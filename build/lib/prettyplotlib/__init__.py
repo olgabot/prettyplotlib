@@ -54,40 +54,42 @@ def prettify(ax, remove_spines, grid=None, remove_ticklabels=None):
         ax.grid(axis=grid, color='white', linestyle='-', linewidth=0.5)
         
     if remove_ticklabels is not None:
-        assert set(remove_ticklabels) in set(('x', 'y'))
+        assert set(remove_ticklabels) | set(('x', 'y')) > 0
         if 'x' in remove_ticklabels:
             ax.set_xticklabels([])
         elif 'y' in remove_ticklabels:
-            ax.set_yticklabels([])\
+            ax.set_yticklabels([])
 
 
 def hist(ax, x, **kwargs):
-    # Reassign the default colors to Set2 by Colorbrewer
+# Reassign the default colors to Set2 by Colorbrewer
     ax.hist(x, edgecolor='white', **kwargs)
 
+def plot(ax, **kwargs):
+    color = set2[0] if 'color' not in kwargs else kwargs['color']
+    ax.plot(color=color, **kwargs)
 
 def scatter(ax, x, y, **kwargs):
     color = set2[0] if 'color' not in kwargs else kwargs['color']
     ax.scatter(x, y, edgecolor='black', linewidth=0.15, color=color, **kwargs)
 
-def bar(ax, x, **kwargs):
+def bar(ax, left, height, xticklabels, **kwargs):
     color = set2[0] if 'color' not in kwargs else kwargs['color']
-    ax.bar(x, edgecolor='white', color=color, **kwargs)
+    ax.bar(left, height, edgecolor='white', color=color, **kwargs)
+    prettify(ax, ['top', 'right'])
 
 def boxplot(ax, x, xticklabels, **kwargs):
     bp = ax.boxplot(x, widths=0.15)
     ax.xaxis.set_ticklabels(xticklabels)
 
     prettify(ax, ['top', 'right', 'bottom'])
-    # ax.xaxis.set_ticks_position('none')
-    # ax.yaxis.set_ticks_position('none')
 
     plt.setp(bp['boxes'], color=set1[1], linewidth=0.5)
     plt.setp(bp['medians'], color=set1[0])
     plt.setp(bp['whiskers'], color=set1[1], linestyle='solid', linewidth=0.5)
     plt.setp(bp['fliers'], color=set1[1])
     plt.setp(bp['caps'], color='none')
-#    ax.spines['left']._linewidth = 0.5
+    ax.spines['left']._linewidth = 0.5
 
 def switch_axis_limits(ax, which_axis=('x', 'y')):
     '''
@@ -115,6 +117,7 @@ def sideways_hist(ax, y, **kwargs):
     switch_axis_limits(ax, 'x')
     prettify(ax, ['left', 'top'], grid='x', remove_ticklabels='y')
 
+# TODO: Heatmap-style figures. Default colormap = Blues.
 
 # import matplotlib.pyplot as plt
 # import prettyplotlib as ppl

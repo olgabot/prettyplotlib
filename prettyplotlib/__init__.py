@@ -54,7 +54,7 @@ def prettify(ax, remove_spines, grid=None, remove_ticklabels=None):
         ax.grid(axis=grid, color='white', linestyle='-', linewidth=0.5)
         
     if remove_ticklabels is not None:
-        assert set(remove_ticklabels) in set(('x', 'y'))
+        assert set(remove_ticklabels) | set(('x', 'y')) > 0
         if 'x' in remove_ticklabels:
             ax.set_xticklabels([])
         elif 'y' in remove_ticklabels:
@@ -65,6 +65,9 @@ def hist(ax, x, **kwargs):
 # Reassign the default colors to Set2 by Colorbrewer
     ax.hist(x, edgecolor='white', **kwargs)
 
+def plot(ax, **kwargs):
+    color = set2[0] if 'color' not in kwargs else kwargs['color']
+    ax.plot(color=color, **kwargs)
 
 def scatter(ax, x, y, **kwargs):
     color = set2[0] if 'color' not in kwargs else kwargs['color']
@@ -114,6 +117,7 @@ def sideways_hist(ax, y, **kwargs):
     switch_axis_limits(ax, 'x')
     prettify(ax, ['left', 'top'], grid='x', remove_ticklabels='y')
 
+# TODO: Heatmap-style figures. Default colormap = Blues.
 
 # import matplotlib.pyplot as plt
 # import prettyplotlib as ppl
