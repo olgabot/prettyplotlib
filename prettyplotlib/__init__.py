@@ -83,6 +83,7 @@ def plot(ax, **kwargs):
     remove_chartjunk(ax, ['top', 'right'])
 
 def scatter(ax, x, y, **kwargs):
+    print 'kwargs', kwargs
     edgecolor = set2[0] if 'edgecolor' not in kwargs else kwargs['edgecolor']
     ax.scatter(x, y, edgecolor=edgecolor, linewidth=0.5, **kwargs)
     remove_chartjunk(ax, ['top', 'right'])
