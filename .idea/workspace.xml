@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="9147a5cd-d55d-4207-b0f1-bf5037d94b35" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/lib/prettyplotlib/__init__.py" afterPath="$PROJECT_DIR$/build/lib/prettyplotlib/__init__.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/prettyplotlib/__init__.py" afterPath="$PROJECT_DIR$/prettyplotlib/__init__.py" />
-    </list>
+    <list default="true" id="9147a5cd-d55d-4207-b0f1-bf5037d94b35" name="Default" comment="" />
     <ignored path="PrettyPlots.iws" />
     <ignored path=".idea/workspace.xml" />
     <file path="/__init__.py" changelist="9147a5cd-d55d-4207-b0f1-bf5037d94b35" time="1375811606228" ignored="false" />
