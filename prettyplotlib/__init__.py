@@ -20,7 +20,9 @@ set2 = brewer2mpl.get_map('Set2', 'qualitative', 8).mpl_colors
 set1 = brewer2mpl.get_map('Set1', 'qualitative', 9).mpl_colors
 mpl.rcParams['axes.color_cycle'] = set2
 
+# Set some commonly used colors
 almost_black = '#262626'
+light_grey = np.array([float(230)/float(255)]*3)
 
 blues = mpl.cm.Blues
 blues.set_bad('white')
@@ -44,6 +46,9 @@ mpl.rcParams['patch.edgecolor'] = set2[0]
 mpl.rcParams['axes.edgecolor'] = almost_black
 mpl.rcParams['axes.labelcolor'] = almost_black
 mpl.rcParams['axes.linewidth'] = 0.5
+
+# Only show one point (instead of three) as an example for the legend.
+mpl.rcParams['legend.scatterpoints'] = 1
 
 # Make the default grid be white so it "removes" lines rather than adds
 mpl.rcParams['grid.color'] = 'white'
@@ -268,6 +273,12 @@ def pcolormesh(fig, ax, x, **kwargs):
 
     # Show the scale of the colorbar
     fig.colorbar(p)
+
+def legend(ax):
+    legend = ax.legend(frameon=True)
+    rect = legend.get_frame()
+    rect.set_facecolor(light_grey)
+    rect.set_linewidth(0.0)
 
 # import matplotlib.pyplot as plt
 # import prettyplotlib as ppl
