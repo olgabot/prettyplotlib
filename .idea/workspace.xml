@@ -2,17 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9147a5cd-d55d-4207-b0f1-bf5037d94b35" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.gitignore" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/examples/serve_ipython.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/examples/srvIPY.sh" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/examples/plot_matplotlib_default.png" afterPath="$PROJECT_DIR$/examples/plot_matplotlib_default.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/lib/prettyplotlib/__init__.py" afterPath="$PROJECT_DIR$/build/lib/prettyplotlib/__init__.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/prettyplotlib/__init__.py" afterPath="$PROJECT_DIR$/prettyplotlib/__init__.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/examples/.ipynb_checkpoints/plot-checkpoint.ipynb" afterPath="$PROJECT_DIR$/examples/.ipynb_checkpoints/plot-checkpoint.ipynb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/examples/plot.ipynb" afterPath="$PROJECT_DIR$/examples/plot.ipynb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/examples/.ipynb_checkpoints/scatter-checkpoint.ipynb" afterPath="$PROJECT_DIR$/examples/.ipynb_checkpoints/scatter-checkpoint.ipynb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/examples/scatter.ipynb" afterPath="$PROJECT_DIR$/examples/scatter.ipynb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="PrettyPlots.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -141,7 +131,7 @@
           <file leaf-file-name="__init__.py" pinned="false" current="true" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/prettyplotlib/__init__.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="42" column="43" selection-start="1381" selection-end="1381" vertical-scroll-proportion="0.22535211">
+                <state line="42" column="43" selection-start="1381" selection-end="1381" vertical-scroll-proportion="-1.769953">
                   <folding>
                     <element signature="e#23#47#0" expanded="true" />
                   </folding>
@@ -701,7 +691,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/prettyplotlib/__init__.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="42" column="43" selection-start="1381" selection-end="1381" vertical-scroll-proportion="0.22535211">
+        <state line="42" column="43" selection-start="1381" selection-end="1381" vertical-scroll-proportion="-1.769953">
           <folding>
             <element signature="e#23#47#0" expanded="true" />
           </folding>
