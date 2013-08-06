@@ -6,12 +6,10 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/prettyplotlib/__init__.py" afterPath="$PROJECT_DIR$/prettyplotlib/__init__.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/examples/.ipynb_checkpoints/plot-checkpoint.ipynb" afterPath="$PROJECT_DIR$/examples/.ipynb_checkpoints/plot-checkpoint.ipynb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/examples/plot.ipynb" afterPath="$PROJECT_DIR$/examples/plot.ipynb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/examples/.ipynb_checkpoints/scatter-checkpoint.ipynb" afterPath="$PROJECT_DIR$/examples/.ipynb_checkpoints/scatter-checkpoint.ipynb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/examples/scatter.ipynb" afterPath="$PROJECT_DIR$/examples/scatter.ipynb" />
     </list>
     <ignored path="PrettyPlots.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/__init__.py" changelist="9147a5cd-d55d-4207-b0f1-bf5037d94b35" time="1375811316382" ignored="false" />
+    <file path="/__init__.py" changelist="9147a5cd-d55d-4207-b0f1-bf5037d94b35" time="1375811459689" ignored="false" />
     <file path="$PROJECT_DIR$/../templates/python_command_line_template.py" changelist="9147a5cd-d55d-4207-b0f1-bf5037d94b35" time="1373579768258" ignored="false" />
     <file path="/python_command_line_template.py" changelist="9147a5cd-d55d-4207-b0f1-bf5037d94b35" time="1373556381015" ignored="false" />
     <file path="/Dummy.txt" changelist="9147a5cd-d55d-4207-b0f1-bf5037d94b35" time="1375556839978" ignored="false" />
@@ -136,7 +134,7 @@
           <file leaf-file-name="__init__.py" pinned="false" current="true" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/prettyplotlib/__init__.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="76" column="15" selection-start="2544" selection-end="2544" vertical-scroll-proportion="0.35211268">
+                <state line="89" column="8" selection-start="3033" selection-end="3033" vertical-scroll-proportion="0.70422536">
                   <folding>
                     <element signature="e#23#47#0" expanded="true" />
                   </folding>
@@ -696,7 +694,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/prettyplotlib/__init__.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="76" column="15" selection-start="2544" selection-end="2544" vertical-scroll-proportion="0.35211268">
+        <state line="89" column="8" selection-start="3033" selection-end="3033" vertical-scroll-proportion="0.70422536">
           <folding>
             <element signature="e#23#47#0" expanded="true" />
           </folding>
