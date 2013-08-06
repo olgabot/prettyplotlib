@@ -32,6 +32,26 @@ blues.set_under('white')
 
 blue_red = mpl.cm.RdBu_r
 
+# Default "patches" like scatterplots
+mpl.rcParams['patch.linewidth'] = 0.75     # edge width in points
+
+# Default empty circle with a colored outline
+mpl.rcParams['patch.facecolor'] = 'none'
+mpl.rcParams['patch.edgecolor'] = set2[0]
+
+# Change the default axis colors from black to a slightly lighter black,
+# and a little thinner (0.5 instead of 0.1)
+mpl.rcParams['axes.edgecolor'] = almost_black
+mpl.rcParams['axes.labelcolor'] = almost_black
+mpl.rcParams['axes.linewidth'] = 0.5
+
+# Make the default grid be white so it "removes" lines rather than adds
+mpl.rcParams['grid.color'] = 'white'
+
+# change the tick colors also to the almost black
+mpl.rcParams['ytick.color'] = almost_black
+mpl.rcParams['xtick.color'] = almost_black
+
 def remove_chartjunk(ax, spines, grid=None, ticklabels=None):
     '''
     Removes "chartjunk", such as extra lines of axes and tick marks.
@@ -50,8 +70,9 @@ def remove_chartjunk(ax, spines, grid=None, ticklabels=None):
     # off-black dark grey
     for spine in all_spines:
         if spine not in spines:
-            ax.spine[spine].set_linewidth(0.5)
-            ax.spine[spine].set_color(almost_black)
+            ax.spines[spine].set_linewidth(0.5)
+            # ax.spines[spine].set_color(almost_black)
+#            ax.spines[spine].set_tick_params(color=almost_black)
     # Check that the axes are not log-scale. If they are, leave the ticks
     # because otherwise people assume a linear scale.
     x_pos = set(['top', 'bottom'])
@@ -61,10 +82,12 @@ def remove_chartjunk(ax, spines, grid=None, ticklabels=None):
 
     for ax_name, pos in zip(xy_ax_names, xy_pos):
         axis = ax.__dict__[ax_name]
+        # axis.set_tick_params(color=almost_black)
         if type(axis.get_scale()) == 'log':
+            # if this spine is not in the list of spines to remove
             for p in pos.difference(spines):
                 axis.set_ticks_position(p)
-                axis.set_tick_params(color=almost_black)
+
 #                axis.set_tick_params(which='both', p)
         else:
             axis.set_ticks_position('none')
@@ -123,14 +146,13 @@ def scatter(ax, x, y, **kwargs):
         color_cycle = ax._get_lines.color_cycle
         edgecolor = color_cycle.next()
 
-    if 'facecolor' in kwargs:
-        facecolor = kwargs['facecolor']
-        kwargs.pop('facecolor')
-    else:
-        facecolor = 'none'
+    # if 'facecolor' in kwargs:
+    #     facecolor = kwargs['facecolor']
+    #     kwargs.pop('facecolor')
+    # else:
+    #     facecolor = 'none'
 
-    ax.scatter(x, y, edgecolor=edgecolor, facecolor=facecolor, linewidth=0.5,
-               **kwargs)
+    ax.scatter(x, y, edgecolor=edgecolor, **kwargs)
     remove_chartjunk(ax, ['top', 'right'])
 
 
