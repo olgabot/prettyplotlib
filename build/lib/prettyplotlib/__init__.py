@@ -13,11 +13,11 @@ import numpy as np
 #     http://colorbrewer2.org/
 # - A quick visual reference to every ColorBrewer scale:
 #     http://bl.ocks.org/mbostock/5577023
-set2 = brewer2mpl.get_map('Set2', 'qualitative', 7).mpl_colors
+set2 = brewer2mpl.get_map('Set2', 'qualitative', 8).mpl_colors
 
 # Another ColorBrewer scale. This one has nice "traditional" colors like
 # reds and blues
-set1 = brewer2mpl.get_map('Set1', 'qualitative', 7).mpl_colors
+set1 = brewer2mpl.get_map('Set1', 'qualitative', 9).mpl_colors
 mpl.rcParams['axes.color_cycle'] = set2
 
 blues = mpl.cm.Blues

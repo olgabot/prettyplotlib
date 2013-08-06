@@ -77,14 +77,14 @@ def hist(ax, x, **kwargs):
     ax.hist(x, edgecolor='white', color=color, **kwargs)
     remove_chartjunk(ax, ['top', 'right'])
 
-def plot(ax, **kwargs):
+def plot(ax, x, y, **kwargs):
     if 'color' in kwargs:
         color = kwargs['color']
         # Remove the other color argument so matplotlib doesn't complain
         kwargs.pop('color')
     else:
         color = set2[0]
-    ax.plot(color=color, **kwargs)
+    ax.plot(x, y, color=color, **kwargs)
     remove_chartjunk(ax, ['top', 'right'])
 
 def scatter(ax, x, y, **kwargs):
