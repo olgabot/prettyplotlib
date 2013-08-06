@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9147a5cd-d55d-4207-b0f1-bf5037d94b35" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.txt" afterPath="$PROJECT_DIR$/README.txt" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/lib/prettyplotlib/__init__.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/lib/prettyplots/__init__.py" afterPath="" />
     </list>
     <ignored path="PrettyPlots.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -128,10 +129,10 @@
     <splitter split-orientation="horizontal" split-proportion="0.5">
       <split-first>
         <leaf>
-          <file leaf-file-name="__init__.py" pinned="false" current="true" current-in-tab="true">
+          <file leaf-file-name="__init__.py" pinned="false" current="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/prettyplotlib/__init__.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="120" column="36" selection-start="4214" selection-end="4214" vertical-scroll-proportion="0.7746479">
+                <state line="120" column="36" selection-start="4214" selection-end="4214" vertical-scroll-proportion="-9.705882">
                   <folding>
                     <element signature="e#23#47#0" expanded="true" />
                   </folding>
@@ -145,7 +146,16 @@
                 <state />
               </provider>
               <provider selected="true" editor-type-id="text-editor">
-                <state line="14" column="30" selection-start="775" selection-end="775" vertical-scroll-proportion="0.0">
+                <state line="14" column="30" selection-start="775" selection-end="775" vertical-scroll-proportion="-7.7777777">
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="CHANGES.txt" pinned="false" current="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/CHANGES.txt">
+              <provider selected="true" editor-type-id="text-editor">
+                <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
                   <folding />
                 </state>
               </provider>
@@ -160,10 +170,10 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="test_scatter.py" pinned="false" current="false" current-in-tab="false">
+          <file leaf-file-name="test_scatter.py" pinned="false" current="true" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/tests/test_scatter.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="21" column="34" selection-start="513" selection-end="513" vertical-scroll-proportion="0.0">
+                <state line="21" column="34" selection-start="513" selection-end="513" vertical-scroll-proportion="0.44807965">
                   <folding>
                     <element signature="e#21#79#0" expanded="true" />
                   </folding>
@@ -184,6 +194,24 @@
             <entry file="file://$PROJECT_DIR$/setup.py">
               <provider selected="true" editor-type-id="text-editor">
                 <state line="6" column="5" selection-start="125" selection-end="125" vertical-scroll-proportion="0.0">
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="MANIFEST.in" pinned="false" current="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/MANIFEST.in">
+              <provider selected="true" editor-type-id="text-editor">
+                <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="README.md" pinned="false" current="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/README.md">
+              <provider selected="true" editor-type-id="text-editor">
+                <state line="10" column="41" selection-start="378" selection-end="378" vertical-scroll-proportion="0.0">
                   <folding />
                 </state>
               </provider>
@@ -472,14 +500,14 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="22" width="1440" height="874" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32891247" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.15494978" sideWeight="0.6710875" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.15494978" sideWeight="0.6710875" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="true" content_ui="tabs" />
@@ -554,22 +582,6 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/prettyplotlib/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="83" column="0" selection-start="2815" selection-end="2815" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="e#23#47#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tests/test_boxplot.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="24" column="0" selection-start="527" selection-end="527" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/tests/test_scatter.py">
       <provider selected="true" editor-type-id="text-editor">
         <state line="2" column="0" selection-start="21" selection-end="130" vertical-scroll-proportion="0.0">
@@ -607,50 +619,14 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/MANIFEST.in">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/tests/test_prettyfiy.py">
       <provider selected="true" editor-type-id="text-editor">
         <state line="2" column="58" selection-start="79" selection-end="79" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/README.md">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="41" selection-start="378" selection-end="378" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/LICENSE.txt">
-      <provider editor-type-id="com.intellij.persistence.database.editor.CsvTableFileEditorProvider">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="30" selection-start="775" selection-end="775" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/tests/test_boxplot.py">
       <provider selected="true" editor-type-id="text-editor">
         <state line="10" column="19" selection-start="272" selection-end="272" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tests/test_scatter.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="21" column="34" selection-start="513" selection-end="513" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="e#21#79#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/setup.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="5" selection-start="125" selection-end="125" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
@@ -664,9 +640,56 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/prettyplotlib/__init__.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="120" column="36" selection-start="4214" selection-end="4214" vertical-scroll-proportion="0.7746479">
+        <state line="120" column="36" selection-start="4214" selection-end="4214" vertical-scroll-proportion="-9.705882">
           <folding>
             <element signature="e#23#47#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/setup.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="6" column="5" selection-start="125" selection-end="125" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MANIFEST.in">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="10" column="41" selection-start="378" selection-end="378" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/LICENSE.txt">
+      <provider editor-type-id="com.intellij.persistence.database.editor.CsvTableFileEditorProvider">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="14" column="30" selection-start="775" selection-end="775" vertical-scroll-proportion="-7.7777777">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CHANGES.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/test_scatter.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="21" column="34" selection-start="513" selection-end="513" vertical-scroll-proportion="0.44807965">
+          <folding>
+            <element signature="e#21#79#0" expanded="true" />
           </folding>
         </state>
       </provider>
