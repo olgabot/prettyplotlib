@@ -20,6 +20,8 @@ set2 = brewer2mpl.get_map('Set2', 'qualitative', 8).mpl_colors
 set1 = brewer2mpl.get_map('Set1', 'qualitative', 9).mpl_colors
 mpl.rcParams['axes.color_cycle'] = set2
 
+almost_black = '#262626'
+
 blues = mpl.cm.Blues
 blues.set_bad('white')
 blues.set_under('white')
@@ -40,9 +42,16 @@ def remove_chartjunk(ax, spines, grid=None, ticklabels=None):
     If ticklabels="y" or "x", or ['x', 'y'] will remove ticklabels from that
     axis
     '''
-    # --- Added this line --- #)
+    all_spines = ['top', 'bottom', 'right', 'left']
     for spine in spines:
         ax.spines[spine].set_visible(False)
+
+    # For the remaining spines, make their line thinner and a slightly
+    # off-black dark grey
+    for spine in all_spines:
+        if spine not in spines:
+            ax.spine[spine].set_linewidth(0.5)
+            ax.spine[spine].set_color(almost_black)
     # Check that the axes are not log-scale. If they are, leave the ticks
     # because otherwise people assume a linear scale.
     x_pos = set(['top', 'bottom'])
@@ -55,6 +64,7 @@ def remove_chartjunk(ax, spines, grid=None, ticklabels=None):
         if type(axis.get_scale()) == 'log':
             for p in pos.difference(spines):
                 axis.set_ticks_position(p)
+                axis.set_tick_params(color=almost_black)
 #                axis.set_tick_params(which='both', p)
         else:
             axis.set_ticks_position('none')
@@ -86,7 +96,7 @@ def plot(ax, x, y, **kwargs):
         # if no color is specified, cycle over the ones in this axis
         color_cycle = ax._get_lines.color_cycle
         color = color_cycle.next()
-        
+
     ax.plot(x, y, color=color, **kwargs)
     remove_chartjunk(ax, ['top', 'right'])
 
