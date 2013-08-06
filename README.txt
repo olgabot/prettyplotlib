@@ -1,26 +1,12 @@
 ===========
-Towel Stuff
+`prettyplotlib`
 ===========
 
-Towel Stuff provides such and such and so and so. You might find
-it most useful for tasks involving <x> and also <y>. Typical usage
-often looks like this::
-
-    #!/usr/bin/env python
-
-    from towelstuff import location
-    from towelstuff import utils
-
-    if utils.has_towel():
-        print "Your towel is located:", location.where_is_my_towel()
-
-(Note the double-colon and 4-space indent formatting above.)
-
-Paragraphs are separated by blank lines. *Italics*, **bold**,
-and ``monospace`` look like this.
+`prettyplotlib` is a Python package which provides beautiful default plots
+for the `matplotlib` plotting library.
 
 
-A Section
+Examples
 =========
 
 Lists look like this:

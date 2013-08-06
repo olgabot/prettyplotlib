@@ -3,6 +3,7 @@
 import matplotlib as mpl
 import matplotlib.pyplot as plt
 import brewer2mpl
+import numpy as np
 
 # Get Set2 from ColorBrewer, a set of colors deemed colorblind-safe and
 # pleasant to look at by Drs. Cynthia Brewer and Mark Harrower of Pennsylvania
@@ -17,21 +18,30 @@ set2 = brewer2mpl.get_map('Set2', 'qualitative', 7).mpl_colors
 # Another ColorBrewer scale. This one has nice "traditional" colors like
 # reds and blues
 set1 = brewer2mpl.get_map('Set1', 'qualitative', 7).mpl_colors
-
-
 mpl.rcParams['axes.color_cycle'] = set2
 
-def prettify(ax, remove_spines, grid=None, remove_ticklabels=None):
+blues = mpl.cm.Blues
+blues.set_bad('white')
+blues.set_under('white')
+
+#blues_r = mpl.cm.Blues_r
+#blues_r.set_bad('white')
+#blues_r.set_under('white')
+
+blue_red = mpl.cm.RdBu_r
+
+def remove_chartjunk(ax, spines, grid=None, ticklabels=None):
     '''
     Removes "chartjunk", such as extra lines of axes and tick marks.
 
     If grid="y" or "x", will add a white grid at the "y" or "x" axes, 
     respectively
 
-    If remove_ticklabels="y" or "x", will remove ticklabels from that axis
+    If ticklabels="y" or "x", or ['x', 'y'] will remove ticklabels from that
+    axis
     '''
     # --- Added this line --- #)
-    for spine in remove_spines:
+    for spine in spines:
         ax.spines[spine].set_visible(False)
     # Check that the axes are not log-scale. If they are, leave the ticks
     # because otherwise people assume a linear scale.
@@ -43,7 +53,7 @@ def prettify(ax, remove_spines, grid=None, remove_ticklabels=None):
     for ax_name, pos in zip(xy_ax_names, xy_pos):
         axis = ax.__dict__[ax_name]
         if type(axis.get_scale()) == 'log':
-            for p in pos.difference(remove_spines):
+            for p in pos.difference(spines):
                 axis.set_ticks_position(p)
 #                axis.set_tick_params(which='both', p)
         else:
@@ -53,36 +63,40 @@ def prettify(ax, remove_spines, grid=None, remove_ticklabels=None):
         assert grid in ('x', 'y')
         ax.grid(axis=grid, color='white', linestyle='-', linewidth=0.5)
         
-    if remove_ticklabels is not None:
-        assert set(remove_ticklabels) | set(('x', 'y')) > 0
-        if 'x' in remove_ticklabels:
+    if ticklabels is not None:
+        assert set(ticklabels) | set(('x', 'y')) > 0
+        if 'x' in ticklabels:
             ax.set_xticklabels([])
-        elif 'y' in remove_ticklabels:
+        elif 'y' in ticklabels:
             ax.set_yticklabels([])
 
 
 def hist(ax, x, **kwargs):
 # Reassign the default colors to Set2 by Colorbrewer
-    ax.hist(x, edgecolor='white', **kwargs)
+    color = set2[0] if 'color' not in kwargs else kwargs['color']
+    ax.hist(x, edgecolor='white', color=color, **kwargs)
+    remove_chartjunk(ax, ['top', 'right'])
 
 def plot(ax, **kwargs):
     color = set2[0] if 'color' not in kwargs else kwargs['color']
     ax.plot(color=color, **kwargs)
+    remove_chartjunk(ax, ['top', 'right'])
 
 def scatter(ax, x, y, **kwargs):
-    color = set2[0] if 'color' not in kwargs else kwargs['color']
-    ax.scatter(x, y, edgecolor='black', linewidth=0.15, color=color, **kwargs)
+    edgecolor = set2[0] if 'edgecolor' not in kwargs else kwargs['edgecolor']
+    ax.scatter(x, y, edgecolor=edgecolor, linewidth=0.5, **kwargs)
+    remove_chartjunk(ax, ['top', 'right'])
 
 def bar(ax, left, height, xticklabels, **kwargs):
     color = set2[0] if 'color' not in kwargs else kwargs['color']
     ax.bar(left, height, edgecolor='white', color=color, **kwargs)
-    prettify(ax, ['top', 'right'])
+    remove_chartjunk(ax, ['top', 'right'])
 
 def boxplot(ax, x, xticklabels, **kwargs):
     bp = ax.boxplot(x, widths=0.15)
     ax.xaxis.set_ticklabels(xticklabels)
 
-    prettify(ax, ['top', 'right', 'bottom'])
+    remove_chartjunk(ax, ['top', 'right', 'bottom'])
 
     plt.setp(bp['boxes'], color=set1[1], linewidth=0.5)
     plt.setp(bp['medians'], color=set1[0])
@@ -107,7 +121,7 @@ def upside_down_hist(ax, x, **kwargs):
     
     # Turn the histogram upside-down by switching the y-axis limits
     switch_axis_limits(ax, 'y')
-    prettify(ax, ['bottom', 'right'], grid='y', remove_ticklabels='x')
+    remove_chartjunk(ax, ['bottom', 'right'], grid='y', ticklabels='x')
 
 def sideways_hist(ax, y, **kwargs):
     hist(ax, y, orientation='horizontal', **kwargs)
@@ -115,9 +129,76 @@ def sideways_hist(ax, y, **kwargs):
     # Orient the histogram with `0` counts on the right and the max
     # counts on the left by switching the `x` axis limits
     switch_axis_limits(ax, 'x')
-    prettify(ax, ['left', 'top'], grid='x', remove_ticklabels='y')
+    remove_chartjunk(ax, ['left', 'top'], grid='x', ticklabels='y')
 
-# TODO: Heatmap-style figures. Default colormap = Blues.
+# TODO: Heatmap-style figures. Default colormap = Blues. Check if the data
+# has both negative and positive values. If so, then use blue (negative)-red
+# (positive) heatmap
+
+def pcolor(fig, ax, x, **kwargs):
+    '''
+    Like matplotlib's pcolor, but provides a default of a
+    lightblue-to-darkblue colormap instead of a rainbow colormap. If the data
+     is detected to be both positive and negative, then will default to a
+     red-blue colormap.
+    '''
+
+    # need to check the
+    vmin = x.min()
+    vmax = x.max()
+
+    # If we have both negative and positive values, use a divergent colormap
+    if vmax > 0 and vmin < 0:
+        cmap = blue_red
+    else:
+        cmap = blues
+    p = ax.pcolor(x, cmap=cmap, vmin=vmin, vmax=vmax, **kwargs)
+    ax.set_ylim(0, x.shape[0])
+
+    remove_chartjunk(ax, ['top', 'right', 'left', 'bottom'])
+
+    # I don't think this will work because kwargs is also supplied to ax.pcolor
+    if xticklabels in kwargs:
+        xticks = np.arange(0.5, x.shape[1] + 0.5)
+        ax.set_xticks(xticks)
+        ax.set_xticklabels(xticklabels, rotation='vertical')
+    if yticklabels in kwargs:
+        yticks = np.arange(0.5, x.shape[0] + 0.5)
+        ax.set_yticks(yticks)
+        ax.set_yticklabels(yticklabels, rotation='vertical')
+
+    # Show the scale of the colorbar
+    fig.colorbar(p)
+
+
+def pcolormesh(fig, ax, x, **kwargs):
+    """
+    Use for large datasets
+    """
+    vmin = x.min()
+    vmax = x.max()
+
+    # If we have both negative and positive values, use a divergent colormap
+    if vmax > 0 and vmin < 0:
+        cmap = blue_red
+    else:
+        cmap = blues
+    p = ax.pcolormesh(x, cmap=cmap, vmin=vmin, vmax=vmax)
+    ax.set_ylim(0, x.shape[0])
+
+    remove_chartjunk(ax, ['top', 'right', 'left', 'bottom'])
+
+    if xticklabels in kwargs:
+        xticks = np.arange(0.5, x.shape[1] + 0.5)
+        ax.set_xticks(xticks)
+        ax.set_xticklabels(xticklabels, rotation='vertical')
+    if yticklabels in kwargs:
+        yticks = np.arange(0.5, x.shape[0] + 0.5)
+        ax.set_yticks(yticks)
+        ax.set_yticklabels(yticklabels, rotation='vertical')
+
+    # Show the scale of the colorbar
+    fig.colorbar(p)
 
 # import matplotlib.pyplot as plt
 # import prettyplotlib as ppl
