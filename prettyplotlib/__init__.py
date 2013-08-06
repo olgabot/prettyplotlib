@@ -48,7 +48,7 @@ mpl.rcParams['axes.labelcolor'] = almost_black
 mpl.rcParams['axes.linewidth'] = 0.5
 
 # Only show one point (instead of three) as an example for the legend.
-mpl.rcParams['legend.scatterpoints'] = 1
+# mpl.rcParams['legend.scatterpoints'] = 1
 
 # Make the default grid be white so it "removes" lines rather than adds
 mpl.rcParams['grid.color'] = 'white'
