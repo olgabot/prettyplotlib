@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9147a5cd-d55d-4207-b0f1-bf5037d94b35" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/prettyplotlib/__init__.py" afterPath="$PROJECT_DIR$/prettyplotlib/__init__.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.txt" afterPath="$PROJECT_DIR$/README.txt" />
     </list>
     <ignored path="PrettyPlots.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -106,7 +106,7 @@
     <file path="/psi.py" changelist="9147a5cd-d55d-4207-b0f1-bf5037d94b35" time="1375573817952" ignored="false" />
     <file path="$PROJECT_DIR$/../single_cell/scripts/single_cell_colors.py" changelist="9147a5cd-d55d-4207-b0f1-bf5037d94b35" time="1375573933201" ignored="false" />
     <file path="/single_cell_colors.py" changelist="9147a5cd-d55d-4207-b0f1-bf5037d94b35" time="1375573921230" ignored="false" />
-    <file path="/README.txt" changelist="9147a5cd-d55d-4207-b0f1-bf5037d94b35" time="1375806203647" ignored="false" />
+    <file path="/README.txt" changelist="9147a5cd-d55d-4207-b0f1-bf5037d94b35" time="1375808206753" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -131,7 +131,7 @@
           <file leaf-file-name="__init__.py" pinned="false" current="true" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/prettyplotlib/__init__.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="94" column="72" selection-start="3269" selection-end="3269" vertical-scroll-proportion="0.16431925">
+                <state line="120" column="36" selection-start="4214" selection-end="4214" vertical-scroll-proportion="0.7746479">
                   <folding>
                     <element signature="e#23#47#0" expanded="true" />
                   </folding>
@@ -196,7 +196,7 @@
           <file leaf-file-name="README.txt" pinned="false" current="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/README.txt">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="8" column="8" selection-start="165" selection-end="165" vertical-scroll-proportion="0.16830294">
+                <state line="12" column="53" selection-start="300" selection-end="300" vertical-scroll-proportion="0.25245443">
                   <folding />
                 </state>
               </provider>
@@ -228,8 +228,8 @@
         <option value="$PROJECT_DIR$/tests/test_boxplot.py" />
         <option value="$PROJECT_DIR$/tests/test_scatter.py" />
         <option value="$PROJECT_DIR$/README.md" />
-        <option value="$PROJECT_DIR$/README.txt" />
         <option value="$PROJECT_DIR$/prettyplotlib/__init__.py" />
+        <option value="$PROJECT_DIR$/README.txt" />
       </list>
     </option>
   </component>
@@ -648,13 +648,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/README.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/setup.py">
       <provider selected="true" editor-type-id="text-editor">
         <state line="6" column="5" selection-start="125" selection-end="125" vertical-scroll-proportion="0.0">
@@ -662,9 +655,16 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/README.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/prettyplotlib/__init__.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="94" column="72" selection-start="3269" selection-end="3269" vertical-scroll-proportion="0.16431925">
+        <state line="120" column="36" selection-start="4214" selection-end="4214" vertical-scroll-proportion="0.7746479">
           <folding>
             <element signature="e#23#47#0" expanded="true" />
           </folding>

@@ -9,6 +9,9 @@ for the `matplotlib` plotting library.
 Examples
 =========
 
+For each example, provide: matplotlib default, prettyplotlib default,
+and how to get matplotlib default with prettyplotlib.
+
 Lists look like this:
 
 * First
