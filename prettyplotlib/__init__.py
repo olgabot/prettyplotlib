@@ -79,14 +79,13 @@ def hist(ax, x, **kwargs):
 
 def plot(ax, x, y, **kwargs):
     if 'color' in kwargs:
-        # Assume that color means the edge color. You can assign the
-        edgecolor = kwargs['color']
+        color = kwargs['color']
         # Remove the other color argument so matplotlib doesn't complain
         kwargs.pop('color')
     else:
-        # if no color is specified,
+        # if no color is specified, cycle over the ones in this axis
         color_cycle = ax._get_lines.color_cycle
-        edgecolor = color_cycle.next()
+        color = color_cycle.next()
         
     ax.plot(x, y, color=color, **kwargs)
     remove_chartjunk(ax, ['top', 'right'])
