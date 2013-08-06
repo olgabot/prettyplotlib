@@ -78,15 +78,48 @@ def hist(ax, x, **kwargs):
     remove_chartjunk(ax, ['top', 'right'])
 
 def plot(ax, **kwargs):
-    color = set2[0] if 'color' not in kwargs else kwargs['color']
+    if 'color' in kwargs:
+        color = kwargs['color']
+        # Remove the other color argument so matplotlib doesn't complain
+        kwargs.pop('color')
+    else:
+        color = set2[0]
     ax.plot(color=color, **kwargs)
     remove_chartjunk(ax, ['top', 'right'])
 
 def scatter(ax, x, y, **kwargs):
-    print 'kwargs', kwargs
-    edgecolor = set2[0] if 'edgecolor' not in kwargs else kwargs['edgecolor']
-    ax.scatter(x, y, edgecolor=edgecolor, linewidth=0.5, **kwargs)
+    """
+    This will plot a scatterplot of x and y, iterating over the ColorBrewer
+    "Set2" color cycle unless a color is specified. The symbols produced are
+    empty circles, with the outline in the color specified by either 'color'
+    or 'edgecolor'. If you want to fill the circle, specify 'facecolor'.
+    """
+    # Force 'color' to indicate the edge color, so the middle of the
+    # scatter patches are empty. Can speficy
+    if 'edgecolor' in kwargs:
+        edgecolor = kwargs['edgecolor']
+        # Remove the other color argument so matplotlib doesn't complain
+        kwargs.pop('edgecolor')
+    elif 'color' in kwargs:
+        # Assume that color means the edge color. You can assign the
+        edgecolor = kwargs['color']
+        # Remove the other color argument so matplotlib doesn't complain
+        kwargs.pop('color')
+    else:
+        # if no color is specified,
+        color_cycle = ax._get_lines.color_cycle
+        edgecolor = color_cycle.next()
+
+    if 'facecolor' in kwargs:
+        facecolor = kwargs['facecolor']
+        kwargs.pop('facecolor')
+    else:
+        facecolor = 'none'
+
+    ax.scatter(x, y, edgecolor=edgecolor, facecolor=facecolor, linewidth=0.5,
+               **kwargs)
     remove_chartjunk(ax, ['top', 'right'])
+
 
 def bar(ax, left, height, xticklabels, **kwargs):
     color = set2[0] if 'color' not in kwargs else kwargs['color']

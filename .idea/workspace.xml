@@ -6,7 +6,7 @@
     </list>
     <ignored path="PrettyPlots.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/__init__.py" changelist="9147a5cd-d55d-4207-b0f1-bf5037d94b35" time="1375806883184" ignored="false" />
+    <file path="/__init__.py" changelist="9147a5cd-d55d-4207-b0f1-bf5037d94b35" time="1375808072181" ignored="false" />
     <file path="$PROJECT_DIR$/../templates/python_command_line_template.py" changelist="9147a5cd-d55d-4207-b0f1-bf5037d94b35" time="1373579768258" ignored="false" />
     <file path="/python_command_line_template.py" changelist="9147a5cd-d55d-4207-b0f1-bf5037d94b35" time="1373556381015" ignored="false" />
     <file path="/Dummy.txt" changelist="9147a5cd-d55d-4207-b0f1-bf5037d94b35" time="1375556839978" ignored="false" />
@@ -131,7 +131,7 @@
           <file leaf-file-name="__init__.py" pinned="false" current="true" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/prettyplotlib/__init__.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="85" column="26" selection-start="2858" selection-end="2858" vertical-scroll-proportion="0.29577464">
+                <state line="94" column="72" selection-start="3269" selection-end="3269" vertical-scroll-proportion="0.16431925">
                   <folding>
                     <element signature="e#23#47#0" expanded="true" />
                   </folding>
@@ -183,7 +183,7 @@
           <file leaf-file-name="setup.py" pinned="false" current="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/setup.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="14" column="0" selection-start="454" selection-end="454" vertical-scroll-proportion="0.0">
+                <state line="6" column="5" selection-start="125" selection-end="125" vertical-scroll-proportion="0.0">
                   <folding />
                 </state>
               </provider>
@@ -639,13 +639,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/setup.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="0" selection-start="454" selection-end="454" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/tests/test_scatter.py">
       <provider selected="true" editor-type-id="text-editor">
         <state line="21" column="34" selection-start="513" selection-end="513" vertical-scroll-proportion="0.0">
@@ -662,9 +655,16 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/setup.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="6" column="5" selection-start="125" selection-end="125" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/prettyplotlib/__init__.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="85" column="26" selection-start="2858" selection-end="2858" vertical-scroll-proportion="0.29577464">
+        <state line="94" column="72" selection-start="3269" selection-end="3269" vertical-scroll-proportion="0.16431925">
           <folding>
             <element signature="e#23#47#0" expanded="true" />
           </folding>
