@@ -22,7 +22,7 @@ mpl.rcParams['axes.color_cycle'] = set2
 
 # Set some commonly used colors
 almost_black = '#262626'
-light_grey = np.array([float(230)/float(255)]*3)
+light_grey = np.array([float(240)/float(255)]*3)
 
 blues = mpl.cm.Blues
 blues.set_bad('white')
@@ -274,10 +274,10 @@ def pcolormesh(fig, ax, x, **kwargs):
     # Show the scale of the colorbar
     fig.colorbar(p)
 
-def legend(ax):
-    legend = ax.legend(frameon=True)
+def legend(ax, facecolor=light_grey):
+    legend = ax.legend(frameon=True, scatterpoints=1)
     rect = legend.get_frame()
-    rect.set_facecolor(light_grey)
+    rect.set_facecolor(facecolor)
     rect.set_linewidth(0.0)
 
 # import matplotlib.pyplot as plt
