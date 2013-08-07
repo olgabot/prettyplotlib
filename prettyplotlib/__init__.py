@@ -274,8 +274,8 @@ def pcolormesh(fig, ax, x, **kwargs):
     # Show the scale of the colorbar
     fig.colorbar(p)
 
-def legend(ax, facecolor=light_grey):
-    legend = ax.legend(frameon=True, scatterpoints=1)
+def legend(ax, facecolor=light_grey, **kwargs):
+    legend = ax.legend(frameon=True, scatterpoints=1, **kwargs)
     rect = legend.get_frame()
     rect.set_facecolor(facecolor)
     rect.set_linewidth(0.0)

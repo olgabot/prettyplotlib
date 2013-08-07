@@ -2,22 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9147a5cd-d55d-4207-b0f1-bf5037d94b35" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/examples/plot_matplotlib_default.pdf" afterPath="$PROJECT_DIR$/examples/plot_matplotlib_default.pdf" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/examples/plot_matplotlib_default.png" afterPath="$PROJECT_DIR$/examples/plot_matplotlib_default.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/examples/plot_prettyplotlib_default.pdf" afterPath="$PROJECT_DIR$/examples/plot_prettyplotlib_default.pdf" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/examples/plot_prettyplotlib_default.png" afterPath="$PROJECT_DIR$/examples/plot_prettyplotlib_default.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/examples/scatter_matplotlib_default.png" afterPath="$PROJECT_DIR$/examples/scatter_matplotlib_default.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/examples/scatter_prettyplotlib_default.png" afterPath="$PROJECT_DIR$/examples/scatter_prettyplotlib_default.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/lib/prettyplotlib/__init__.py" afterPath="$PROJECT_DIR$/build/lib/prettyplotlib/__init__.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/prettyplotlib/__init__.py" afterPath="$PROJECT_DIR$/prettyplotlib/__init__.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/examples/.ipynb_checkpoints/plot-checkpoint.ipynb" afterPath="$PROJECT_DIR$/examples/.ipynb_checkpoints/plot-checkpoint.ipynb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/examples/plot.ipynb" afterPath="$PROJECT_DIR$/examples/plot.ipynb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/examples/.ipynb_checkpoints/scatter-checkpoint.ipynb" afterPath="$PROJECT_DIR$/examples/.ipynb_checkpoints/scatter-checkpoint.ipynb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/examples/scatter.ipynb" afterPath="$PROJECT_DIR$/examples/scatter.ipynb" />
     </list>
     <ignored path="PrettyPlots.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/__init__.py" changelist="9147a5cd-d55d-4207-b0f1-bf5037d94b35" time="1375818271410" ignored="false" />
+    <file path="/__init__.py" changelist="9147a5cd-d55d-4207-b0f1-bf5037d94b35" time="1375838976051" ignored="false" />
     <file path="$PROJECT_DIR$/../templates/python_command_line_template.py" changelist="9147a5cd-d55d-4207-b0f1-bf5037d94b35" time="1373579768258" ignored="false" />
     <file path="/python_command_line_template.py" changelist="9147a5cd-d55d-4207-b0f1-bf5037d94b35" time="1373556381015" ignored="false" />
     <file path="/Dummy.txt" changelist="9147a5cd-d55d-4207-b0f1-bf5037d94b35" time="1375556839978" ignored="false" />
@@ -146,7 +135,7 @@
           <file leaf-file-name="__init__.py" pinned="false" current="true" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/prettyplotlib/__init__.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="279" column="32" selection-start="9623" selection-end="9623" vertical-scroll-proportion="0.69483566">
+                <state line="277" column="62" selection-start="9579" selection-end="9579" vertical-scroll-proportion="0.64788735">
                   <folding>
                     <element signature="e#23#47#0" expanded="true" />
                   </folding>
@@ -706,7 +695,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/prettyplotlib/__init__.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="279" column="32" selection-start="9623" selection-end="9623" vertical-scroll-proportion="0.69483566">
+        <state line="277" column="62" selection-start="9579" selection-end="9579" vertical-scroll-proportion="0.64788735">
           <folding>
             <element signature="e#23#47#0" expanded="true" />
           </folding>
