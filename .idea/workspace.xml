@@ -3,13 +3,14 @@
   <component name="ChangeListManager">
     <list default="true" id="9147a5cd-d55d-4207-b0f1-bf5037d94b35" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/prettyplotlib/__init__.py" afterPath="$PROJECT_DIR$/prettyplotlib/__init__.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="PrettyPlots.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/__init__.py" changelist="9147a5cd-d55d-4207-b0f1-bf5037d94b35" time="1375838976051" ignored="false" />
+    <file path="/__init__.py" changelist="9147a5cd-d55d-4207-b0f1-bf5037d94b35" time="1375896739095" ignored="false" />
     <file path="$PROJECT_DIR$/../templates/python_command_line_template.py" changelist="9147a5cd-d55d-4207-b0f1-bf5037d94b35" time="1373579768258" ignored="false" />
     <file path="/python_command_line_template.py" changelist="9147a5cd-d55d-4207-b0f1-bf5037d94b35" time="1373556381015" ignored="false" />
-    <file path="/Dummy.txt" changelist="9147a5cd-d55d-4207-b0f1-bf5037d94b35" time="1375556839978" ignored="false" />
+    <file path="/Dummy.txt" changelist="9147a5cd-d55d-4207-b0f1-bf5037d94b35" time="1375851158362" ignored="false" />
     <file path="$USER_HOME$/workspace/gscripts/gscripts/submit_miso_index_gtf.py" changelist="9147a5cd-d55d-4207-b0f1-bf5037d94b35" time="1373555365667" ignored="false" />
     <file path="/submit_miso_index_gtf.py" changelist="9147a5cd-d55d-4207-b0f1-bf5037d94b35" time="1373556371405" ignored="false" />
     <file path="$PROJECT_DIR$/../cse202/Homework/hw2/q5_integer_multiplication.py" changelist="9147a5cd-d55d-4207-b0f1-bf5037d94b35" time="1373555030215" ignored="false" />
@@ -94,13 +95,13 @@
     <file path="$PROJECT_DIR$/../gscripts/tests/test_qtools_submitter.py" changelist="9147a5cd-d55d-4207-b0f1-bf5037d94b35" time="1375544201921" ignored="false" />
     <file path="/test_qtools_submitter.py" changelist="9147a5cd-d55d-4207-b0f1-bf5037d94b35" time="1375544201190" ignored="false" />
     <file path="$PROJECT_DIR$/../gscripts/tests/test_qtools_submitter_wait_for_pbs.py" changelist="9147a5cd-d55d-4207-b0f1-bf5037d94b35" time="1375373200343" ignored="false" />
-    <file path="$PROJECT_DIR$/../single_cell/scripts/load_summary_files.py" changelist="9147a5cd-d55d-4207-b0f1-bf5037d94b35" time="1375573898562" ignored="false" />
+    <file path="$PROJECT_DIR$/../single_cell/scripts/load_summary_files.py" changelist="9147a5cd-d55d-4207-b0f1-bf5037d94b35" time="1375851197418" ignored="false" />
     <file path="/load_summary_files.py" changelist="9147a5cd-d55d-4207-b0f1-bf5037d94b35" time="1375469964725" ignored="false" />
     <file path="$PROJECT_DIR$/../single_cell/scripts/cluster_psi_scores.py" changelist="9147a5cd-d55d-4207-b0f1-bf5037d94b35" time="1375404905090" ignored="false" />
     <file path="$PROJECT_DIR$/../single_cell/scripts/mlpy_cluster_psi_scores.py" changelist="9147a5cd-d55d-4207-b0f1-bf5037d94b35" time="1375467813996" ignored="false" />
     <file path="/mlpy_cluster_psi_scores.py" changelist="9147a5cd-d55d-4207-b0f1-bf5037d94b35" time="1375467803900" ignored="false" />
-    <file path="/load_summary_files_tscc.py" changelist="9147a5cd-d55d-4207-b0f1-bf5037d94b35" time="1375469994013" ignored="false" />
-    <file path="$PROJECT_DIR$/../single_cell/scripts/load_summary_files_tscc.py" changelist="9147a5cd-d55d-4207-b0f1-bf5037d94b35" time="1375469999678" ignored="false" />
+    <file path="/load_summary_files_tscc.py" changelist="9147a5cd-d55d-4207-b0f1-bf5037d94b35" time="1375895383595" ignored="false" />
+    <file path="$PROJECT_DIR$/../single_cell/scripts/load_summary_files_tscc.py" changelist="9147a5cd-d55d-4207-b0f1-bf5037d94b35" time="1375896210908" ignored="false" />
     <file path="$PROJECT_DIR$/../single_cell/scripts/plots/__init__.py" changelist="9147a5cd-d55d-4207-b0f1-bf5037d94b35" time="1375573236430" ignored="false" />
     <file path="$PROJECT_DIR$/../single_cell/scripts/plots/psi.py" changelist="9147a5cd-d55d-4207-b0f1-bf5037d94b35" time="1375573831479" ignored="false" />
     <file path="/psi.py" changelist="9147a5cd-d55d-4207-b0f1-bf5037d94b35" time="1375573817952" ignored="false" />
@@ -111,6 +112,13 @@
     <file path="$USER_HOME$/Dropbox/Docs/UCSD/TA/Rosalind-Coursera/rosalind-c/rosalind_problems/problem_2cpgm/statement.md" changelist="9147a5cd-d55d-4207-b0f1-bf5037d94b35" time="1375823553845" ignored="false" />
     <file path="/statement.md" changelist="9147a5cd-d55d-4207-b0f1-bf5037d94b35" time="1375823553845" ignored="false" />
     <file path="$USER_HOME$/Dropbox/Docs/UCSD/TA/Rosalind-Coursera/rosalind-c/rosalind_problems/LaTeX Files/Bioinformatics Algorithms.run.xml" changelist="9147a5cd-d55d-4207-b0f1-bf5037d94b35" time="1375824607602" ignored="false" />
+    <file path="$PROJECT_DIR$/../single_cell/scripts/plot_psi_scatter_all_vs_all.py" changelist="9147a5cd-d55d-4207-b0f1-bf5037d94b35" time="1375896223125" ignored="false" />
+    <file path="/plot_psi_scatter_all_vs_all.py" changelist="9147a5cd-d55d-4207-b0f1-bf5037d94b35" time="1375896223125" ignored="false" />
+    <file path="$PROJECT_DIR$/../single_cell/scripts/plot_psi_scatter_all_vs_all.sh" changelist="9147a5cd-d55d-4207-b0f1-bf5037d94b35" time="1375852808519" ignored="false" />
+    <file path="/plot_psi_scatter_all_vs_all.sh" changelist="9147a5cd-d55d-4207-b0f1-bf5037d94b35" time="1375852808519" ignored="false" />
+    <file path="$PROJECT_DIR$/../single_cell/igv/batch_scripts/igv_M1_01_ci_high-ci_low_0.2_0.3.txt" changelist="9147a5cd-d55d-4207-b0f1-bf5037d94b35" time="1375852670843" ignored="false" />
+    <file path="$PROJECT_DIR$/../single_cell/igv/batch_scripts/igv_load_all_p.txt" changelist="9147a5cd-d55d-4207-b0f1-bf5037d94b35" time="1375858606608" ignored="false" />
+    <file path="/igv_load_all_p.txt" changelist="9147a5cd-d55d-4207-b0f1-bf5037d94b35" time="1375858606245" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -135,7 +143,7 @@
           <file leaf-file-name="__init__.py" pinned="false" current="true" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/prettyplotlib/__init__.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="277" column="62" selection-start="9579" selection-end="9579" vertical-scroll-proportion="0.64788735">
+                <state line="159" column="63" selection-start="5697" selection-end="5697" vertical-scroll-proportion="0.7183099">
                   <folding>
                     <element signature="e#23#47#0" expanded="true" />
                   </folding>
@@ -695,7 +703,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/prettyplotlib/__init__.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="277" column="62" selection-start="9579" selection-end="9579" vertical-scroll-proportion="0.64788735">
+        <state line="159" column="63" selection-start="5697" selection-end="5697" vertical-scroll-proportion="0.7183099">
           <folding>
             <element signature="e#23#47#0" expanded="true" />
           </folding>

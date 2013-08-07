@@ -151,13 +151,13 @@ def scatter(ax, x, y, **kwargs):
         color_cycle = ax._get_lines.color_cycle
         edgecolor = color_cycle.next()
 
-    # if 'facecolor' in kwargs:
-    #     facecolor = kwargs['facecolor']
-    #     kwargs.pop('facecolor')
-    # else:
-    #     facecolor = 'none'
+    if 'facecolor' in kwargs:
+        facecolor = kwargs['facecolor']
+        kwargs.pop('facecolor')
+    else:
+        facecolor = 'none'
 
-    ax.scatter(x, y, edgecolor=edgecolor, **kwargs)
+    ax.scatter(x, y, edgecolor=edgecolor, facecolor=facecolor, **kwargs)
     remove_chartjunk(ax, ['top', 'right'])
 
 
