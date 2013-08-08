@@ -22,7 +22,7 @@ mpl.rcParams['axes.color_cycle'] = set2
 
 # Set some commonly used colors
 almost_black = '#262626'
-light_grey = np.array([float(240)/float(255)]*3)
+light_grey = np.array([float(248)/float(255)]*3)
 
 blues = mpl.cm.Blues
 blues.set_bad('white')
@@ -56,6 +56,9 @@ mpl.rcParams['grid.color'] = 'white'
 # change the tick colors also to the almost black
 mpl.rcParams['ytick.color'] = almost_black
 mpl.rcParams['xtick.color'] = almost_black
+
+# change the text colors also to the almost black
+mpl.rcParams['text.color'] = almost_black
 
 def remove_chartjunk(ax, spines, grid=None, ticklabels=None):
     '''
