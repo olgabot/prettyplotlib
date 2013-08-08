@@ -114,8 +114,10 @@ def remove_chartjunk(ax, spines, grid=None, ticklabels=None):
 
 def hist(ax, x, **kwargs):
 # Reassign the default colors to Set2 by Colorbrewer
-    color = set2[0] if 'color' not in kwargs else kwargs['color']
-    ax.hist(x, edgecolor='white', color=color, **kwargs)
+    if 'color' not in kwargs:
+        kwargs['color'] = set2[0]
+
+    ax.hist(x, edgecolor='white', **kwargs)
     remove_chartjunk(ax, ['top', 'right'])
 
 def plot(ax, x, y, **kwargs):
