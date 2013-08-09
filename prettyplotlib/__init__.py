@@ -113,12 +113,20 @@ def remove_chartjunk(ax, spines, grid=None, ticklabels=None):
 
 
 def hist(ax, x, **kwargs):
+    """
+    Plots a histogram of the provided data. Can provide optional argument
+    "grid='x'" or "grid='y'" to draw a white grid over the histogram.
+    """
 # Reassign the default colors to Set2 by Colorbrewer
     if 'color' not in kwargs:
         kwargs['color'] = set2[0]
-
+    if 'grid' in kwargs:
+        grid = kwargs['grid']
+        kwargs.pop('grid')
+    else:
+        grid = None
     ax.hist(x, edgecolor='white', **kwargs)
-    remove_chartjunk(ax, ['top', 'right'])
+    remove_chartjunk(ax, ['top', 'right'], grid=grid)
 
 def plot(ax, x, y, **kwargs):
     if 'color' in kwargs:
