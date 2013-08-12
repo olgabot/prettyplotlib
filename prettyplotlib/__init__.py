@@ -126,7 +126,7 @@ def hist(ax, x, **kwargs):
         kwargs.pop('grid')
     else:
         grid = None
-    print 'hist kwargs', kwargs
+    # print 'hist kwargs', kwargs
     ax.hist(x, edgecolor='white', **kwargs)
     remove_chartjunk(ax, ['top', 'right'], grid=grid)
 

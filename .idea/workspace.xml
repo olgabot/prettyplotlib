@@ -3,11 +3,10 @@
   <component name="ChangeListManager">
     <list default="true" id="9147a5cd-d55d-4207-b0f1-bf5037d94b35" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/prettyplotlib/__init__.py" afterPath="$PROJECT_DIR$/prettyplotlib/__init__.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="PrettyPlots.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/__init__.py" changelist="9147a5cd-d55d-4207-b0f1-bf5037d94b35" time="1376348980356" ignored="false" />
+    <file path="/__init__.py" changelist="9147a5cd-d55d-4207-b0f1-bf5037d94b35" time="1376349423233" ignored="false" />
     <file path="$PROJECT_DIR$/../templates/python_command_line_template.py" changelist="9147a5cd-d55d-4207-b0f1-bf5037d94b35" time="1373579768258" ignored="false" />
     <file path="/python_command_line_template.py" changelist="9147a5cd-d55d-4207-b0f1-bf5037d94b35" time="1373556381015" ignored="false" />
     <file path="/Dummy.txt" changelist="9147a5cd-d55d-4207-b0f1-bf5037d94b35" time="1376343006781" ignored="false" />
@@ -123,7 +122,7 @@
     <file path="$PROJECT_DIR$/../single_cell/scripts/read_miso_summary.py" changelist="9147a5cd-d55d-4207-b0f1-bf5037d94b35" time="1375984001149" ignored="false" />
     <file path="/read_miso_summary.py" changelist="9147a5cd-d55d-4207-b0f1-bf5037d94b35" time="1375984001149" ignored="false" />
     <file path="$PROJECT_DIR$/../single_cell/workflows/__init__.py" changelist="9147a5cd-d55d-4207-b0f1-bf5037d94b35" time="1375993232938" ignored="false" />
-    <file path="$PROJECT_DIR$/../single_cell/workflows/Splicing/__init__.py" changelist="9147a5cd-d55d-4207-b0f1-bf5037d94b35" time="1376342712043" ignored="false" />
+    <file path="$PROJECT_DIR$/../single_cell/workflows/Splicing/__init__.py" changelist="9147a5cd-d55d-4207-b0f1-bf5037d94b35" time="1376349424849" ignored="false" />
     <file path="$PROJECT_DIR$/../single_cell/scripts/plot_pca.py" changelist="9147a5cd-d55d-4207-b0f1-bf5037d94b35" time="1375995378219" ignored="false" />
     <file path="/plot_pca.py" changelist="9147a5cd-d55d-4207-b0f1-bf5037d94b35" time="1375995351798" ignored="false" />
     <file path="$PROJECT_DIR$/../single_cell/scripts/patrick_plot_pca.py" changelist="9147a5cd-d55d-4207-b0f1-bf5037d94b35" time="1376049780977" ignored="false" />
@@ -152,7 +151,7 @@
           <file leaf-file-name="__init__.py" pinned="false" current="true" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/prettyplotlib/__init__.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="128" column="31" selection-start="4416" selection-end="4416" vertical-scroll-proportion="0.36956522">
+                <state line="129" column="33" selection-start="4452" selection-end="4452" vertical-scroll-proportion="0.39130434">
                   <folding>
                     <element signature="e#23#47#0" expanded="true" />
                   </folding>
@@ -686,7 +685,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/prettyplotlib/__init__.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="128" column="31" selection-start="4416" selection-end="4416" vertical-scroll-proportion="0.36956522">
+        <state line="129" column="33" selection-start="4452" selection-end="4452" vertical-scroll-proportion="0.39130434">
           <folding>
             <element signature="e#23#47#0" expanded="true" />
           </folding>
