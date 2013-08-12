@@ -115,7 +115,8 @@ def remove_chartjunk(ax, spines, grid=None, ticklabels=None):
 def hist(ax, x, **kwargs):
     """
     Plots a histogram of the provided data. Can provide optional argument
-    "grid='x'" or "grid='y'" to draw a white grid over the histogram.
+    "grid='x'" or "grid='y'" to draw a white grid over the histogram. Almost like "erasing" some of the plot,
+     but it adds more information!
     """
 # Reassign the default colors to Set2 by Colorbrewer
     if 'color' not in kwargs:
@@ -141,6 +142,7 @@ def plot(ax, x, y, **kwargs):
     ax.plot(x, y, color=color, **kwargs)
     remove_chartjunk(ax, ['top', 'right'])
 
+
 def scatter(ax, x, y, **kwargs):
     """
     This will plot a scatterplot of x and y, iterating over the ColorBrewer
@@ -164,20 +166,32 @@ def scatter(ax, x, y, **kwargs):
         color_cycle = ax._get_lines.color_cycle
         edgecolor = color_cycle.next()
 
-    if 'facecolor' in kwargs:
-        facecolor = kwargs['facecolor']
-        kwargs.pop('facecolor')
+    if 'facecolor' not in kwargs:
+        kwargs['facecolor'] = 'none'
+
+    ax.scatter(x, y, edgecolor=edgecolor, **kwargs)
+    remove_chartjunk(ax, ['top', 'right'])
+
+
+def bar(ax, left, height, **kwargs):
+    """
+    Creates a bar plot, with white outlines and a fill color that defaults to
+     the first teal-ish green in ColorBrewer's Set2. Optionally accepts
+     grid='y' or grid='x' to draw a white grid over the bars,
+     to show the scale. Almost like "erasing" some of the plot,
+     but it adds more information!
+    """
+    if 'color' not in kwargs:
+        kwargs['color'] = set2[0]
+    if 'edgecolor' not in kwargs:
+        kwargs['edgecolor'] = 'white'
+    if 'grid' in kwargs:
+        grid = kwargs['grid']
+        kwargs.pop('grid')
     else:
-        facecolor = 'none'
-
-    ax.scatter(x, y, edgecolor=edgecolor, facecolor=facecolor, **kwargs)
-    remove_chartjunk(ax, ['top', 'right'])
-
-
-def bar(ax, left, height, xticklabels, **kwargs):
-    color = set2[0] if 'color' not in kwargs else kwargs['color']
-    ax.bar(left, height, edgecolor='white', color=color, **kwargs)
-    remove_chartjunk(ax, ['top', 'right'])
+        grid = None
+    ax.bar(left, height, **kwargs)
+    remove_chartjunk(ax, ['top', 'right'], grid=grid)
 
 def boxplot(ax, x, xticklabels, **kwargs):
     bp = ax.boxplot(x, widths=0.15)
