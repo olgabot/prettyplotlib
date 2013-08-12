@@ -7,10 +7,10 @@
     </list>
     <ignored path="PrettyPlots.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/__init__.py" changelist="9147a5cd-d55d-4207-b0f1-bf5037d94b35" time="1376342710509" ignored="false" />
+    <file path="/__init__.py" changelist="9147a5cd-d55d-4207-b0f1-bf5037d94b35" time="1376348980356" ignored="false" />
     <file path="$PROJECT_DIR$/../templates/python_command_line_template.py" changelist="9147a5cd-d55d-4207-b0f1-bf5037d94b35" time="1373579768258" ignored="false" />
     <file path="/python_command_line_template.py" changelist="9147a5cd-d55d-4207-b0f1-bf5037d94b35" time="1373556381015" ignored="false" />
-    <file path="/Dummy.txt" changelist="9147a5cd-d55d-4207-b0f1-bf5037d94b35" time="1376065162195" ignored="false" />
+    <file path="/Dummy.txt" changelist="9147a5cd-d55d-4207-b0f1-bf5037d94b35" time="1376343006781" ignored="false" />
     <file path="$USER_HOME$/workspace/gscripts/gscripts/submit_miso_index_gtf.py" changelist="9147a5cd-d55d-4207-b0f1-bf5037d94b35" time="1373555365667" ignored="false" />
     <file path="/submit_miso_index_gtf.py" changelist="9147a5cd-d55d-4207-b0f1-bf5037d94b35" time="1373556371405" ignored="false" />
     <file path="$PROJECT_DIR$/../cse202/Homework/hw2/q5_integer_multiplication.py" changelist="9147a5cd-d55d-4207-b0f1-bf5037d94b35" time="1373555030215" ignored="false" />
@@ -152,7 +152,7 @@
           <file leaf-file-name="__init__.py" pinned="false" current="true" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/prettyplotlib/__init__.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="143" column="0" selection-start="4920" selection-end="4920" vertical-scroll-proportion="0.76086956">
+                <state line="128" column="31" selection-start="4416" selection-end="4416" vertical-scroll-proportion="0.36956522">
                   <folding>
                     <element signature="e#23#47#0" expanded="true" />
                   </folding>
@@ -162,13 +162,13 @@
           </file>
           <file leaf-file-name="LICENSE.txt" pinned="false" current="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/LICENSE.txt">
-              <provider editor-type-id="com.intellij.persistence.database.editor.CsvTableFileEditorProvider">
-                <state />
-              </provider>
               <provider selected="true" editor-type-id="text-editor">
                 <state line="14" column="30" selection-start="775" selection-end="775" vertical-scroll-proportion="0.0">
                   <folding />
                 </state>
+              </provider>
+              <provider editor-type-id="com.intellij.persistence.database.editor.CsvTableFileEditorProvider">
+                <state />
               </provider>
             </entry>
           </file>
@@ -292,6 +292,7 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -340,18 +341,17 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="options.splitter.main.proportions" value="0.3" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="recentsLimit" value="5" />
     <property name="options.lastSelected" value="reference.settingsdialog.IDE.editor.colors.Font" />
+    <property name="recentsLimit" value="5" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../single_cell" />
     <property name="FullScreen" value="false" />
-    <property name="options.splitter.details.proportions" value="0.2" />
     <property name="options.searchVisible" value="true" />
+    <property name="options.splitter.details.proportions" value="0.2" />
   </component>
   <component name="PyConsoleOptionsProvider">
     <option name="myPythonConsoleState">
@@ -511,7 +511,7 @@
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.15710187" sideWeight="0.6710875" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.15925394" sideWeight="0.6710875" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="true" content_ui="tabs" />
@@ -686,7 +686,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/prettyplotlib/__init__.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="143" column="0" selection-start="4920" selection-end="4920" vertical-scroll-proportion="0.76086956">
+        <state line="128" column="31" selection-start="4416" selection-end="4416" vertical-scroll-proportion="0.36956522">
           <folding>
             <element signature="e#23#47#0" expanded="true" />
           </folding>
