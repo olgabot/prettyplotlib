@@ -1,0 +1,10 @@
+#!/bin/bash
+
+DIR=$(dirname $0)
+
+echo "Running all tests in $DIR/test_*.py"
+
+for test in $(ls $DIR/test_*.py) ; do
+    echo "--- testing $test ---"
+    python $test
+done

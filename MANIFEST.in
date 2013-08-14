@@ -1,2 +1,2 @@
+include *.md
 include *.txt
-recursive-include docs *.txt

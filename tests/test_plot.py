@@ -24,7 +24,6 @@ def test_plot():
         # For now, you need to specify both x and y :(
         # Still figuring out how to specify just one
         ppl.plot(ax, x, y, label=str(i))
-    ppl.legend(ax)
     # fig.savefig('%s/baseline_images/test_plot/plot.png' %
     #             os.path.dirname(__file__))
 

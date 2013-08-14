@@ -9,7 +9,9 @@ import os
 @image_comparison(baseline_images=['remove_chartjunk'], extensions=['png'])
 def test_remove_chartjunk():
     fig, ax = plt.subplots(1)
-    ax.hist(np.random.randn(1000))
+    np.random.seed(14)
+    ax.bar(np.arange(10), np.abs(np.random.randn(10)), color=ppl.set2[0],
+           edgecolor='white')
     ppl.remove_chartjunk(ax, ['top', 'right'], grid='y', ticklabels='x')
     # fig.savefig('%s/baseline_images/test_remove_chartjunk/remove_chartjunk.png' %
     #             os.path.dirname(__file__))

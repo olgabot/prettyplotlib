@@ -113,70 +113,6 @@ def remove_chartjunk(ax, spines, grid=None, ticklabels=None):
             elif 'y' in ticklabels:
                 ax.set_yticklabels([])
 
-
-def hist(ax, x, **kwargs):
-    """
-    Plots a histogram of the provided data. Can provide optional argument
-    "grid='x'" or "grid='y'" to draw a white grid over the histogram. Almost like "erasing" some of the plot,
-     but it adds more information!
-    """
-    # Reassign the default colors to Set2 by Colorbrewer
-    if 'color' not in kwargs:
-        kwargs['color'] = set2[0]
-    if 'grid' in kwargs:
-        grid = kwargs['grid']
-        kwargs.pop('grid')
-    else:
-        grid = None
-        # print 'hist kwargs', kwargs
-    ax.hist(x, edgecolor='white', **kwargs)
-    remove_chartjunk(ax, ['top', 'right'], grid=grid)
-
-
-def plot(ax, x, y, **kwargs):
-    if 'color' in kwargs:
-        color = kwargs['color']
-        # Remove the other color argument so matplotlib doesn't complain
-        kwargs.pop('color')
-    else:
-        # if no color is specified, cycle over the ones in this axis
-        color_cycle = ax._get_lines.color_cycle
-        color = color_cycle.next()
-
-    ax.plot(x, y, color=color, **kwargs)
-    remove_chartjunk(ax, ['top', 'right'])
-
-
-def scatter(ax, x, y, **kwargs):
-    """
-    This will plot a scatterplot of x and y, iterating over the ColorBrewer
-    "Set2" color cycle unless a color is specified. The symbols produced are
-    empty circles, with the outline in the color specified by either 'color'
-    or 'edgecolor'. If you want to fill the circle, specify 'facecolor'.
-    """
-    # Force 'color' to indicate the edge color, so the middle of the
-    # scatter patches are empty. Can speficy
-    if 'edgecolor' in kwargs:
-        edgecolor = kwargs['edgecolor']
-        # Remove the other color argument so matplotlib doesn't complain
-        kwargs.pop('edgecolor')
-    elif 'color' in kwargs:
-        # Assume that color means the edge color. You can assign the
-        edgecolor = kwargs['color']
-        # Remove the other color argument so matplotlib doesn't complain
-        kwargs.pop('color')
-    else:
-        # if no color is specified,
-        color_cycle = ax._get_lines.color_cycle
-        edgecolor = color_cycle.next()
-
-    if 'facecolor' not in kwargs:
-        kwargs['facecolor'] = 'none'
-
-    ax.scatter(x, y, edgecolor=edgecolor, **kwargs)
-    remove_chartjunk(ax, ['top', 'right'])
-
-
 def bar(ax, left, height, **kwargs):
     """
     Creates a bar plot, with white outlines and a fill color that defaults to
@@ -216,6 +152,69 @@ def boxplot(ax, x, **kwargs):
     plt.setp(bp['fliers'], color=set1[1])
     plt.setp(bp['caps'], color='none')
     ax.spines['left']._linewidth = 0.5
+
+
+def hist(ax, x, **kwargs):
+    """
+    Plots a histogram of the provided data. Can provide optional argument
+    "grid='x'" or "grid='y'" to draw a white grid over the histogram. Almost like "erasing" some of the plot,
+     but it adds more information!
+    """
+    # Reassign the default colors to Set2 by Colorbrewer
+    if 'color' not in kwargs:
+        kwargs['color'] = set2[0]
+    if 'grid' in kwargs:
+        grid = kwargs['grid']
+        kwargs.pop('grid')
+    else:
+        grid = None
+        # print 'hist kwargs', kwargs
+    ax.hist(x, edgecolor='white', **kwargs)
+    remove_chartjunk(ax, ['top', 'right'], grid=grid)
+
+
+def plot(ax, x, y, **kwargs):
+    if 'color' in kwargs:
+        color = kwargs['color']
+        # Remove the other color argument so matplotlib doesn't complain
+        kwargs.pop('color')
+    else:
+        # if no color is specified, cycle over the ones in this axis
+        color_cycle = ax._get_lines.color_cycle
+        color = color_cycle.next()
+    if 'linewidth' not in kwargs:
+        kwargs['linewidth'] = 0.75
+
+    ax.plot(x, y, color=color, **kwargs)
+    remove_chartjunk(ax, ['top', 'right'])
+
+
+def scatter(ax, x, y, **kwargs):
+    """
+    This will plot a scatterplot of x and y, iterating over the ColorBrewer
+    "Set2" color cycle unless a color is specified. The symbols produced are
+    empty circles, with the outline in the color specified by either 'color'
+    or 'edgecolor'. If you want to fill the circle, specify 'facecolor'.
+    """
+    # Force 'color' to indicate the edge color, so the middle of the
+    # scatter patches are empty. Can speficy
+    if 'edgecolor' not in kwargs:
+        kwargs['edgecolor'] = almost_black
+    if 'color' not in kwargs:
+        # Assume that color means the edge color. You can assign the
+        color_cycle = ax._get_lines.color_cycle
+        kwargs['color'] = color_cycle.next()
+    if 'alpha' not in kwargs:
+        kwargs['alpha'] = 0.5
+    if 'linewidth' not in kwargs:
+        kwargs['linewidth'] = 0.15
+
+    ax.scatter(x, y, **kwargs)
+    remove_chartjunk(ax, ['top', 'right'])
+
+
+
+
 
 
 def switch_axis_limits(ax, which_axis=('x', 'y')):
