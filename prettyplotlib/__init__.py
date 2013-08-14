@@ -22,16 +22,14 @@ mpl.rcParams['axes.color_cycle'] = set2
 
 # Set some commonly used colors
 almost_black = '#262626'
-light_grey = np.array([float(248)/float(255)]*3)
+light_grey = np.array([float(248) / float(255)] * 3)
 
 blues = mpl.cm.Blues
 blues.set_bad('white')
 blues.set_under('white')
 
-#blues_r = mpl.cm.Blues_r
-#blues_r.set_bad('white')
-#blues_r.set_under('white')
-
+# Need to 'reverse' red to blue so that blue=cold=small numbers,
+# and red=hot=large numbers with '_r' suffix
 blue_red = mpl.cm.RdBu_r
 
 # Default "patches" like scatterplots
@@ -47,9 +45,6 @@ mpl.rcParams['axes.edgecolor'] = almost_black
 mpl.rcParams['axes.labelcolor'] = almost_black
 mpl.rcParams['axes.linewidth'] = 0.5
 
-# Only show one point (instead of three) as an example for the legend.
-# mpl.rcParams['legend.scatterpoints'] = 1
-
 # Make the default grid be white so it "removes" lines rather than adds
 mpl.rcParams['grid.color'] = 'white'
 
@@ -59,6 +54,7 @@ mpl.rcParams['xtick.color'] = almost_black
 
 # change the text colors also to the almost black
 mpl.rcParams['text.color'] = almost_black
+
 
 def remove_chartjunk(ax, spines, grid=None, ticklabels=None):
     '''
@@ -80,8 +76,8 @@ def remove_chartjunk(ax, spines, grid=None, ticklabels=None):
         if spine not in spines:
             ax.spines[spine].set_linewidth(0.5)
             # ax.spines[spine].set_color(almost_black)
-#            ax.spines[spine].set_tick_params(color=almost_black)
-    # Check that the axes are not log-scale. If they are, leave the ticks
+        #            ax.spines[spine].set_tick_params(color=almost_black)
+        # Check that the axes are not log-scale. If they are, leave the ticks
     # because otherwise people assume a linear scale.
     x_pos = set(['top', 'bottom'])
     y_pos = set(['left', 'right'])
@@ -95,21 +91,27 @@ def remove_chartjunk(ax, spines, grid=None, ticklabels=None):
             # if this spine is not in the list of spines to remove
             for p in pos.difference(spines):
                 axis.set_ticks_position(p)
-
-#                axis.set_tick_params(which='both', p)
+            #                axis.set_tick_params(which='both', p)
         else:
             axis.set_ticks_position('none')
 
     if grid is not None:
         assert grid in ('x', 'y')
         ax.grid(axis=grid, color='white', linestyle='-', linewidth=0.5)
-        
+
     if ticklabels is not None:
-        assert set(ticklabels) | set(('x', 'y')) > 0
-        if 'x' in ticklabels:
-            ax.set_xticklabels([])
-        elif 'y' in ticklabels:
-            ax.set_yticklabels([])
+        if type(ticklabels) is str:
+            assert ticklabels in set(('x', 'y'))
+            if ticklabels == 'x':
+                ax.set_xticklabels([])
+            if ticklabels == 'y':
+                ax.set_yticklabels([])
+        else:
+            assert set(ticklabels) | set(('x', 'y')) > 0
+            if 'x' in ticklabels:
+                ax.set_xticklabels([])
+            elif 'y' in ticklabels:
+                ax.set_yticklabels([])
 
 
 def hist(ax, x, **kwargs):
@@ -118,7 +120,7 @@ def hist(ax, x, **kwargs):
     "grid='x'" or "grid='y'" to draw a white grid over the histogram. Almost like "erasing" some of the plot,
      but it adds more information!
     """
-# Reassign the default colors to Set2 by Colorbrewer
+    # Reassign the default colors to Set2 by Colorbrewer
     if 'color' not in kwargs:
         kwargs['color'] = set2[0]
     if 'grid' in kwargs:
@@ -126,9 +128,10 @@ def hist(ax, x, **kwargs):
         kwargs.pop('grid')
     else:
         grid = None
-    # print 'hist kwargs', kwargs
+        # print 'hist kwargs', kwargs
     ax.hist(x, edgecolor='white', **kwargs)
     remove_chartjunk(ax, ['top', 'right'], grid=grid)
+
 
 def plot(ax, x, y, **kwargs):
     if 'color' in kwargs:
@@ -194,9 +197,16 @@ def bar(ax, left, height, **kwargs):
     ax.bar(left, height, **kwargs)
     remove_chartjunk(ax, ['top', 'right'], grid=grid)
 
-def boxplot(ax, x, xticklabels, **kwargs):
-    bp = ax.boxplot(x, widths=0.15)
-    ax.xaxis.set_ticklabels(xticklabels)
+
+def boxplot(ax, x, **kwargs):
+    if 'xticklabels' in kwargs:
+        xticklabels = kwargs['xticklabels']
+        kwargs.pop('xticklabels')
+    else:
+        xticklabels = None
+    bp = ax.boxplot(x, widths=0.15, **kwargs)
+    if xticklabels:
+        ax.xaxis.set_ticklabels(xticklabels)
 
     remove_chartjunk(ax, ['top', 'right', 'bottom'])
 
@@ -206,6 +216,7 @@ def boxplot(ax, x, xticklabels, **kwargs):
     plt.setp(bp['fliers'], color=set1[1])
     plt.setp(bp['caps'], color='none')
     ax.spines['left']._linewidth = 0.5
+
 
 def switch_axis_limits(ax, which_axis=('x', 'y')):
     '''
@@ -218,16 +229,18 @@ def switch_axis_limits(ax, which_axis=('x', 'y')):
     else:
         ax.set_ylim(ax_limits[3], ax_limits[2])
 
+
 def upside_down_hist(ax, x, **kwargs):
     hist(ax, x, **kwargs)
-    
+
     # Turn the histogram upside-down by switching the y-axis limits
     switch_axis_limits(ax, 'y')
     remove_chartjunk(ax, ['bottom', 'right'], grid='y', ticklabels='x')
 
+
 def sideways_hist(ax, y, **kwargs):
     hist(ax, y, orientation='horizontal', **kwargs)
-    
+
     # Orient the histogram with `0` counts on the right and the max
     # counts on the left by switching the `x` axis limits
     switch_axis_limits(ax, 'x')
@@ -237,70 +250,76 @@ def sideways_hist(ax, y, **kwargs):
 # has both negative and positive values. If so, then use blue (negative)-red
 # (positive) heatmap
 
-def pcolor(fig, ax, x, **kwargs):
-    '''
-    Like matplotlib's pcolor, but provides a default of a
-    lightblue-to-darkblue colormap instead of a rainbow colormap. If the data
-     is detected to be both positive and negative, then will default to a
-     red-blue colormap.
-    '''
-
-    # need to check the
-    vmin = x.min()
-    vmax = x.max()
-
-    # If we have both negative and positive values, use a divergent colormap
-    if vmax > 0 and vmin < 0:
-        cmap = blue_red
-    else:
-        cmap = blues
-    p = ax.pcolor(x, cmap=cmap, vmin=vmin, vmax=vmax, **kwargs)
-    ax.set_ylim(0, x.shape[0])
-
-    remove_chartjunk(ax, ['top', 'right', 'left', 'bottom'])
-
-    # I don't think this will work because kwargs is also supplied to ax.pcolor
-    if xticklabels in kwargs:
-        xticks = np.arange(0.5, x.shape[1] + 0.5)
-        ax.set_xticks(xticks)
-        ax.set_xticklabels(xticklabels, rotation='vertical')
-    if yticklabels in kwargs:
-        yticks = np.arange(0.5, x.shape[0] + 0.5)
-        ax.set_yticks(yticks)
-        ax.set_yticklabels(yticklabels, rotation='vertical')
-
-    # Show the scale of the colorbar
-    fig.colorbar(p)
-
-
 def pcolormesh(fig, ax, x, **kwargs):
     """
     Use for large datasets
+
+    Non-traditional `pcolormesh` kwargs are:
+    - xticklabels, which will put x tick labels exactly in the center of the
+    heatmap block
+    - yticklables, which will put y tick labels exactly aligned in the center
+     of the heatmap block
+     - xticklabels_rotation, which can be either 'horizontal' or 'vertical'
+     depending on how you want the xticklabels rotated. The default is
+     'horiztonal' but if you have xticklabels that are longer, you may want
+     to do 'vertical' so they don't overlap
+     - yticklabels_rotation, which can also be either 'horizontal' or
+     'vertical'. The default is 'horizontal' and in most cases,
+     that's what you'll want to stick with. But the option is there if you
+     want.
     """
-    vmin = x.min()
-    vmax = x.max()
+    # Deal with arguments in kwargs that should be there, or need to be taken
+    #  out
+    if 'vmax' not in kwargs:
+        kwargs['vmax'] = x.max()
+    if 'vmin' not in kwargs:
+        kwargs['vmin'] = x.min()
 
     # If we have both negative and positive values, use a divergent colormap
-    if vmax > 0 and vmin < 0:
-        cmap = blue_red
+    if 'cmap' not in kwargs:
+        if kwargs['vmax'] > 0 and kwargs['vmin'] < 0:
+            kwargs['cmap'] = blue_red
+        else:
+            kwargs['cmap'] = blues
+
+    if 'xticklabels' in kwargs:
+        xticklabels = kwargs['xticklabels']
+        kwargs.pop('xticklabels')
     else:
-        cmap = blues
-    p = ax.pcolormesh(x, cmap=cmap, vmin=vmin, vmax=vmax)
+        xticklabels = None
+    if 'yticklabels' in kwargs:
+        yticklabels = kwargs['yticklabels']
+        kwargs.pop('yticklabels')
+    else:
+        yticklabels = None
+
+    if 'xticklabels_rotation' in kwargs:
+        xticklabels_rotation = kwargs['xticklabels_rotation']
+        kwargs.pop('xticklabels_rotation')
+    else:
+        xticklabels_rotation = 'horizontal'
+    if 'yticklabels_rotation' in kwargs:
+        yticklabels_rotation = kwargs['yticklabels_rotation']
+        kwargs.pop('yticklabels_rotation')
+    else:
+        yticklabels_rotation = 'horizontal'
+    p = ax.pcolormesh(x, **kwargs)
     ax.set_ylim(0, x.shape[0])
 
+    # Get rid of ALL axes
     remove_chartjunk(ax, ['top', 'right', 'left', 'bottom'])
 
-    if xticklabels in kwargs:
+    if xticklabels:
         xticks = np.arange(0.5, x.shape[1] + 0.5)
         ax.set_xticks(xticks)
-        ax.set_xticklabels(xticklabels, rotation='vertical')
-    if yticklabels in kwargs:
+        ax.set_xticklabels(xticklabels, rotation=xticklabels_rotation)
+    if yticklabels:
         yticks = np.arange(0.5, x.shape[0] + 0.5)
         ax.set_yticks(yticks)
-        ax.set_yticklabels(yticklabels, rotation='vertical')
-
-    # Show the scale of the colorbar
+        ax.set_yticklabels(yticklabels, rotation=yticklabels_rotation)
+        # Show the scale of the colorbar
     fig.colorbar(p)
+
 
 def legend(ax, facecolor=light_grey, **kwargs):
     legend = ax.legend(frameon=True, scatterpoints=1, **kwargs)
@@ -308,8 +327,14 @@ def legend(ax, facecolor=light_grey, **kwargs):
     rect.set_facecolor(facecolor)
     rect.set_linewidth(0.0)
 
-# import matplotlib.pyplot as plt
-# import prettyplotlib as ppl
-#
-# fig, ax = plt.subplots(1)
-# ppl.scatter(ax, x, y)
+    # change the label colors in the legend to almost black
+    # Change the legend label colors to almost black, too
+    texts = legend.texts
+    for t in texts:
+        t.set_color(almost_black)
+
+        # import matplotlib.pyplot as plt
+        # import prettyplotlib as ppl
+        #
+        # fig, ax = plt.subplots(1)
+        # ppl.scatter(ax, x, y)

@@ -2,11 +2,39 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9147a5cd-d55d-4207-b0f1-bf5037d94b35" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/test_bar.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/test_pcolormesh.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/test_plot.py" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/README.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/test_boxplot.ipynb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/tests/baseline_images/test_boxplot/boxplot.pdf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/tests/baseline_images/test_boxplot/boxplot.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/tests/result_images/test_boxplot/boxplot-expected.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/tests/result_images/test_boxplot/boxplot.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/tests/result_images/test_scatter/scatter.png" afterPath="" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/tests/test_prettyfiy.py" afterPath="$PROJECT_DIR$/tests/test_remove_chartjunk.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/baseline_images/test_boxplot/boxplot.png" afterPath="$PROJECT_DIR$/tests/baseline_images/test_boxplot/boxplot.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/examples/plot_matplotlib_default.pdf" afterPath="$PROJECT_DIR$/examples/plot_matplotlib_default.pdf" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/examples/plot_matplotlib_default.png" afterPath="$PROJECT_DIR$/examples/plot_matplotlib_default.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/examples/plot_prettyplotlib_default.pdf" afterPath="$PROJECT_DIR$/examples/plot_prettyplotlib_default.pdf" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/examples/plot_prettyplotlib_default.png" afterPath="$PROJECT_DIR$/examples/plot_prettyplotlib_default.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/examples/scatter_matplotlib_improved.png" afterPath="$PROJECT_DIR$/examples/scatter_matplotlib_improved.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/examples/scatter_prettyplotlib_default.png" afterPath="$PROJECT_DIR$/examples/scatter_prettyplotlib_default.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/lib/prettyplotlib/__init__.py" afterPath="$PROJECT_DIR$/build/lib/prettyplotlib/__init__.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/prettyplotlib/__init__.py" afterPath="$PROJECT_DIR$/prettyplotlib/__init__.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/examples/.ipynb_checkpoints/plot-checkpoint.ipynb" afterPath="$PROJECT_DIR$/examples/.ipynb_checkpoints/plot-checkpoint.ipynb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/examples/plot.ipynb" afterPath="$PROJECT_DIR$/examples/plot.ipynb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/examples/.ipynb_checkpoints/scatter-checkpoint.ipynb" afterPath="$PROJECT_DIR$/examples/.ipynb_checkpoints/scatter-checkpoint.ipynb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/examples/scatter.ipynb" afterPath="$PROJECT_DIR$/examples/scatter.ipynb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/setup.py" afterPath="$PROJECT_DIR$/setup.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/test_boxplot.py" afterPath="$PROJECT_DIR$/tests/test_boxplot.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/test_scatter.py" afterPath="$PROJECT_DIR$/tests/test_scatter.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="PrettyPlots.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/__init__.py" changelist="9147a5cd-d55d-4207-b0f1-bf5037d94b35" time="1376349423233" ignored="false" />
+    <file path="/__init__.py" changelist="9147a5cd-d55d-4207-b0f1-bf5037d94b35" time="1376491816563" ignored="false" />
     <file path="$PROJECT_DIR$/../templates/python_command_line_template.py" changelist="9147a5cd-d55d-4207-b0f1-bf5037d94b35" time="1373579768258" ignored="false" />
     <file path="/python_command_line_template.py" changelist="9147a5cd-d55d-4207-b0f1-bf5037d94b35" time="1373556381015" ignored="false" />
     <file path="/Dummy.txt" changelist="9147a5cd-d55d-4207-b0f1-bf5037d94b35" time="1376343006781" ignored="false" />
@@ -14,7 +42,7 @@
     <file path="/submit_miso_index_gtf.py" changelist="9147a5cd-d55d-4207-b0f1-bf5037d94b35" time="1373556371405" ignored="false" />
     <file path="$PROJECT_DIR$/../cse202/Homework/hw2/q5_integer_multiplication.py" changelist="9147a5cd-d55d-4207-b0f1-bf5037d94b35" time="1373555030215" ignored="false" />
     <file path="$USER_HOME$/workspace/gscripts/setup.py" changelist="9147a5cd-d55d-4207-b0f1-bf5037d94b35" time="1373580782663" ignored="false" />
-    <file path="/setup.py" changelist="9147a5cd-d55d-4207-b0f1-bf5037d94b35" time="1374097015003" ignored="false" />
+    <file path="/setup.py" changelist="9147a5cd-d55d-4207-b0f1-bf5037d94b35" time="1376489475061" ignored="false" />
     <file path="$USER_HOME$/workspace/gscripts/gscripts/rnaseq/submit_miso_index_gtf.py" changelist="9147a5cd-d55d-4207-b0f1-bf5037d94b35" time="1373556371828" ignored="false" />
     <file path="$USER_HOME$/workspace/gscripts/gscripts/rnaseq/submit_miso_index_gff.py" changelist="9147a5cd-d55d-4207-b0f1-bf5037d94b35" time="1373560048386" ignored="false" />
     <file path="/submit_miso_index_gff.py" changelist="9147a5cd-d55d-4207-b0f1-bf5037d94b35" time="1373560047999" ignored="false" />
@@ -49,10 +77,10 @@
     <file path="$PROJECT_DIR$/../gscripts/gscripts/mapping/map_paired_with_STAR.py" changelist="9147a5cd-d55d-4207-b0f1-bf5037d94b35" time="1374086537673" ignored="false" />
     <file path="$USER_HOME$/Dropbox/Docs/UCSD/TA/Rosalind-Coursera/rosalind-c/rosalind_problems/common/proteomics.py" changelist="9147a5cd-d55d-4207-b0f1-bf5037d94b35" time="1375304440217" ignored="false" />
     <file path="/proteomics.py" changelist="9147a5cd-d55d-4207-b0f1-bf5037d94b35" time="1375304411653" ignored="false" />
-    <file path="/test_scatter.py" changelist="9147a5cd-d55d-4207-b0f1-bf5037d94b35" time="1374111054146" ignored="false" />
-    <file path="/test_boxplot.py" changelist="9147a5cd-d55d-4207-b0f1-bf5037d94b35" time="1374110486243" ignored="false" />
+    <file path="/test_scatter.py" changelist="9147a5cd-d55d-4207-b0f1-bf5037d94b35" time="1376490276383" ignored="false" />
+    <file path="/test_boxplot.py" changelist="9147a5cd-d55d-4207-b0f1-bf5037d94b35" time="1376490230311" ignored="false" />
     <file path="/a.dummy" changelist="9147a5cd-d55d-4207-b0f1-bf5037d94b35" time="1374110447075" ignored="false" />
-    <file path="/README.md" changelist="9147a5cd-d55d-4207-b0f1-bf5037d94b35" time="1374158723863" ignored="false" />
+    <file path="/README.md" changelist="9147a5cd-d55d-4207-b0f1-bf5037d94b35" time="1376489255846" ignored="false" />
     <file path="$PROJECT_DIR$/../single_cell/igv_load_all_samples.txt" changelist="9147a5cd-d55d-4207-b0f1-bf5037d94b35" time="1374804393579" ignored="false" />
     <file path="/igv_load_all_samples.txt" changelist="9147a5cd-d55d-4207-b0f1-bf5037d94b35" time="1374804205661" ignored="false" />
     <file path="$USER_HOME$/Dropbox/Docs/UCSD/TA/Rosalind-Coursera/rosalind-c/rosalind_problems/Chapter 2-Sequencing Antibiotics/figures/Figure 5 - Number of peptides with a given mass.py" changelist="9147a5cd-d55d-4207-b0f1-bf5037d94b35" time="1374623150996" ignored="false" />
@@ -67,9 +95,9 @@
     <file path="$PROJECT_DIR$/../gscripts/gscripts/miso/compute_insert_len.py" changelist="9147a5cd-d55d-4207-b0f1-bf5037d94b35" time="1374889762233" ignored="false" />
     <file path="/compute_insert_len.py" changelist="9147a5cd-d55d-4207-b0f1-bf5037d94b35" time="1374889358942" ignored="false" />
     <file path="$PROJECT_DIR$/../gscripts/gscripts/miso/MisoPipeline/__init__.py" changelist="9147a5cd-d55d-4207-b0f1-bf5037d94b35" time="1374953944728" ignored="false" />
-    <file path="$PROJECT_DIR$/../gscripts/gscripts/miso/MisoPipeline/_MisoPipeline.py" changelist="9147a5cd-d55d-4207-b0f1-bf5037d94b35" time="1376332381785" ignored="false" />
+    <file path="$PROJECT_DIR$/../gscripts/gscripts/miso/MisoPipeline/_MisoPipeline.py" changelist="9147a5cd-d55d-4207-b0f1-bf5037d94b35" time="1376360889052" ignored="false" />
     <file path="$PROJECT_DIR$/../gscripts/gscripts/general/_read_sample_info_file.py" changelist="9147a5cd-d55d-4207-b0f1-bf5037d94b35" time="1375373989411" ignored="false" />
-    <file path="/_MisoPipeline.py" changelist="9147a5cd-d55d-4207-b0f1-bf5037d94b35" time="1376068917945" ignored="false" />
+    <file path="/_MisoPipeline.py" changelist="9147a5cd-d55d-4207-b0f1-bf5037d94b35" time="1376360882598" ignored="false" />
     <file path="$PROJECT_DIR$/../gscripts/gscripts/miso/MisoPipeline/tests/__init__.py" changelist="9147a5cd-d55d-4207-b0f1-bf5037d94b35" time="1374956051178" ignored="false" />
     <file path="$PROJECT_DIR$/../gscripts/gscripts/miso/MisoPipeline/tests/test_insert_len.py" changelist="9147a5cd-d55d-4207-b0f1-bf5037d94b35" time="1374956075947" ignored="false" />
     <file path="$PROJECT_DIR$/../gscripts/gscripts/miso/MisoPipeline/tests/test_psi.py" changelist="9147a5cd-d55d-4207-b0f1-bf5037d94b35" time="1374956089779" ignored="false" />
@@ -122,11 +150,15 @@
     <file path="$PROJECT_DIR$/../single_cell/scripts/read_miso_summary.py" changelist="9147a5cd-d55d-4207-b0f1-bf5037d94b35" time="1375984001149" ignored="false" />
     <file path="/read_miso_summary.py" changelist="9147a5cd-d55d-4207-b0f1-bf5037d94b35" time="1375984001149" ignored="false" />
     <file path="$PROJECT_DIR$/../single_cell/workflows/__init__.py" changelist="9147a5cd-d55d-4207-b0f1-bf5037d94b35" time="1375993232938" ignored="false" />
-    <file path="$PROJECT_DIR$/../single_cell/workflows/Splicing/__init__.py" changelist="9147a5cd-d55d-4207-b0f1-bf5037d94b35" time="1376349424849" ignored="false" />
+    <file path="$PROJECT_DIR$/../single_cell/workflows/Splicing/__init__.py" changelist="9147a5cd-d55d-4207-b0f1-bf5037d94b35" time="1376491993848" ignored="false" />
     <file path="$PROJECT_DIR$/../single_cell/scripts/plot_pca.py" changelist="9147a5cd-d55d-4207-b0f1-bf5037d94b35" time="1375995378219" ignored="false" />
     <file path="/plot_pca.py" changelist="9147a5cd-d55d-4207-b0f1-bf5037d94b35" time="1375995351798" ignored="false" />
     <file path="$PROJECT_DIR$/../single_cell/scripts/patrick_plot_pca.py" changelist="9147a5cd-d55d-4207-b0f1-bf5037d94b35" time="1376049780977" ignored="false" />
     <file path="/patrick_plot_pca.py" changelist="9147a5cd-d55d-4207-b0f1-bf5037d94b35" time="1375995494998" ignored="false" />
+    <file path="/test_plot.py" changelist="9147a5cd-d55d-4207-b0f1-bf5037d94b35" time="1376490699110" ignored="false" />
+    <file path="/test_bar.py" changelist="9147a5cd-d55d-4207-b0f1-bf5037d94b35" time="1376490768922" ignored="false" />
+    <file path="/test_remove_chartjunk.py" changelist="9147a5cd-d55d-4207-b0f1-bf5037d94b35" time="1376490365667" ignored="false" />
+    <file path="/test_pcolormesh.py" changelist="9147a5cd-d55d-4207-b0f1-bf5037d94b35" time="1376491428900" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -148,21 +180,10 @@
     <splitter split-orientation="horizontal" split-proportion="0.5">
       <split-first>
         <leaf>
-          <file leaf-file-name="__init__.py" pinned="false" current="true" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/prettyplotlib/__init__.py">
-              <provider selected="true" editor-type-id="text-editor">
-                <state line="129" column="33" selection-start="4452" selection-end="4452" vertical-scroll-proportion="0.39130434">
-                  <folding>
-                    <element signature="e#23#47#0" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
           <file leaf-file-name="LICENSE.txt" pinned="false" current="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/LICENSE.txt">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="14" column="30" selection-start="775" selection-end="775" vertical-scroll-proportion="0.0">
+                <state line="14" column="30" selection-start="775" selection-end="775" vertical-scroll-proportion="-7.7777777">
                   <folding />
                 </state>
               </provider>
@@ -171,19 +192,65 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="CHANGES.txt" pinned="false" current="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/CHANGES.txt">
+          <file leaf-file-name="test_boxplot.py" pinned="false" current="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/tests/test_boxplot.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-                  <folding />
+                <state line="19" column="22" selection-start="494" selection-end="494" vertical-scroll-proportion="0.0">
+                  <folding>
+                    <element signature="e#21#79#0" expanded="true" />
+                  </folding>
                 </state>
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="test_boxplot.py" pinned="false" current="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/tests/test_boxplot.py">
+          <file leaf-file-name="test_bar.py" pinned="false" current="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/tests/test_bar.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="10" column="19" selection-start="272" selection-end="272" vertical-scroll-proportion="0.0">
+                <state line="13" column="0" selection-start="0" selection-end="556" vertical-scroll-proportion="0.0">
+                  <folding>
+                    <element signature="e#21#79#0" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="test_pcolormesh.py" pinned="false" current="true" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/tests/test_pcolormesh.py">
+              <provider selected="true" editor-type-id="text-editor">
+                <state line="60" column="35" selection-start="1942" selection-end="1942" vertical-scroll-proportion="0.6851574">
+                  <folding>
+                    <element signature="e#21#79#0" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="test_remove_chartjunk.py" pinned="false" current="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/tests/test_remove_chartjunk.py">
+              <provider selected="true" editor-type-id="text-editor">
+                <state line="13" column="0" selection-start="413" selection-end="541" vertical-scroll-proportion="0.0">
+                  <folding>
+                    <element signature="e#21#79#0" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="test_plot.py" pinned="false" current="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/tests/test_plot.py">
+              <provider selected="true" editor-type-id="text-editor">
+                <state line="29" column="0" selection-start="725" selection-end="830" vertical-scroll-proportion="0.0">
+                  <folding>
+                    <element signature="e#21#79#0" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name=".gitignore" pinned="false" current="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/.gitignore">
+              <provider selected="true" editor-type-id="text-editor">
+                <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
                   <folding />
                 </state>
               </provider>
@@ -192,26 +259,30 @@
           <file leaf-file-name="test_scatter.py" pinned="false" current="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/tests/test_scatter.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="10" column="0" selection-start="294" selection-end="433" vertical-scroll-proportion="0.0">
+                <state line="22" column="0" selection-start="622" selection-end="732" vertical-scroll-proportion="0.0">
+                  <folding>
+                    <element signature="e#21#79#0" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="README.md" pinned="false" current="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/README.md">
+              <provider selected="true" editor-type-id="text-editor">
+                <state line="10" column="76" selection-start="528" selection-end="528" vertical-scroll-proportion="0.0">
                   <folding />
                 </state>
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="README.txt" pinned="false" current="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/README.txt">
+          <file leaf-file-name="__init__.py" pinned="false" current="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/prettyplotlib/__init__.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="setup.py" pinned="false" current="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/setup.py">
-              <provider selected="true" editor-type-id="text-editor">
-                <state line="6" column="5" selection-start="125" selection-end="125" vertical-scroll-proportion="0.0">
-                  <folding />
+                <state line="110" column="33" selection-start="3976" selection-end="3976" vertical-scroll-proportion="0.0">
+                  <folding>
+                    <element signature="e#23#47#0" expanded="true" />
+                  </folding>
                 </state>
               </provider>
             </entry>
@@ -220,12 +291,15 @@
       </split-first>
       <split-second>
         <leaf>
-          <file leaf-file-name="README.txt" pinned="false" current="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/README.txt">
+          <file leaf-file-name="LICENSE.txt" pinned="false" current="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/LICENSE.txt">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="32" column="0" selection-start="598" selection-end="598" vertical-scroll-proportion="0.67321175">
+                <state line="19" column="0" selection-start="1058" selection-end="1058" vertical-scroll-proportion="0.41545188">
                   <folding />
                 </state>
+              </provider>
+              <provider editor-type-id="com.intellij.persistence.database.editor.CsvTableFileEditorProvider">
+                <state />
               </provider>
             </entry>
           </file>
@@ -250,13 +324,17 @@
     <option name="changedFiles">
       <list>
         <option value="$PROJECT_DIR$/prettyplots/__init__.py" />
-        <option value="$PROJECT_DIR$/setup.py" />
         <option value="$PROJECT_DIR$/tests/test_prettyfiy.py" />
+        <option value="$PROJECT_DIR$/README.txt" />
+        <option value="$PROJECT_DIR$/README.md" />
+        <option value="$PROJECT_DIR$/setup.py" />
         <option value="$PROJECT_DIR$/tests/test_boxplot.py" />
         <option value="$PROJECT_DIR$/tests/test_scatter.py" />
-        <option value="$PROJECT_DIR$/README.md" />
-        <option value="$PROJECT_DIR$/README.txt" />
+        <option value="$PROJECT_DIR$/tests/test_remove_chartjunk.py" />
+        <option value="$PROJECT_DIR$/tests/test_plot.py" />
+        <option value="$PROJECT_DIR$/tests/test_bar.py" />
         <option value="$PROJECT_DIR$/prettyplotlib/__init__.py" />
+        <option value="$PROJECT_DIR$/tests/test_pcolormesh.py" />
       </list>
     </option>
   </component>
@@ -272,7 +350,7 @@
     <OptionsSetting value="true" id="Update" />
     <OptionsSetting value="true" id="Status" />
     <OptionsSetting value="true" id="Edit" />
-    <ConfirmationsSetting value="0" id="Add" />
+    <ConfirmationsSetting value="2" id="Add" />
     <ConfirmationsSetting value="0" id="Remove" />
   </component>
   <component name="ProjectReloadState">
@@ -588,25 +666,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/tests/test_scatter.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="0" selection-start="21" selection-end="130" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tests/test_prettyfiy.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="58" selection-start="79" selection-end="79" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/README.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/setup.py">
       <provider selected="true" editor-type-id="text-editor">
         <state line="12" column="46" selection-start="451" selection-end="451" vertical-scroll-proportion="0.0">
@@ -623,29 +682,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/tests/test_prettyfiy.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="58" selection-start="79" selection-end="79" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/MANIFEST.in">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/README.md">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="41" selection-start="378" selection-end="378" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/LICENSE.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="30" selection-start="775" selection-end="775" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-      <provider editor-type-id="com.intellij.persistence.database.editor.CsvTableFileEditorProvider">
-        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/CHANGES.txt">
@@ -655,39 +694,96 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/tests/test_boxplot.py">
+    <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="19" selection-start="272" selection-end="272" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tests/test_scatter.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="0" selection-start="294" selection-end="433" vertical-scroll-proportion="0.0">
+        <state line="10" column="76" selection-start="528" selection-end="528" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/setup.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="5" selection-start="125" selection-end="125" vertical-scroll-proportion="0.0">
+        <state line="9" column="13" selection-start="237" selection-end="237" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/README.txt">
+    <entry file="file://$PROJECT_DIR$/LICENSE.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="14" column="30" selection-start="775" selection-end="775" vertical-scroll-proportion="-7.7777777">
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="com.intellij.persistence.database.editor.CsvTableFileEditorProvider">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/test_boxplot.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="19" column="22" selection-start="494" selection-end="494" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="e#21#79#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/test_scatter.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="22" column="0" selection-start="622" selection-end="732" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="e#21#79#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/tests/test_remove_chartjunk.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="13" column="0" selection-start="413" selection-end="541" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="e#21#79#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/test_plot.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="29" column="0" selection-start="725" selection-end="830" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="e#21#79#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/test_bar.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="13" column="0" selection-start="0" selection-end="556" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="e#21#79#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/prettyplotlib/__init__.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="129" column="33" selection-start="4452" selection-end="4452" vertical-scroll-proportion="0.39130434">
+        <state line="110" column="33" selection-start="3976" selection-end="3976" vertical-scroll-proportion="0.0">
           <folding>
             <element signature="e#23#47#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/test_pcolormesh.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="60" column="35" selection-start="1942" selection-end="1942" vertical-scroll-proportion="0.6851574">
+          <folding>
+            <element signature="e#21#79#0" expanded="true" />
           </folding>
         </state>
       </provider>

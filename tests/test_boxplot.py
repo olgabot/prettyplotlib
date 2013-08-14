@@ -4,6 +4,7 @@ from matplotlib.testing.decorators import image_comparison
 from matplotlib import pyplot as plt
 import numpy as np
 import prettyplotlib as ppl
+import os
 
 
 @image_comparison(baseline_images=['boxplot'], extensions=['png'])
@@ -15,7 +16,9 @@ def test_boxplot():
     labels = ['A', 'B', 'C', 'D']
 
     fig, ax = plt.subplots()
-    ppl.boxplot(ax, data, labels)
+    ppl.boxplot(ax, data, xticklabels=labels)
+    # fig.savefig('%s/baseline_images/test_boxplot/boxplot.png' %
+    #             os.path.dirname(__file__))
 
 
 if __name__ == '__main__':

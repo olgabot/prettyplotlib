@@ -6,9 +6,8 @@ setup(
     author='Olga B. Botvinnik',
     author_email='olga.botvinnik@gmail.com',
     packages=['prettyplotlib'],
-#    scripts=['bin/stowe-towels.py','bin/wash-towels.py'],
-#    url='http://pypi.python.org/pypi/TowelStuff/',
     license='LICENSE.txt',
-    description='Prettify matplotlib plots by removing "chartjunk".',
-    long_description=open('README.txt').read()
+    url='http://github.com/olgabot/prettyplotlib',
+    description='Painlessly create beautiful default `matplotlib` plots.',
+    long_description=open('README.md').read()
 )
