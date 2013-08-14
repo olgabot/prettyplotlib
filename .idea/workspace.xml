@@ -2,39 +2,38 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9147a5cd-d55d-4207-b0f1-bf5037d94b35" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/test_bar.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/test_pcolormesh.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/test_plot.py" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/README.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/serve_ipython.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/srvIPY.sh" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/result_images/test_bar/bar-expected.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/result_images/test_bar/bar.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/result_images/test_boxplot/boxplot-expected.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/result_images/test_boxplot/boxplot.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/result_images/test_pcolormesh/pcolormesh-expected.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/result_images/test_pcolormesh/pcolormesh.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/result_images/test_pcolormesh/pcolormesh_labels-expected.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/result_images/test_pcolormesh/pcolormesh_labels.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/result_images/test_pcolormesh/pcolormesh_positive-expected.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/result_images/test_pcolormesh/pcolormesh_positive.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/result_images/test_pcolormesh/pcolormesh_positive_other_cmap-expected.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/result_images/test_pcolormesh/pcolormesh_positive_other_cmap.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/result_images/test_plot/plot-expected.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/result_images/test_plot/plot.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/result_images/test_remove_chartjunk/remove_chartjunk-expected.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/result_images/test_remove_chartjunk/remove_chartjunk.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/result_images/test_scatter/scatter-expected.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/result_images/test_scatter/scatter.png" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/test_boxplot.ipynb" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/tests/baseline_images/test_boxplot/boxplot.pdf" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/tests/baseline_images/test_boxplot/boxplot.svg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/tests/result_images/test_boxplot/boxplot-expected.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/tests/result_images/test_boxplot/boxplot.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/tests/result_images/test_scatter/scatter.png" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/tests/test_prettyfiy.py" afterPath="$PROJECT_DIR$/tests/test_remove_chartjunk.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/baseline_images/test_boxplot/boxplot.png" afterPath="$PROJECT_DIR$/tests/baseline_images/test_boxplot/boxplot.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/examples/plot_matplotlib_default.pdf" afterPath="$PROJECT_DIR$/examples/plot_matplotlib_default.pdf" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/examples/plot_matplotlib_default.png" afterPath="$PROJECT_DIR$/examples/plot_matplotlib_default.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/examples/plot_prettyplotlib_default.pdf" afterPath="$PROJECT_DIR$/examples/plot_prettyplotlib_default.pdf" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/examples/plot_prettyplotlib_default.png" afterPath="$PROJECT_DIR$/examples/plot_prettyplotlib_default.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/examples/scatter_matplotlib_improved.png" afterPath="$PROJECT_DIR$/examples/scatter_matplotlib_improved.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/examples/scatter_prettyplotlib_default.png" afterPath="$PROJECT_DIR$/examples/scatter_prettyplotlib_default.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/lib/prettyplotlib/__init__.py" afterPath="$PROJECT_DIR$/build/lib/prettyplotlib/__init__.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/prettyplotlib/__init__.py" afterPath="$PROJECT_DIR$/prettyplotlib/__init__.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/examples/.ipynb_checkpoints/plot-checkpoint.ipynb" afterPath="$PROJECT_DIR$/examples/.ipynb_checkpoints/plot-checkpoint.ipynb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/examples/plot.ipynb" afterPath="$PROJECT_DIR$/examples/plot.ipynb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/examples/.ipynb_checkpoints/scatter-checkpoint.ipynb" afterPath="$PROJECT_DIR$/examples/.ipynb_checkpoints/scatter-checkpoint.ipynb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/examples/scatter.ipynb" afterPath="$PROJECT_DIR$/examples/scatter.ipynb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/setup.py" afterPath="$PROJECT_DIR$/setup.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/test_boxplot.py" afterPath="$PROJECT_DIR$/tests/test_boxplot.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/test_scatter.py" afterPath="$PROJECT_DIR$/tests/test_scatter.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/result_images/test_boxplot/boxplot-expected.png" afterPath="$PROJECT_DIR$/tests/result_images/test_boxplot/boxplot-expected.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/result_images/test_boxplot/boxplot.png" afterPath="$PROJECT_DIR$/tests/result_images/test_boxplot/boxplot.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/result_images/test_scatter/scatter.png" afterPath="$PROJECT_DIR$/tests/result_images/test_scatter/scatter.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/examples/.ipynb_checkpoints/pcolormesh-checkpoint.ipynb" afterPath="$PROJECT_DIR$/examples/.ipynb_checkpoints/pcolormesh-checkpoint.ipynb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/examples/pcolormesh.ipynb" afterPath="$PROJECT_DIR$/examples/pcolormesh.ipynb" />
     </list>
     <ignored path="PrettyPlots.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/__init__.py" changelist="9147a5cd-d55d-4207-b0f1-bf5037d94b35" time="1376491816563" ignored="false" />
+    <file path="/__init__.py" changelist="9147a5cd-d55d-4207-b0f1-bf5037d94b35" time="1376492597601" ignored="false" />
     <file path="$PROJECT_DIR$/../templates/python_command_line_template.py" changelist="9147a5cd-d55d-4207-b0f1-bf5037d94b35" time="1373579768258" ignored="false" />
     <file path="/python_command_line_template.py" changelist="9147a5cd-d55d-4207-b0f1-bf5037d94b35" time="1373556381015" ignored="false" />
     <file path="/Dummy.txt" changelist="9147a5cd-d55d-4207-b0f1-bf5037d94b35" time="1376343006781" ignored="false" />
@@ -150,7 +149,7 @@
     <file path="$PROJECT_DIR$/../single_cell/scripts/read_miso_summary.py" changelist="9147a5cd-d55d-4207-b0f1-bf5037d94b35" time="1375984001149" ignored="false" />
     <file path="/read_miso_summary.py" changelist="9147a5cd-d55d-4207-b0f1-bf5037d94b35" time="1375984001149" ignored="false" />
     <file path="$PROJECT_DIR$/../single_cell/workflows/__init__.py" changelist="9147a5cd-d55d-4207-b0f1-bf5037d94b35" time="1375993232938" ignored="false" />
-    <file path="$PROJECT_DIR$/../single_cell/workflows/Splicing/__init__.py" changelist="9147a5cd-d55d-4207-b0f1-bf5037d94b35" time="1376491993848" ignored="false" />
+    <file path="$PROJECT_DIR$/../single_cell/workflows/Splicing/__init__.py" changelist="9147a5cd-d55d-4207-b0f1-bf5037d94b35" time="1376492608730" ignored="false" />
     <file path="$PROJECT_DIR$/../single_cell/scripts/plot_pca.py" changelist="9147a5cd-d55d-4207-b0f1-bf5037d94b35" time="1375995378219" ignored="false" />
     <file path="/plot_pca.py" changelist="9147a5cd-d55d-4207-b0f1-bf5037d94b35" time="1375995351798" ignored="false" />
     <file path="$PROJECT_DIR$/../single_cell/scripts/patrick_plot_pca.py" changelist="9147a5cd-d55d-4207-b0f1-bf5037d94b35" time="1376049780977" ignored="false" />
