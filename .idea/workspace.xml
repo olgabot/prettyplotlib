@@ -2,13 +2,33 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9147a5cd-d55d-4207-b0f1-bf5037d94b35" name="Default" comment="">
+      <change type="DELETED" beforePath="$PROJECT_DIR$/boxplot.png" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/examples/serve_ipython.py" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/examples/srvIPY.sh" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/result_images/test_bar/bar-expected.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/result_images/test_bar/bar.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/result_images/test_boxplot/boxplot-expected.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/result_images/test_boxplot/boxplot.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/result_images/test_legend/legend-expected.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/result_images/test_legend/legend.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/result_images/test_pcolormesh/pcolormesh-expected.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/result_images/test_pcolormesh/pcolormesh.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/result_images/test_pcolormesh/pcolormesh_labels-expected.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/result_images/test_pcolormesh/pcolormesh_labels.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/result_images/test_pcolormesh/pcolormesh_positive-expected.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/result_images/test_pcolormesh/pcolormesh_positive.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/result_images/test_pcolormesh/pcolormesh_positive_other_cmap-expected.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/result_images/test_pcolormesh/pcolormesh_positive_other_cmap.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/result_images/test_plot/plot-expected.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/result_images/test_plot/plot.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/result_images/test_remove_chartjunk/remove_chartjunk-expected.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/result_images/test_remove_chartjunk/remove_chartjunk.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/result_images/test_scatter/scatter-expected.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/result_images/test_scatter/scatter.png" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/test_boxplot.ipynb" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/tests/baseline_images/test_boxplot/boxplot.pdf" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/tests/baseline_images/test_boxplot/boxplot.svg" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/examples/.ipynb_checkpoints/hist-checkpoint.ipynb" afterPath="$PROJECT_DIR$/examples/.ipynb_checkpoints/hist-checkpoint.ipynb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/examples/hist.ipynb" afterPath="$PROJECT_DIR$/examples/hist.ipynb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/setup.py" afterPath="$PROJECT_DIR$/setup.py" />
     </list>
     <ignored path="PrettyPlots.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -20,7 +40,7 @@
     <file path="/submit_miso_index_gtf.py" changelist="9147a5cd-d55d-4207-b0f1-bf5037d94b35" time="1373556371405" ignored="false" />
     <file path="$PROJECT_DIR$/../cse202/Homework/hw2/q5_integer_multiplication.py" changelist="9147a5cd-d55d-4207-b0f1-bf5037d94b35" time="1373555030215" ignored="false" />
     <file path="$USER_HOME$/workspace/gscripts/setup.py" changelist="9147a5cd-d55d-4207-b0f1-bf5037d94b35" time="1373580782663" ignored="false" />
-    <file path="/setup.py" changelist="9147a5cd-d55d-4207-b0f1-bf5037d94b35" time="1376495919607" ignored="false" />
+    <file path="/setup.py" changelist="9147a5cd-d55d-4207-b0f1-bf5037d94b35" time="1376537320191" ignored="false" />
     <file path="$USER_HOME$/workspace/gscripts/gscripts/rnaseq/submit_miso_index_gtf.py" changelist="9147a5cd-d55d-4207-b0f1-bf5037d94b35" time="1373556371828" ignored="false" />
     <file path="$USER_HOME$/workspace/gscripts/gscripts/rnaseq/submit_miso_index_gff.py" changelist="9147a5cd-d55d-4207-b0f1-bf5037d94b35" time="1373560048386" ignored="false" />
     <file path="/submit_miso_index_gff.py" changelist="9147a5cd-d55d-4207-b0f1-bf5037d94b35" time="1373560047999" ignored="false" />
@@ -216,10 +236,10 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="setup.py" pinned="false" current="false" current-in-tab="false">
+          <file leaf-file-name="setup.py" pinned="false" current="true" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/setup.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="12" column="12" selection-start="409" selection-end="409" vertical-scroll-proportion="0.0">
+                <state line="4" column="18" selection-start="85" selection-end="85" vertical-scroll-proportion="0.089955024">
                   <folding />
                 </state>
               </provider>
@@ -254,10 +274,10 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="__init__.py" pinned="false" current="true" current-in-tab="true">
+          <file leaf-file-name="__init__.py" pinned="false" current="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/prettyplotlib/__init__.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="144" column="0" selection-start="5035" selection-end="5067" vertical-scroll-proportion="0.26986507">
+                <state line="144" column="0" selection-start="5035" selection-end="5067" vertical-scroll-proportion="0.0">
                   <folding>
                     <element signature="e#23#47#0" expanded="true" />
                   </folding>
@@ -313,10 +333,10 @@
         <option value="$PROJECT_DIR$/tests/test_legend.py" />
         <option value="$PROJECT_DIR$/tests/test_remove_chartjunk.py" />
         <option value="$PROJECT_DIR$/tests/test_all" />
-        <option value="$PROJECT_DIR$/setup.py" />
         <option value="$PROJECT_DIR$/MANIFEST" />
         <option value="$PROJECT_DIR$/MANIFEST.in" />
         <option value="$PROJECT_DIR$/prettyplotlib/__init__.py" />
+        <option value="$PROJECT_DIR$/setup.py" />
       </list>
     </option>
   </component>
@@ -760,13 +780,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/setup.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="12" selection-start="409" selection-end="409" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/MANIFEST">
       <provider selected="true" editor-type-id="text-editor">
         <state line="3" column="9" selection-start="76" selection-end="76" vertical-scroll-proportion="0.0">
@@ -783,10 +796,17 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/prettyplotlib/__init__.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="144" column="0" selection-start="5035" selection-end="5067" vertical-scroll-proportion="0.26986507">
+        <state line="144" column="0" selection-start="5035" selection-end="5067" vertical-scroll-proportion="0.0">
           <folding>
             <element signature="e#23#47#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/setup.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="4" column="18" selection-start="85" selection-end="85" vertical-scroll-proportion="0.089955024">
+          <folding />
         </state>
       </provider>
     </entry>
