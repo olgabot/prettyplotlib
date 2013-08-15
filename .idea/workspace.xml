@@ -2,45 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9147a5cd-d55d-4207-b0f1-bf5037d94b35" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/test_all" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/test_legend.py" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/examples/serve_ipython.py" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/examples/srvIPY.sh" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/test_boxplot.ipynb" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/tests/baseline_images/test_boxplot/boxplot.pdf" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/tests/baseline_images/test_boxplot/boxplot.svg" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/result_images/test_boxplot/boxplot.png" afterPath="$PROJECT_DIR$/result_images/test_boxplot/boxplot.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/result_images/test_pcolormesh/pcolormesh.png" afterPath="$PROJECT_DIR$/result_images/test_pcolormesh/pcolormesh.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/result_images/test_plot/plot-expected.png" afterPath="$PROJECT_DIR$/result_images/test_plot/plot-expected.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/result_images/test_plot/plot.png" afterPath="$PROJECT_DIR$/result_images/test_plot/plot.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/baseline_images/test_plot/plot.png" afterPath="$PROJECT_DIR$/tests/baseline_images/test_plot/plot.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/examples/plot_matplotlib_default.png" afterPath="$PROJECT_DIR$/examples/plot_matplotlib_default.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/examples/plot_prettyplotlib_default.pdf" afterPath="$PROJECT_DIR$/examples/plot_prettyplotlib_default.pdf" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/examples/plot_prettyplotlib_default.png" afterPath="$PROJECT_DIR$/examples/plot_prettyplotlib_default.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/result_images/test_remove_chartjunk/remove_chartjunk-expected.png" afterPath="$PROJECT_DIR$/result_images/test_remove_chartjunk/remove_chartjunk-expected.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/result_images/test_remove_chartjunk/remove_chartjunk.png" afterPath="$PROJECT_DIR$/result_images/test_remove_chartjunk/remove_chartjunk.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/baseline_images/test_remove_chartjunk/remove_chartjunk.png" afterPath="$PROJECT_DIR$/tests/baseline_images/test_remove_chartjunk/remove_chartjunk.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/result_images/test_scatter/scatter-expected.png" afterPath="$PROJECT_DIR$/result_images/test_scatter/scatter-expected.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/result_images/test_scatter/scatter.png" afterPath="$PROJECT_DIR$/result_images/test_scatter/scatter.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/baseline_images/test_scatter/scatter.png" afterPath="$PROJECT_DIR$/tests/baseline_images/test_scatter/scatter.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/examples/scatter_matplotlib_improved.png" afterPath="$PROJECT_DIR$/examples/scatter_matplotlib_improved.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/examples/scatter_prettyplotlib_default.png" afterPath="$PROJECT_DIR$/examples/scatter_prettyplotlib_default.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/MANIFEST.in" afterPath="$PROJECT_DIR$/MANIFEST.in" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/MANIFEST" afterPath="$PROJECT_DIR$/MANIFEST" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/lib/prettyplotlib/__init__.py" afterPath="$PROJECT_DIR$/build/lib/prettyplotlib/__init__.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/prettyplotlib/__init__.py" afterPath="$PROJECT_DIR$/prettyplotlib/__init__.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/examples/.ipynb_checkpoints/bar-checkpoint.ipynb" afterPath="$PROJECT_DIR$/examples/.ipynb_checkpoints/bar-checkpoint.ipynb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/examples/bar.ipynb" afterPath="$PROJECT_DIR$/examples/bar.ipynb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/examples/.ipynb_checkpoints/hist-checkpoint.ipynb" afterPath="$PROJECT_DIR$/examples/.ipynb_checkpoints/hist-checkpoint.ipynb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/examples/hist.ipynb" afterPath="$PROJECT_DIR$/examples/hist.ipynb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/examples/.ipynb_checkpoints/plot-checkpoint.ipynb" afterPath="$PROJECT_DIR$/examples/.ipynb_checkpoints/plot-checkpoint.ipynb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/examples/plot.ipynb" afterPath="$PROJECT_DIR$/examples/plot.ipynb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/examples/.ipynb_checkpoints/scatter-checkpoint.ipynb" afterPath="$PROJECT_DIR$/examples/.ipynb_checkpoints/scatter-checkpoint.ipynb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/examples/scatter.ipynb" afterPath="$PROJECT_DIR$/examples/scatter.ipynb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/setup.py" afterPath="$PROJECT_DIR$/setup.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/test_plot.py" afterPath="$PROJECT_DIR$/tests/test_plot.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/test_remove_chartjunk.py" afterPath="$PROJECT_DIR$/tests/test_remove_chartjunk.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="PrettyPlots.iws" />
     <ignored path=".idea/workspace.xml" />
