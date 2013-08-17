@@ -1,2 +1,3 @@
 include *.md
 include *.txt
+recursive-include tests/baseline_images/*/*.png

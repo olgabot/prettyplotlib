@@ -7,7 +7,7 @@ setup(
     author_email='olga.botvinnik@gmail.com',
     packages=['prettyplotlib'],
     license='LICENSE.txt',
-    url='http://github.com/olgabot/prettyplotlib',
+    url='http://olgabot.github.io/prettyplotlib',
     description='Painlessly create beautiful default `matplotlib` plots.',
     long_description=open('README.txt').read(),
     install_requires=['matplotlib >= 1.2.1',
