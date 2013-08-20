@@ -11,6 +11,14 @@
       <change type="DELETED" beforePath="$PROJECT_DIR$/result_images/test_boxplot/boxplot.png" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/result_images/test_legend/legend-expected.png" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/result_images/test_legend/legend.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/result_images/test_pcolormesh/pcolormesh-expected.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/result_images/test_pcolormesh/pcolormesh.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/result_images/test_pcolormesh/pcolormesh_labels-expected.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/result_images/test_pcolormesh/pcolormesh_labels.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/result_images/test_pcolormesh/pcolormesh_positive-expected.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/result_images/test_pcolormesh/pcolormesh_positive.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/result_images/test_pcolormesh/pcolormesh_positive_other_cmap-expected.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/result_images/test_pcolormesh/pcolormesh_positive_other_cmap.png" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/result_images/test_plot/plot-expected.png" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/result_images/test_plot/plot.png" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/result_images/test_remove_chartjunk/remove_chartjunk-expected.png" afterPath="" />
@@ -20,15 +28,20 @@
       <change type="DELETED" beforePath="$PROJECT_DIR$/test_boxplot.ipynb" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/tests/baseline_images/test_boxplot/boxplot.pdf" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/tests/baseline_images/test_boxplot/boxplot.svg" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/result_images/test_bar/bar-expected.png" afterPath="$PROJECT_DIR$/tests/result_images/test_bar/bar-expected.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/baseline_images/test_bar/bar.png" afterPath="$PROJECT_DIR$/tests/baseline_images/test_bar/bar.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/result_images/test_bar/bar.png" afterPath="$PROJECT_DIR$/tests/result_images/test_bar/bar.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/lib/prettyplotlib/__init__.py" afterPath="$PROJECT_DIR$/build/lib/prettyplotlib/__init__.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/prettyplotlib/__init__.py" afterPath="$PROJECT_DIR$/prettyplotlib/__init__.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/test_bar.py" afterPath="$PROJECT_DIR$/tests/test_bar.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="PrettyPlots.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/__init__.py" changelist="9147a5cd-d55d-4207-b0f1-bf5037d94b35" time="1376940871114" ignored="false" />
+    <file path="/__init__.py" changelist="9147a5cd-d55d-4207-b0f1-bf5037d94b35" time="1377031569008" ignored="false" />
     <file path="$PROJECT_DIR$/../templates/python_command_line_template.py" changelist="9147a5cd-d55d-4207-b0f1-bf5037d94b35" time="1373579768258" ignored="false" />
     <file path="/python_command_line_template.py" changelist="9147a5cd-d55d-4207-b0f1-bf5037d94b35" time="1373556381015" ignored="false" />
-    <file path="/Dummy.txt" changelist="9147a5cd-d55d-4207-b0f1-bf5037d94b35" time="1376952244161" ignored="false" />
+    <file path="/Dummy.txt" changelist="9147a5cd-d55d-4207-b0f1-bf5037d94b35" time="1377022174989" ignored="false" />
     <file path="$USER_HOME$/workspace/gscripts/gscripts/submit_miso_index_gtf.py" changelist="9147a5cd-d55d-4207-b0f1-bf5037d94b35" time="1373555365667" ignored="false" />
     <file path="/submit_miso_index_gtf.py" changelist="9147a5cd-d55d-4207-b0f1-bf5037d94b35" time="1373556371405" ignored="false" />
     <file path="$PROJECT_DIR$/../cse202/Homework/hw2/q5_integer_multiplication.py" changelist="9147a5cd-d55d-4207-b0f1-bf5037d94b35" time="1373555030215" ignored="false" />
@@ -146,8 +159,8 @@
     <file path="/plot_pca.py" changelist="9147a5cd-d55d-4207-b0f1-bf5037d94b35" time="1375995351798" ignored="false" />
     <file path="$PROJECT_DIR$/../single_cell/scripts/patrick_plot_pca.py" changelist="9147a5cd-d55d-4207-b0f1-bf5037d94b35" time="1376049780977" ignored="false" />
     <file path="/patrick_plot_pca.py" changelist="9147a5cd-d55d-4207-b0f1-bf5037d94b35" time="1375995494998" ignored="false" />
-    <file path="/test_plot.py" changelist="9147a5cd-d55d-4207-b0f1-bf5037d94b35" time="1376490699110" ignored="false" />
-    <file path="/test_bar.py" changelist="9147a5cd-d55d-4207-b0f1-bf5037d94b35" time="1376490768922" ignored="false" />
+    <file path="/test_plot.py" changelist="9147a5cd-d55d-4207-b0f1-bf5037d94b35" time="1377028110203" ignored="false" />
+    <file path="/test_bar.py" changelist="9147a5cd-d55d-4207-b0f1-bf5037d94b35" time="1377028300782" ignored="false" />
     <file path="/test_remove_chartjunk.py" changelist="9147a5cd-d55d-4207-b0f1-bf5037d94b35" time="1376494574057" ignored="false" />
     <file path="/test_pcolormesh.py" changelist="9147a5cd-d55d-4207-b0f1-bf5037d94b35" time="1376491428900" ignored="false" />
     <file path="/test_all.sh" changelist="9147a5cd-d55d-4207-b0f1-bf5037d94b35" time="1376493033997" ignored="false" />
@@ -163,6 +176,7 @@
     <file path="$PROJECT_DIR$/../single_cell/igv/batch_scripts/all_samples.txt" changelist="9147a5cd-d55d-4207-b0f1-bf5037d94b35" time="1376939137327" ignored="false" />
     <file path="/all_samples.txt" changelist="9147a5cd-d55d-4207-b0f1-bf5037d94b35" time="1376938813026" ignored="false" />
     <file path="$PROJECT_DIR$/../single_cell/igv/batch_scripts/collapse.txt" changelist="9147a5cd-d55d-4207-b0f1-bf5037d94b35" time="1376939147660" ignored="false" />
+    <file path="/_bar.py" changelist="9147a5cd-d55d-4207-b0f1-bf5037d94b35" time="1377022364978" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -184,20 +198,13 @@
     <splitter split-orientation="horizontal" split-proportion="0.5">
       <split-first>
         <leaf>
-          <file leaf-file-name="test_boxplot.py" pinned="false" current="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/tests/test_boxplot.py">
-              <provider selected="true" editor-type-id="text-editor">
-                <state line="19" column="22" selection-start="494" selection-end="494" vertical-scroll-proportion="0.0">
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
           <file leaf-file-name="test_bar.py" pinned="false" current="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/tests/test_bar.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="13" column="0" selection-start="0" selection-end="556" vertical-scroll-proportion="0.0">
-                  <folding />
+                <state line="36" column="0" selection-start="1241" selection-end="1408" vertical-scroll-proportion="-7.8235292">
+                  <folding>
+                    <element signature="e#21#79#0" expanded="true" />
+                  </folding>
                 </state>
               </provider>
             </entry>
@@ -232,18 +239,32 @@
           <file leaf-file-name="test_plot.py" pinned="false" current="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/tests/test_plot.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="25" column="40" selection-start="705" selection-end="705" vertical-scroll-proportion="0.0">
+                <state line="31" column="28" selection-start="883" selection-end="883" vertical-scroll-proportion="0.0">
                   <folding />
                 </state>
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="__init__.py" pinned="false" current="false" current-in-tab="true">
+          <file leaf-file-name="__init__.py" pinned="false" current="true" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/prettyplotlib/__init__.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="32" column="48" selection-start="1166" selection-end="1166" vertical-scroll-proportion="0.02173913">
+                <state line="97" column="53" selection-start="3369" selection-end="3369" vertical-scroll-proportion="0.5037594">
+                  <folding>
+                    <element signature="e#23#47#0" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="matplotlibrc" pinned="false" current="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/examples/matplotlibrc">
+              <provider selected="true" editor-type-id="text-editor">
+                <state line="31" column="2" selection-start="1363" selection-end="1363" vertical-scroll-proportion="60.0">
                   <folding />
                 </state>
+              </provider>
+              <provider editor-type-id="com.intellij.persistence.database.editor.CsvTableFileEditorProvider">
+                <state />
               </provider>
             </entry>
           </file>
@@ -251,7 +272,7 @@
       </split-first>
       <split-second>
         <leaf>
-          <file leaf-file-name="LICENSE.txt" pinned="false" current="true" current-in-tab="true">
+          <file leaf-file-name="LICENSE.txt" pinned="false" current="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/LICENSE.txt">
               <provider selected="true" editor-type-id="text-editor">
                 <state line="19" column="0" selection-start="1058" selection-end="1058" vertical-scroll-proportion="0.41545188">
@@ -283,21 +304,21 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/tests/test_prettyfiy.py" />
-        <option value="$PROJECT_DIR$/README.txt" />
-        <option value="$PROJECT_DIR$/README.md" />
-        <option value="$PROJECT_DIR$/tests/test_boxplot.py" />
-        <option value="$PROJECT_DIR$/tests/test_scatter.py" />
-        <option value="$PROJECT_DIR$/tests/test_bar.py" />
-        <option value="$PROJECT_DIR$/tests/test_pcolormesh.py" />
         <option value="$PROJECT_DIR$/tests/test_all.sh" />
-        <option value="$PROJECT_DIR$/tests/test_plot.py" />
         <option value="$PROJECT_DIR$/tests/test_legend.py" />
         <option value="$PROJECT_DIR$/tests/test_remove_chartjunk.py" />
         <option value="$PROJECT_DIR$/tests/test_all" />
         <option value="$PROJECT_DIR$/MANIFEST" />
         <option value="$PROJECT_DIR$/setup.py" />
         <option value="$PROJECT_DIR$/MANIFEST.in" />
+        <option value="$PROJECT_DIR$/prettyplotlib/_common.py" />
+        <option value="$PROJECT_DIR$/prettyplotlib/common/__init__.py" />
+        <option value="$PROJECT_DIR$/prettyplotlib/_bar.py" />
+        <option value="$PROJECT_DIR$/prettyplotlib/bar/__init__.py" />
+        <option value="$PROJECT_DIR$/prettyplotlib/remove_chartjunk/__init__.py" />
+        <option value="$PROJECT_DIR$/examples/matplotlibrc" />
+        <option value="$PROJECT_DIR$/tests/test_plot.py" />
+        <option value="$PROJECT_DIR$/tests/test_bar.py" />
         <option value="$PROJECT_DIR$/prettyplotlib/__init__.py" />
       </list>
     </option>
@@ -380,6 +401,20 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="PrettyPlots" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="prettyplotlib" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="examples" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
     </panes>
@@ -404,6 +439,7 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/prettyplotlib/bar" />
       <recent name="$PROJECT_DIR$" />
     </key>
   </component>
@@ -559,10 +595,10 @@
     <frame x="0" y="22" width="1440" height="874" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info id="Plugins" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Plugins" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.16140603" sideWeight="0.6710875" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -572,10 +608,10 @@
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32891247" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="3" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
@@ -642,36 +678,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/CHANGES.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/README.md">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="76" selection-start="528" selection-end="528" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tests/test_pcolormesh.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="35" column="17" selection-start="991" selection-end="1007" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tests/test_scatter.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="21" column="43" selection-start="621" selection-end="621" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tests/test_all">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="4" selection-start="168" selection-end="168" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/MANIFEST">
       <provider selected="true" editor-type-id="text-editor">
         <state line="5" column="9" selection-start="93" selection-end="93" vertical-scroll-proportion="0.0" />
@@ -685,20 +691,6 @@
     <entry file="file://$PROJECT_DIR$/tests/test_boxplot.py">
       <provider selected="true" editor-type-id="text-editor">
         <state line="19" column="22" selection-start="494" selection-end="494" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tests/test_bar.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="0" selection-start="0" selection-end="556" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tests/test_remove_chartjunk.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="27" selection-start="429" selection-end="429" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
@@ -717,16 +709,36 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/tests/test_plot.py">
+    <entry file="file://$PROJECT_DIR$/tests/test_remove_chartjunk.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="25" column="40" selection-start="705" selection-end="705" vertical-scroll-proportion="0.0">
+        <state line="13" column="27" selection-start="429" selection-end="429" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/prettyplotlib/__init__.py">
+    <entry file="file://$PROJECT_DIR$/examples/pcolormesh.ipynb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="32" column="48" selection-start="1166" selection-end="1166" vertical-scroll-proportion="0.02173913">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="com.intellij.persistence.database.editor.CsvTableFileEditorProvider">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/examples/matplotlibrc">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="31" column="2" selection-start="1363" selection-end="1363" vertical-scroll-proportion="60.0">
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="com.intellij.persistence.database.editor.CsvTableFileEditorProvider">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/test_plot.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="31" column="28" selection-start="883" selection-end="883" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
@@ -739,6 +751,24 @@
       </provider>
       <provider editor-type-id="com.intellij.persistence.database.editor.CsvTableFileEditorProvider">
         <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/test_bar.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="36" column="0" selection-start="1241" selection-end="1408" vertical-scroll-proportion="-7.8235292">
+          <folding>
+            <element signature="e#21#79#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/prettyplotlib/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="97" column="53" selection-start="3369" selection-end="3369" vertical-scroll-proportion="0.5037594">
+          <folding>
+            <element signature="e#23#47#0" expanded="true" />
+          </folding>
+        </state>
       </provider>
     </entry>
   </component>

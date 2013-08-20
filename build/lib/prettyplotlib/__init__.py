@@ -4,6 +4,7 @@ import matplotlib as mpl
 import matplotlib.pyplot as plt
 import brewer2mpl
 import numpy as np
+import sys
 
 # Get Set2 from ColorBrewer, a set of colors deemed colorblind-safe and
 # pleasant to look at by Drs. Cynthia Brewer and Mark Harrower of Pennsylvania
@@ -30,7 +31,8 @@ blues.set_under('white')
 
 # Need to 'reverse' red to blue so that blue=cold=small numbers,
 # and red=hot=large numbers with '_r' suffix
-blue_red = mpl.cm.RdBu_r
+blue_red = brewer2mpl.get_map('RdBu', 'Diverging', 11,
+                              reverse=True).mpl_colormap
 
 # Default "patches" like scatterplots
 mpl.rcParams['patch.linewidth'] = 0.75     # edge width in points
@@ -56,62 +58,6 @@ mpl.rcParams['xtick.color'] = almost_black
 mpl.rcParams['text.color'] = almost_black
 
 
-def remove_chartjunk(ax, spines, grid=None, ticklabels=None):
-    '''
-    Removes "chartjunk", such as extra lines of axes and tick marks.
-
-    If grid="y" or "x", will add a white grid at the "y" or "x" axes, 
-    respectively
-
-    If ticklabels="y" or "x", or ['x', 'y'] will remove ticklabels from that
-    axis
-    '''
-    all_spines = ['top', 'bottom', 'right', 'left']
-    for spine in spines:
-        ax.spines[spine].set_visible(False)
-
-    # For the remaining spines, make their line thinner and a slightly
-    # off-black dark grey
-    for spine in all_spines:
-        if spine not in spines:
-            ax.spines[spine].set_linewidth(0.5)
-            # ax.spines[spine].set_color(almost_black)
-        #            ax.spines[spine].set_tick_params(color=almost_black)
-        # Check that the axes are not log-scale. If they are, leave the ticks
-    # because otherwise people assume a linear scale.
-    x_pos = set(['top', 'bottom'])
-    y_pos = set(['left', 'right'])
-    xy_pos = [x_pos, y_pos]
-    xy_ax_names = ['xaxis', 'yaxis']
-
-    for ax_name, pos in zip(xy_ax_names, xy_pos):
-        axis = ax.__dict__[ax_name]
-        # axis.set_tick_params(color=almost_black)
-        if type(axis.get_scale()) == 'log':
-            # if this spine is not in the list of spines to remove
-            for p in pos.difference(spines):
-                axis.set_ticks_position(p)
-            #                axis.set_tick_params(which='both', p)
-        else:
-            axis.set_ticks_position('none')
-
-    if grid is not None:
-        assert grid in ('x', 'y')
-        ax.grid(axis=grid, color='white', linestyle='-', linewidth=0.5)
-
-    if ticklabels is not None:
-        if type(ticklabels) is str:
-            assert ticklabels in set(('x', 'y'))
-            if ticklabels == 'x':
-                ax.set_xticklabels([])
-            if ticklabels == 'y':
-                ax.set_yticklabels([])
-        else:
-            assert set(ticklabels) | set(('x', 'y')) > 0
-            if 'x' in ticklabels:
-                ax.set_xticklabels([])
-            elif 'y' in ticklabels:
-                ax.set_yticklabels([])
 
 def bar(ax, left, height, **kwargs):
     """
@@ -125,22 +71,82 @@ def bar(ax, left, height, **kwargs):
         kwargs['color'] = set2[0]
     if 'edgecolor' not in kwargs:
         kwargs['edgecolor'] = 'white'
-    if 'grid' in kwargs:
-        grid = kwargs['grid']
-        kwargs.pop('grid')
-    else:
-        grid = None
+
+    # Label each individual bar, if xticklabels is provided
+    xtickabels = kwargs.pop('xticklabels', None)
+    # left+0.4 is the center of the bar
+    xticks = np.array(left) + 0.4
+
+    # Whether or not to annotate each bar with the height value
+    annotate = kwargs.pop('annotate', False)
+
+    # If no grid specified, don't draw one.
+    grid = kwargs.pop('grid', None)
+
     ax.bar(left, height, **kwargs)
-    remove_chartjunk(ax, ['top', 'right'], grid=grid)
+
+    # add whitespace padding on left
+    xmin, xmax = ax.get_xlim()
+    xmin -= 0.25
+    ax.set_xlim(xmin, xmax)
+
+    # If there are negative counts, remove the bottom axes
+    # and add a line at y=0
+    if sum(h < 0 for h in height) > 0:
+        axes_to_remove = ['top', 'right', 'bottom']
+        ax.hlines(y=0, xmin=xmin, xmax=xmax,
+                  colors=almost_black, linewidths=0.75)
+    else:
+        axes_to_remove = ['top', 'right']
+
+    # Remove excess axes
+    remove_chartjunk(ax, axes_to_remove, grid=grid)
+
+    # Add the xticklabels if they are there
+    if xtickabels is not None:
+        ax.set_xticks(xticks)
+        ax.set_xticklabels(xtickabels)
+
+    if annotate:
+        annotate_yrange_factor = 0.025
+        ymin, ymax = ax.get_ylim()
+        yrange = ymax - ymin
+
+        # Reset ymax and ymin so there's enough room to see the annotation of
+        # the top-most
+        if ymax > 0:
+            ymax += yrange*0.1
+        if ymin < 0:
+            ymin -= yrange*0.1
+        ax.set_ylim(ymin, ymax)
+        yrange = ymax - ymin
+
+        offset_ = yrange * annotate_yrange_factor
+        for x, h in zip(xticks, height):
+            if type(h) is np.float_:
+                annotation = '%.3f' % h
+            else:
+                annotation = str(h)
+            # Adjust the offset to account for negative bars
+            offset = offset_ if h >= 0 else -1*offset_
+            verticalalignment = 'bottom' if h >= 0 else 'top'
+            print 'x', x, '  h', h, '  offset', offset,
+            print '  verticalalignment', verticalalignment
+
+            # Finally, add the text to the axes
+            ax.annotate(annotation, (x, h + offset),
+                        verticalalignment=verticalalignment,
+                        horizontalalignment='center',
+                        color=almost_black)
 
 
 def boxplot(ax, x, **kwargs):
-    if 'xticklabels' in kwargs:
-        xticklabels = kwargs['xticklabels']
-        kwargs.pop('xticklabels')
-    else:
-        xticklabels = None
-    bp = ax.boxplot(x, widths=0.15, **kwargs)
+    # If no ticklabels are specified, don't draw any
+    xticklabels = kwargs.pop('xticklabels', None)
+
+    if 'widths' not in kwargs:
+        kwargs['widths'] = 0.15
+    bp = ax.boxplot(x, **kwargs)
     if xticklabels:
         ax.xaxis.set_ticklabels(xticklabels)
 
@@ -163,15 +169,31 @@ def hist(ax, x, **kwargs):
     # Reassign the default colors to Set2 by Colorbrewer
     if 'color' not in kwargs:
         kwargs['color'] = set2[0]
-    if 'grid' in kwargs:
-        grid = kwargs['grid']
-        kwargs.pop('grid')
-    else:
-        grid = None
+
+    # If no grid specified, don't draw one.
+    grid = kwargs.pop('grid', None)
+
         # print 'hist kwargs', kwargs
     ax.hist(x, edgecolor='white', **kwargs)
     remove_chartjunk(ax, ['top', 'right'], grid=grid)
 
+def legend(ax, facecolor=light_grey, **kwargs):
+    legend = ax.legend(frameon=True, scatterpoints=1, **kwargs)
+    rect = legend.get_frame()
+    rect.set_facecolor(facecolor)
+    rect.set_linewidth(0.0)
+
+    # change the label colors in the legend to almost black
+    # Change the legend label colors to almost black, too
+    texts = legend.texts
+    for t in texts:
+        t.set_color(almost_black)
+
+        # import matplotlib.pyplot as plt
+        # import prettyplotlib as ppl
+        #
+        # fig, ax = plt.subplots(1)
+        # ppl.scatter(ax, x, y)
 
 def plot(ax, x, y, **kwargs):
     if 'color' in kwargs:
@@ -319,21 +341,59 @@ def pcolormesh(fig, ax, x, **kwargs):
         # Show the scale of the colorbar
     fig.colorbar(p)
 
+def remove_chartjunk(ax, spines, grid=None, ticklabels=None):
+    '''
+    Removes "chartjunk", such as extra lines of axes and tick marks.
 
-def legend(ax, facecolor=light_grey, **kwargs):
-    legend = ax.legend(frameon=True, scatterpoints=1, **kwargs)
-    rect = legend.get_frame()
-    rect.set_facecolor(facecolor)
-    rect.set_linewidth(0.0)
+    If grid="y" or "x", will add a white grid at the "y" or "x" axes,
+    respectively
 
-    # change the label colors in the legend to almost black
-    # Change the legend label colors to almost black, too
-    texts = legend.texts
-    for t in texts:
-        t.set_color(almost_black)
+    If ticklabels="y" or "x", or ['x', 'y'] will remove ticklabels from that
+    axis
+    '''
+    all_spines = ['top', 'bottom', 'right', 'left']
+    for spine in spines:
+        ax.spines[spine].set_visible(False)
 
-        # import matplotlib.pyplot as plt
-        # import prettyplotlib as ppl
-        #
-        # fig, ax = plt.subplots(1)
-        # ppl.scatter(ax, x, y)
+    # For the remaining spines, make their line thinner and a slightly
+    # off-black dark grey
+    for spine in all_spines:
+        if spine not in spines:
+            ax.spines[spine].set_linewidth(0.5)
+            # ax.spines[spine].set_color(almost_black)
+        #            ax.spines[spine].set_tick_params(color=almost_black)
+        # Check that the axes are not log-scale. If they are, leave the ticks
+    # because otherwise people assume a linear scale.
+    x_pos = set(['top', 'bottom'])
+    y_pos = set(['left', 'right'])
+    xy_pos = [x_pos, y_pos]
+    xy_ax_names = ['xaxis', 'yaxis']
+
+    for ax_name, pos in zip(xy_ax_names, xy_pos):
+        axis = ax.__dict__[ax_name]
+        # axis.set_tick_params(color=almost_black)
+        if type(axis.get_scale()) == 'log':
+            # if this spine is not in the list of spines to remove
+            for p in pos.difference(spines):
+                axis.set_ticks_position(p)
+            #                axis.set_tick_params(which='both', p)
+        else:
+            axis.set_ticks_position('none')
+
+    if grid is not None:
+        assert grid in ('x', 'y')
+        ax.grid(axis=grid, color='white', linestyle='-', linewidth=0.5)
+
+    if ticklabels is not None:
+        if type(ticklabels) is str:
+            assert ticklabels in set(('x', 'y'))
+            if ticklabels == 'x':
+                ax.set_xticklabels([])
+            if ticklabels == 'y':
+                ax.set_yticklabels([])
+        else:
+            assert set(ticklabels) | set(('x', 'y')) > 0
+            if 'x' in ticklabels:
+                ax.set_xticklabels([])
+            elif 'y' in ticklabels:
+                ax.set_yticklabels([])
