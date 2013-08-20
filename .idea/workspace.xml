@@ -11,14 +11,6 @@
       <change type="DELETED" beforePath="$PROJECT_DIR$/result_images/test_boxplot/boxplot.png" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/result_images/test_legend/legend-expected.png" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/result_images/test_legend/legend.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/result_images/test_pcolormesh/pcolormesh-expected.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/result_images/test_pcolormesh/pcolormesh.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/result_images/test_pcolormesh/pcolormesh_labels-expected.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/result_images/test_pcolormesh/pcolormesh_labels.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/result_images/test_pcolormesh/pcolormesh_positive-expected.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/result_images/test_pcolormesh/pcolormesh_positive.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/result_images/test_pcolormesh/pcolormesh_positive_other_cmap-expected.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/result_images/test_pcolormesh/pcolormesh_positive_other_cmap.png" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/result_images/test_plot/plot-expected.png" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/result_images/test_plot/plot.png" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/result_images/test_remove_chartjunk/remove_chartjunk-expected.png" afterPath="" />
@@ -29,13 +21,14 @@
       <change type="DELETED" beforePath="$PROJECT_DIR$/tests/baseline_images/test_boxplot/boxplot.pdf" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/tests/baseline_images/test_boxplot/boxplot.svg" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/prettyplotlib/__init__.py" afterPath="$PROJECT_DIR$/prettyplotlib/__init__.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="PrettyPlots.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/__init__.py" changelist="9147a5cd-d55d-4207-b0f1-bf5037d94b35" time="1376851048491" ignored="false" />
+    <file path="/__init__.py" changelist="9147a5cd-d55d-4207-b0f1-bf5037d94b35" time="1376940871114" ignored="false" />
     <file path="$PROJECT_DIR$/../templates/python_command_line_template.py" changelist="9147a5cd-d55d-4207-b0f1-bf5037d94b35" time="1373579768258" ignored="false" />
     <file path="/python_command_line_template.py" changelist="9147a5cd-d55d-4207-b0f1-bf5037d94b35" time="1373556381015" ignored="false" />
-    <file path="/Dummy.txt" changelist="9147a5cd-d55d-4207-b0f1-bf5037d94b35" time="1376677722449" ignored="false" />
+    <file path="/Dummy.txt" changelist="9147a5cd-d55d-4207-b0f1-bf5037d94b35" time="1376952244161" ignored="false" />
     <file path="$USER_HOME$/workspace/gscripts/gscripts/submit_miso_index_gtf.py" changelist="9147a5cd-d55d-4207-b0f1-bf5037d94b35" time="1373555365667" ignored="false" />
     <file path="/submit_miso_index_gtf.py" changelist="9147a5cd-d55d-4207-b0f1-bf5037d94b35" time="1373556371405" ignored="false" />
     <file path="$PROJECT_DIR$/../cse202/Homework/hw2/q5_integer_multiplication.py" changelist="9147a5cd-d55d-4207-b0f1-bf5037d94b35" time="1373555030215" ignored="false" />
@@ -148,7 +141,7 @@
     <file path="$PROJECT_DIR$/../single_cell/scripts/read_miso_summary.py" changelist="9147a5cd-d55d-4207-b0f1-bf5037d94b35" time="1375984001149" ignored="false" />
     <file path="/read_miso_summary.py" changelist="9147a5cd-d55d-4207-b0f1-bf5037d94b35" time="1375984001149" ignored="false" />
     <file path="$PROJECT_DIR$/../single_cell/workflows/__init__.py" changelist="9147a5cd-d55d-4207-b0f1-bf5037d94b35" time="1375993232938" ignored="false" />
-    <file path="$PROJECT_DIR$/../single_cell/workflows/Splicing/__init__.py" changelist="9147a5cd-d55d-4207-b0f1-bf5037d94b35" time="1376850570589" ignored="false" />
+    <file path="$PROJECT_DIR$/../single_cell/workflows/Splicing/__init__.py" changelist="9147a5cd-d55d-4207-b0f1-bf5037d94b35" time="1376948232970" ignored="false" />
     <file path="$PROJECT_DIR$/../single_cell/scripts/plot_pca.py" changelist="9147a5cd-d55d-4207-b0f1-bf5037d94b35" time="1375995378219" ignored="false" />
     <file path="/plot_pca.py" changelist="9147a5cd-d55d-4207-b0f1-bf5037d94b35" time="1375995351798" ignored="false" />
     <file path="$PROJECT_DIR$/../single_cell/scripts/patrick_plot_pca.py" changelist="9147a5cd-d55d-4207-b0f1-bf5037d94b35" time="1376049780977" ignored="false" />
@@ -162,9 +155,14 @@
     <file path="/test_all" changelist="9147a5cd-d55d-4207-b0f1-bf5037d94b35" time="1376495710354" ignored="false" />
     <file path="/MANIFEST" changelist="9147a5cd-d55d-4207-b0f1-bf5037d94b35" time="1376496404651" ignored="false" />
     <file path="/MANIFEST.in" changelist="9147a5cd-d55d-4207-b0f1-bf5037d94b35" time="1376673291006" ignored="false" />
-    <file path="/dataviz.py" changelist="9147a5cd-d55d-4207-b0f1-bf5037d94b35" time="1376716109716" ignored="false" />
-    <file path="$PROJECT_DIR$/../gscripts/gscripts/general/dataviz.py" changelist="9147a5cd-d55d-4207-b0f1-bf5037d94b35" time="1376823093408" ignored="false" />
+    <file path="/dataviz.py" changelist="9147a5cd-d55d-4207-b0f1-bf5037d94b35" time="1376954426922" ignored="false" />
+    <file path="$PROJECT_DIR$/../gscripts/gscripts/general/dataviz.py" changelist="9147a5cd-d55d-4207-b0f1-bf5037d94b35" time="1376954427396" ignored="false" />
     <file path="$PROJECT_DIR$/../single_cell/workflows/plots/psi.py" changelist="9147a5cd-d55d-4207-b0f1-bf5037d94b35" time="1376820796116" ignored="false" />
+    <file path="$PROJECT_DIR$/../single_cell/workflows/SingleCellDataVisualizer/__init__.py" changelist="9147a5cd-d55d-4207-b0f1-bf5037d94b35" time="1376940871114" ignored="false" />
+    <file path="$PROJECT_DIR$/../single_cell/igv/batch_scripts/two_representatives_from_PNM.txt" changelist="9147a5cd-d55d-4207-b0f1-bf5037d94b35" time="1376938411574" ignored="false" />
+    <file path="$PROJECT_DIR$/../single_cell/igv/batch_scripts/all_samples.txt" changelist="9147a5cd-d55d-4207-b0f1-bf5037d94b35" time="1376939137327" ignored="false" />
+    <file path="/all_samples.txt" changelist="9147a5cd-d55d-4207-b0f1-bf5037d94b35" time="1376938813026" ignored="false" />
+    <file path="$PROJECT_DIR$/../single_cell/igv/batch_scripts/collapse.txt" changelist="9147a5cd-d55d-4207-b0f1-bf5037d94b35" time="1376939147660" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -208,9 +206,7 @@
             <entry file="file://$PROJECT_DIR$/tests/test_legend.py">
               <provider selected="true" editor-type-id="text-editor">
                 <state line="18" column="22" selection-start="481" selection-end="481" vertical-scroll-proportion="0.0">
-                  <folding>
-                    <element signature="e#21#79#0" expanded="true" />
-                  </folding>
+                  <folding />
                 </state>
               </provider>
             </entry>
@@ -242,10 +238,10 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="__init__.py" pinned="false" current="true" current-in-tab="true">
+          <file leaf-file-name="__init__.py" pinned="false" current="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/prettyplotlib/__init__.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="33" column="42" selection-start="1217" selection-end="1217" vertical-scroll-proportion="0.5217391">
+                <state line="32" column="48" selection-start="1166" selection-end="1166" vertical-scroll-proportion="0.02173913">
                   <folding />
                 </state>
               </provider>
@@ -255,7 +251,7 @@
       </split-first>
       <split-second>
         <leaf>
-          <file leaf-file-name="LICENSE.txt" pinned="false" current="false" current-in-tab="true">
+          <file leaf-file-name="LICENSE.txt" pinned="false" current="true" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/LICENSE.txt">
               <provider selected="true" editor-type-id="text-editor">
                 <state line="19" column="0" selection-start="1058" selection-end="1058" vertical-scroll-proportion="0.41545188">
@@ -391,12 +387,12 @@
   <component name="PropertiesComponent">
     <property name="options.splitter.main.proportions" value="0.3" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="recentsLimit" value="5" />
     <property name="options.lastSelected" value="reference.settingsdialog.IDE.editor.colors.Font" />
+    <property name="recentsLimit" value="5" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../single_cell" />
     <property name="FullScreen" value="false" />
-    <property name="options.splitter.details.proportions" value="0.2" />
     <property name="options.searchVisible" value="true" />
+    <property name="options.splitter.details.proportions" value="0.2" />
   </component>
   <component name="PyConsoleOptionsProvider">
     <option name="myPythonConsoleState">
@@ -560,9 +556,10 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="22" width="1440" height="874" extended-state="6" />
+    <frame x="0" y="22" width="1440" height="874" extended-state="0" />
     <editor active="true" />
     <layout>
+      <window_info id="Plugins" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -699,18 +696,16 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/tests/test_legend.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="18" column="22" selection-start="481" selection-end="481" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="e#21#79#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/tests/test_remove_chartjunk.py">
       <provider selected="true" editor-type-id="text-editor">
         <state line="13" column="27" selection-start="429" selection-end="429" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/test_legend.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="18" column="22" selection-start="481" selection-end="481" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
@@ -729,6 +724,13 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/prettyplotlib/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="32" column="48" selection-start="1166" selection-end="1166" vertical-scroll-proportion="0.02173913">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/LICENSE.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state line="19" column="0" selection-start="1058" selection-end="1058" vertical-scroll-proportion="0.41545188">
@@ -737,13 +739,6 @@
       </provider>
       <provider editor-type-id="com.intellij.persistence.database.editor.CsvTableFileEditorProvider">
         <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/prettyplotlib/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="33" column="42" selection-start="1217" selection-end="1217" vertical-scroll-proportion="0.5217391">
-          <folding />
-        </state>
       </provider>
     </entry>
   </component>

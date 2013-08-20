@@ -30,7 +30,7 @@ blues.set_under('white')
 
 # Need to 'reverse' red to blue so that blue=cold=small numbers,
 # and red=hot=large numbers with '_r' suffix
-blue_red = brewer2mpl.get_map('RdBu', 'qualitative', 11,
+blue_red = brewer2mpl.get_map('RdBu', 'Diverging', 11,
                               reverse=True).mpl_colormap
 
 # Default "patches" like scatterplots
