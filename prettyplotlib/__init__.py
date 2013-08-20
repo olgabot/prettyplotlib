@@ -126,21 +126,52 @@ def bar(ax, left, height, **kwargs):
         kwargs['color'] = set2[0]
     if 'edgecolor' not in kwargs:
         kwargs['edgecolor'] = 'white'
-    if 'grid' in kwargs:
-        grid = kwargs['grid']
-        kwargs.pop('grid')
-    else:
-        grid = None
+
+    # Label each individual bar, if xticklabels is provided
+    xtickabels = kwargs.pop('xtickabels', None)
+    xticks = np.ndarray(left) + 0.4
+
+    # Annotate each bar with the value
+    annotate = kwargs.pop('annotation', False)
+
+    # If no grid specified, don't draw one.
+    grid = kwargs.pop('grid', None)
+
     ax.bar(left, height, **kwargs)
     remove_chartjunk(ax, ['top', 'right'], grid=grid)
 
+    # Add the xticklabels if they are there
+    if xtickabels is not None:
+        n = len(xticks)
+        xmin, xmax = ax.get_xlim()
+        ax.set_xlim(xmin-0.25, xmax)
+        ax.set_xticks(left+0.4)
+        ax.set_xticklabels(xtickabels)
+
+    if annotate:
+        annotate_yrange_factor = 0.025
+        ymin, ymax = ax.get_ylim()
+        yrange = ymax - ymin
+        # Reset ymax so there's enough room to see the annotation of the topmost bar
+        ymax += yrange*0.1
+        ax.set_ylim(ymin, ymax)
+        yrange = ymax - ymin
+
+        offset = yrange * annotate_yrange_factor
+        for x, h in zip(xticks, height):
+            if type(h) is np.float_:
+                annotation = '%.3f' % h
+            else:
+                annotation = str(h)
+            ax.annotate(annotation, (x, h + offset),
+                        verticalalignment='bottom',
+                        horizontalalignment='center')
+
 
 def boxplot(ax, x, **kwargs):
-    if 'xticklabels' in kwargs:
-        xticklabels = kwargs['xticklabels']
-        kwargs.pop('xticklabels')
-    else:
-        xticklabels = None
+    # If no ticklabels are specified, don't draw any
+    xticklabels = kwargs.pop('xticklabels', None)
+
     if 'widths' not in kwargs:
         kwargs['widths'] = 0.15
     bp = ax.boxplot(x, **kwargs)
@@ -166,11 +197,10 @@ def hist(ax, x, **kwargs):
     # Reassign the default colors to Set2 by Colorbrewer
     if 'color' not in kwargs:
         kwargs['color'] = set2[0]
-    if 'grid' in kwargs:
-        grid = kwargs['grid']
-        kwargs.pop('grid')
-    else:
-        grid = None
+
+    # If no grid specified, don't draw one.
+    grid = kwargs.pop('grid', None)
+
         # print 'hist kwargs', kwargs
     ax.hist(x, edgecolor='white', **kwargs)
     remove_chartjunk(ax, ['top', 'right'], grid=grid)
