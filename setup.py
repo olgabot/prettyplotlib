@@ -2,7 +2,7 @@ from distutils.core import setup
 
 setup(
     name='prettyplotlib',
-    version='0.1.2',
+    version='0.1.3',
     author='Olga B. Botvinnik',
     author_email='olga.botvinnik@gmail.com',
     packages=['prettyplotlib'],

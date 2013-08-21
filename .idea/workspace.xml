@@ -2,27 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9147a5cd-d55d-4207-b0f1-bf5037d94b35" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/result_images/test_bar/bar-expected.png" afterPath="$PROJECT_DIR$/tests/result_images/test_bar/bar-expected.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/baseline_images/test_bar/bar.png" afterPath="$PROJECT_DIR$/tests/baseline_images/test_bar/bar.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/result_images/test_bar/bar.png" afterPath="$PROJECT_DIR$/tests/result_images/test_bar/bar.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/baseline_images/test_pcolormesh/pcolormesh.png" afterPath="$PROJECT_DIR$/tests/baseline_images/test_pcolormesh/pcolormesh.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/baseline_images/test_pcolormesh/pcolormesh_positive.png" afterPath="$PROJECT_DIR$/tests/baseline_images/test_pcolormesh/pcolormesh_positive.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/lib/prettyplotlib/__init__.py" afterPath="$PROJECT_DIR$/build/lib/prettyplotlib/__init__.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/prettyplotlib/__init__.py" afterPath="$PROJECT_DIR$/prettyplotlib/__init__.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/examples/.ipynb_checkpoints/pcolormesh-checkpoint.ipynb" afterPath="$PROJECT_DIR$/examples/.ipynb_checkpoints/pcolormesh-checkpoint.ipynb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/examples/pcolormesh.ipynb" afterPath="$PROJECT_DIR$/examples/pcolormesh.ipynb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/examples/.ipynb_checkpoints/scatter-checkpoint.ipynb" afterPath="$PROJECT_DIR$/examples/.ipynb_checkpoints/scatter-checkpoint.ipynb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/examples/scatter.ipynb" afterPath="$PROJECT_DIR$/examples/scatter.ipynb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/test_bar.py" afterPath="$PROJECT_DIR$/tests/test_bar.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/test_pcolormesh.py" afterPath="$PROJECT_DIR$/tests/test_pcolormesh.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/setup.py" afterPath="$PROJECT_DIR$/setup.py" />
     </list>
     <ignored path="PrettyPlots.iws" />
     <ignored path=".idea/workspace.xml" />
     <file path="/__init__.py" changelist="9147a5cd-d55d-4207-b0f1-bf5037d94b35" time="1377105826858" ignored="false" />
     <file path="$PROJECT_DIR$/../templates/python_command_line_template.py" changelist="9147a5cd-d55d-4207-b0f1-bf5037d94b35" time="1373579768258" ignored="false" />
     <file path="/python_command_line_template.py" changelist="9147a5cd-d55d-4207-b0f1-bf5037d94b35" time="1373556381015" ignored="false" />
-    <file path="/Dummy.txt" changelist="9147a5cd-d55d-4207-b0f1-bf5037d94b35" time="1377022174989" ignored="false" />
+    <file path="/Dummy.txt" changelist="9147a5cd-d55d-4207-b0f1-bf5037d94b35" time="1377115136068" ignored="false" />
     <file path="$USER_HOME$/workspace/gscripts/gscripts/submit_miso_index_gtf.py" changelist="9147a5cd-d55d-4207-b0f1-bf5037d94b35" time="1373555365667" ignored="false" />
     <file path="/submit_miso_index_gtf.py" changelist="9147a5cd-d55d-4207-b0f1-bf5037d94b35" time="1373556371405" ignored="false" />
     <file path="$PROJECT_DIR$/../cse202/Homework/hw2/q5_integer_multiplication.py" changelist="9147a5cd-d55d-4207-b0f1-bf5037d94b35" time="1373555030215" ignored="false" />
@@ -179,13 +166,11 @@
     <splitter split-orientation="horizontal" split-proportion="0.5">
       <split-first>
         <leaf>
-          <file leaf-file-name="test_bar.py" pinned="false" current="false" current-in-tab="true">
+          <file leaf-file-name="test_bar.py" pinned="false" current="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/tests/test_bar.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="32" column="20" selection-start="1112" selection-end="1112" vertical-scroll-proportion="0.53051645">
-                  <folding>
-                    <element signature="e#21#79#0" expanded="true" />
-                  </folding>
+                <state line="32" column="20" selection-start="1112" selection-end="1112" vertical-scroll-proportion="0.0">
+                  <folding />
                 </state>
               </provider>
             </entry>
@@ -208,10 +193,10 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="setup.py" pinned="false" current="false" current-in-tab="false">
+          <file leaf-file-name="setup.py" pinned="false" current="true" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/setup.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="9" column="33" selection-start="257" selection-end="257" vertical-scroll-proportion="0.0">
+                <state line="4" column="18" selection-start="85" selection-end="85" vertical-scroll-proportion="0.0867052">
                   <folding />
                 </state>
               </provider>
@@ -229,7 +214,7 @@
           <file leaf-file-name="matplotlibrc" pinned="false" current="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/examples/matplotlibrc">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="31" column="2" selection-start="1363" selection-end="1363" vertical-scroll-proportion="60.0">
+                <state line="31" column="2" selection-start="1363" selection-end="1363" vertical-scroll-proportion="0.0">
                   <folding />
                 </state>
               </provider>
@@ -245,7 +230,7 @@
           <file leaf-file-name="LICENSE.txt" pinned="false" current="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/LICENSE.txt">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="19" column="0" selection-start="1058" selection-end="1058" vertical-scroll-proportion="-10.555555">
+                <state line="19" column="0" selection-start="1058" selection-end="1058" vertical-scroll-proportion="0.0">
                   <folding />
                 </state>
               </provider>
@@ -258,17 +243,15 @@
             <entry file="file://$PROJECT_DIR$/prettyplotlib/__init__.py">
               <provider selected="true" editor-type-id="text-editor">
                 <state line="395" column="44" selection-start="13613" selection-end="13613" vertical-scroll-proportion="0.0">
-                  <folding>
-                    <element signature="e#23#47#0" expanded="true" />
-                  </folding>
+                  <folding />
                 </state>
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="test_pcolormesh.py" pinned="false" current="true" current-in-tab="true">
+          <file leaf-file-name="test_pcolormesh.py" pinned="false" current="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/tests/test_pcolormesh.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="62" column="61" selection-start="2137" selection-end="2137" vertical-scroll-proportion="0.3202417">
+                <state line="62" column="61" selection-start="2137" selection-end="2137" vertical-scroll-proportion="0.02097902">
                   <folding>
                     <element signature="e#21#79#0" expanded="true" />
                   </folding>
@@ -300,7 +283,6 @@
         <option value="$PROJECT_DIR$/tests/test_remove_chartjunk.py" />
         <option value="$PROJECT_DIR$/tests/test_all" />
         <option value="$PROJECT_DIR$/MANIFEST" />
-        <option value="$PROJECT_DIR$/setup.py" />
         <option value="$PROJECT_DIR$/MANIFEST.in" />
         <option value="$PROJECT_DIR$/prettyplotlib/_common.py" />
         <option value="$PROJECT_DIR$/prettyplotlib/common/__init__.py" />
@@ -312,6 +294,7 @@
         <option value="$PROJECT_DIR$/tests/test_bar.py" />
         <option value="$PROJECT_DIR$/prettyplotlib/__init__.py" />
         <option value="$PROJECT_DIR$/tests/test_pcolormesh.py" />
+        <option value="$PROJECT_DIR$/setup.py" />
       </list>
     </option>
   </component>
@@ -401,12 +384,12 @@
   <component name="PropertiesComponent">
     <property name="options.splitter.main.proportions" value="0.3" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="options.lastSelected" value="reference.settingsdialog.IDE.editor.colors.Font" />
     <property name="recentsLimit" value="5" />
+    <property name="options.lastSelected" value="reference.settingsdialog.IDE.editor.colors.Font" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../single_cell" />
     <property name="FullScreen" value="false" />
-    <property name="options.searchVisible" value="true" />
     <property name="options.splitter.details.proportions" value="0.2" />
+    <property name="options.searchVisible" value="true" />
   </component>
   <component name="PyConsoleOptionsProvider">
     <option name="myPythonConsoleState">
@@ -657,6 +640,32 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/LICENSE.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="19" column="0" selection-start="1058" selection-end="1058" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="com.intellij.persistence.database.editor.CsvTableFileEditorProvider">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/prettyplotlib/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="395" column="44" selection-start="13613" selection-end="13613" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/test_pcolormesh.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="62" column="61" selection-start="2137" selection-end="2137" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="e#21#79#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/MANIFEST">
       <provider selected="true" editor-type-id="text-editor">
         <state line="5" column="9" selection-start="93" selection-end="93" vertical-scroll-proportion="0.0" />
@@ -669,16 +678,12 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/tests/test_boxplot.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="19" column="22" selection-start="494" selection-end="494" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="19" column="22" selection-start="494" selection-end="494" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/examples/pcolormesh.ipynb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
       </provider>
       <provider editor-type-id="com.intellij.persistence.database.editor.CsvTableFileEditorProvider">
         <state />
@@ -686,7 +691,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/LICENSE.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="19" column="0" selection-start="1058" selection-end="1058" vertical-scroll-proportion="-10.555555">
+        <state line="19" column="0" selection-start="1058" selection-end="1058" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
@@ -708,16 +713,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/setup.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="33" selection-start="257" selection-end="257" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/examples/matplotlibrc">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="31" column="2" selection-start="1363" selection-end="1363" vertical-scroll-proportion="60.0">
+        <state line="31" column="2" selection-start="1363" selection-end="1363" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
@@ -732,30 +730,33 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/tests/test_bar.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="32" column="20" selection-start="1112" selection-end="1112" vertical-scroll-proportion="0.53051645">
-          <folding>
-            <element signature="e#21#79#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/prettyplotlib/__init__.py">
       <provider selected="true" editor-type-id="text-editor">
         <state line="395" column="44" selection-start="13613" selection-end="13613" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="e#23#47#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/tests/test_pcolormesh.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="62" column="61" selection-start="2137" selection-end="2137" vertical-scroll-proportion="0.3202417">
+        <state line="62" column="61" selection-start="2137" selection-end="2137" vertical-scroll-proportion="0.02097902">
           <folding>
             <element signature="e#21#79#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/test_bar.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="32" column="20" selection-start="1112" selection-end="1112" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/setup.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="4" column="18" selection-start="85" selection-end="85" vertical-scroll-proportion="0.0867052">
+          <folding />
         </state>
       </provider>
     </entry>
