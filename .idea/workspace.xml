@@ -2,43 +2,24 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9147a5cd-d55d-4207-b0f1-bf5037d94b35" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/boxplot.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/serve_ipython.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/srvIPY.sh" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/result_images/test_bar/bar-expected.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/result_images/test_bar/bar.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/result_images/test_boxplot/boxplot-expected.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/result_images/test_boxplot/boxplot.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/result_images/test_legend/legend-expected.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/result_images/test_legend/legend.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/result_images/test_pcolormesh/pcolormesh-expected.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/result_images/test_pcolormesh/pcolormesh.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/result_images/test_pcolormesh/pcolormesh_labels-expected.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/result_images/test_pcolormesh/pcolormesh_labels.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/result_images/test_pcolormesh/pcolormesh_positive-expected.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/result_images/test_pcolormesh/pcolormesh_positive.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/result_images/test_pcolormesh/pcolormesh_positive_other_cmap-expected.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/result_images/test_pcolormesh/pcolormesh_positive_other_cmap.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/result_images/test_plot/plot-expected.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/result_images/test_plot/plot.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/result_images/test_remove_chartjunk/remove_chartjunk-expected.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/result_images/test_remove_chartjunk/remove_chartjunk.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/result_images/test_scatter/scatter-expected.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/result_images/test_scatter/scatter.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/test_boxplot.ipynb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/tests/baseline_images/test_boxplot/boxplot.pdf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/tests/baseline_images/test_boxplot/boxplot.svg" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/result_images/test_bar/bar-expected.png" afterPath="$PROJECT_DIR$/tests/result_images/test_bar/bar-expected.png" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/baseline_images/test_bar/bar.png" afterPath="$PROJECT_DIR$/tests/baseline_images/test_bar/bar.png" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/result_images/test_bar/bar.png" afterPath="$PROJECT_DIR$/tests/result_images/test_bar/bar.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/baseline_images/test_pcolormesh/pcolormesh.png" afterPath="$PROJECT_DIR$/tests/baseline_images/test_pcolormesh/pcolormesh.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/baseline_images/test_pcolormesh/pcolormesh_positive.png" afterPath="$PROJECT_DIR$/tests/baseline_images/test_pcolormesh/pcolormesh_positive.png" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/lib/prettyplotlib/__init__.py" afterPath="$PROJECT_DIR$/build/lib/prettyplotlib/__init__.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/prettyplotlib/__init__.py" afterPath="$PROJECT_DIR$/prettyplotlib/__init__.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/examples/.ipynb_checkpoints/pcolormesh-checkpoint.ipynb" afterPath="$PROJECT_DIR$/examples/.ipynb_checkpoints/pcolormesh-checkpoint.ipynb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/examples/pcolormesh.ipynb" afterPath="$PROJECT_DIR$/examples/pcolormesh.ipynb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/examples/.ipynb_checkpoints/scatter-checkpoint.ipynb" afterPath="$PROJECT_DIR$/examples/.ipynb_checkpoints/scatter-checkpoint.ipynb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/examples/scatter.ipynb" afterPath="$PROJECT_DIR$/examples/scatter.ipynb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/test_bar.py" afterPath="$PROJECT_DIR$/tests/test_bar.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/test_pcolormesh.py" afterPath="$PROJECT_DIR$/tests/test_pcolormesh.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="PrettyPlots.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/__init__.py" changelist="9147a5cd-d55d-4207-b0f1-bf5037d94b35" time="1377031569008" ignored="false" />
+    <file path="/__init__.py" changelist="9147a5cd-d55d-4207-b0f1-bf5037d94b35" time="1377105826858" ignored="false" />
     <file path="$PROJECT_DIR$/../templates/python_command_line_template.py" changelist="9147a5cd-d55d-4207-b0f1-bf5037d94b35" time="1373579768258" ignored="false" />
     <file path="/python_command_line_template.py" changelist="9147a5cd-d55d-4207-b0f1-bf5037d94b35" time="1373556381015" ignored="false" />
     <file path="/Dummy.txt" changelist="9147a5cd-d55d-4207-b0f1-bf5037d94b35" time="1377022174989" ignored="false" />
@@ -160,9 +141,9 @@
     <file path="$PROJECT_DIR$/../single_cell/scripts/patrick_plot_pca.py" changelist="9147a5cd-d55d-4207-b0f1-bf5037d94b35" time="1376049780977" ignored="false" />
     <file path="/patrick_plot_pca.py" changelist="9147a5cd-d55d-4207-b0f1-bf5037d94b35" time="1375995494998" ignored="false" />
     <file path="/test_plot.py" changelist="9147a5cd-d55d-4207-b0f1-bf5037d94b35" time="1377028110203" ignored="false" />
-    <file path="/test_bar.py" changelist="9147a5cd-d55d-4207-b0f1-bf5037d94b35" time="1377028300782" ignored="false" />
+    <file path="/test_bar.py" changelist="9147a5cd-d55d-4207-b0f1-bf5037d94b35" time="1377038290083" ignored="false" />
     <file path="/test_remove_chartjunk.py" changelist="9147a5cd-d55d-4207-b0f1-bf5037d94b35" time="1376494574057" ignored="false" />
-    <file path="/test_pcolormesh.py" changelist="9147a5cd-d55d-4207-b0f1-bf5037d94b35" time="1376491428900" ignored="false" />
+    <file path="/test_pcolormesh.py" changelist="9147a5cd-d55d-4207-b0f1-bf5037d94b35" time="1377113113472" ignored="false" />
     <file path="/test_all.sh" changelist="9147a5cd-d55d-4207-b0f1-bf5037d94b35" time="1376493033997" ignored="false" />
     <file path="/test_legend.py" changelist="9147a5cd-d55d-4207-b0f1-bf5037d94b35" time="1376493111058" ignored="false" />
     <file path="/test_all" changelist="9147a5cd-d55d-4207-b0f1-bf5037d94b35" time="1376495710354" ignored="false" />
@@ -198,10 +179,10 @@
     <splitter split-orientation="horizontal" split-proportion="0.5">
       <split-first>
         <leaf>
-          <file leaf-file-name="test_bar.py" pinned="false" current="false" current-in-tab="false">
+          <file leaf-file-name="test_bar.py" pinned="false" current="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/tests/test_bar.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="36" column="0" selection-start="1241" selection-end="1408" vertical-scroll-proportion="-7.8235292">
+                <state line="32" column="20" selection-start="1112" selection-end="1112" vertical-scroll-proportion="0.53051645">
                   <folding>
                     <element signature="e#21#79#0" expanded="true" />
                   </folding>
@@ -245,17 +226,6 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="__init__.py" pinned="false" current="true" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/prettyplotlib/__init__.py">
-              <provider selected="true" editor-type-id="text-editor">
-                <state line="97" column="53" selection-start="3369" selection-end="3369" vertical-scroll-proportion="0.5037594">
-                  <folding>
-                    <element signature="e#23#47#0" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
           <file leaf-file-name="matplotlibrc" pinned="false" current="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/examples/matplotlibrc">
               <provider selected="true" editor-type-id="text-editor">
@@ -272,15 +242,37 @@
       </split-first>
       <split-second>
         <leaf>
-          <file leaf-file-name="LICENSE.txt" pinned="false" current="false" current-in-tab="true">
+          <file leaf-file-name="LICENSE.txt" pinned="false" current="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/LICENSE.txt">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="19" column="0" selection-start="1058" selection-end="1058" vertical-scroll-proportion="0.41545188">
+                <state line="19" column="0" selection-start="1058" selection-end="1058" vertical-scroll-proportion="-10.555555">
                   <folding />
                 </state>
               </provider>
               <provider editor-type-id="com.intellij.persistence.database.editor.CsvTableFileEditorProvider">
                 <state />
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="__init__.py" pinned="false" current="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/prettyplotlib/__init__.py">
+              <provider selected="true" editor-type-id="text-editor">
+                <state line="395" column="44" selection-start="13613" selection-end="13613" vertical-scroll-proportion="0.0">
+                  <folding>
+                    <element signature="e#23#47#0" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="test_pcolormesh.py" pinned="false" current="true" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/tests/test_pcolormesh.py">
+              <provider selected="true" editor-type-id="text-editor">
+                <state line="62" column="61" selection-start="2137" selection-end="2137" vertical-scroll-proportion="0.3202417">
+                  <folding>
+                    <element signature="e#21#79#0" expanded="true" />
+                  </folding>
+                </state>
               </provider>
             </entry>
           </file>
@@ -304,7 +296,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/tests/test_all.sh" />
         <option value="$PROJECT_DIR$/tests/test_legend.py" />
         <option value="$PROJECT_DIR$/tests/test_remove_chartjunk.py" />
         <option value="$PROJECT_DIR$/tests/test_all" />
@@ -320,10 +311,12 @@
         <option value="$PROJECT_DIR$/tests/test_plot.py" />
         <option value="$PROJECT_DIR$/tests/test_bar.py" />
         <option value="$PROJECT_DIR$/prettyplotlib/__init__.py" />
+        <option value="$PROJECT_DIR$/tests/test_pcolormesh.py" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
+    <option name="x" value="-36" />
     <option name="y" value="22" />
     <option name="width" value="1440" />
     <option name="height" value="874" />
@@ -398,20 +391,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="prettyplotlib" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="PrettyPlots" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="prettyplotlib" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="examples" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -592,7 +571,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="22" width="1440" height="874" extended-state="0" />
+    <frame x="-36" y="22" width="1440" height="874" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Plugins" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -695,16 +674,29 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/tests/test_legend.py">
+    <entry file="file://$PROJECT_DIR$/examples/pcolormesh.ipynb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="18" column="22" selection-start="481" selection-end="481" vertical-scroll-proportion="0.0">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
+      <provider editor-type-id="com.intellij.persistence.database.editor.CsvTableFileEditorProvider">
+        <state />
+      </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/setup.py">
+    <entry file="file://$PROJECT_DIR$/LICENSE.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="33" selection-start="257" selection-end="257" vertical-scroll-proportion="0.0">
+        <state line="19" column="0" selection-start="1058" selection-end="1058" vertical-scroll-proportion="-10.555555">
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="com.intellij.persistence.database.editor.CsvTableFileEditorProvider">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/test_legend.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="18" column="22" selection-start="481" selection-end="481" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
@@ -716,14 +708,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/examples/pcolormesh.ipynb">
+    <entry file="file://$PROJECT_DIR$/setup.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+        <state line="9" column="33" selection-start="257" selection-end="257" vertical-scroll-proportion="0.0">
           <folding />
         </state>
-      </provider>
-      <provider editor-type-id="com.intellij.persistence.database.editor.CsvTableFileEditorProvider">
-        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/examples/matplotlibrc">
@@ -743,19 +732,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/LICENSE.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="19" column="0" selection-start="1058" selection-end="1058" vertical-scroll-proportion="0.41545188">
-          <folding />
-        </state>
-      </provider>
-      <provider editor-type-id="com.intellij.persistence.database.editor.CsvTableFileEditorProvider">
-        <state />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/tests/test_bar.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="36" column="0" selection-start="1241" selection-end="1408" vertical-scroll-proportion="-7.8235292">
+        <state line="32" column="20" selection-start="1112" selection-end="1112" vertical-scroll-proportion="0.53051645">
           <folding>
             <element signature="e#21#79#0" expanded="true" />
           </folding>
@@ -764,9 +743,18 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/prettyplotlib/__init__.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="97" column="53" selection-start="3369" selection-end="3369" vertical-scroll-proportion="0.5037594">
+        <state line="395" column="44" selection-start="13613" selection-end="13613" vertical-scroll-proportion="0.0">
           <folding>
             <element signature="e#23#47#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/test_pcolormesh.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="62" column="61" selection-start="2137" selection-end="2137" vertical-scroll-proportion="0.3202417">
+          <folding>
+            <element signature="e#21#79#0" expanded="true" />
           </folding>
         </state>
       </provider>

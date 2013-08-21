@@ -5,6 +5,7 @@ import matplotlib.pyplot as plt
 import brewer2mpl
 import numpy as np
 import sys
+import collections
 
 # Get Set2 from ColorBrewer, a set of colors deemed colorblind-safe and
 # pleasant to look at by Drs. Cynthia Brewer and Mark Harrower of Pennsylvania
@@ -25,9 +26,13 @@ mpl.rcParams['axes.color_cycle'] = set2
 almost_black = '#262626'
 light_grey = np.array([float(248) / float(255)] * 3)
 
-blues = mpl.cm.Blues
-blues.set_bad('white')
-blues.set_under('white')
+reds = mpl.cm.Reds
+reds.set_bad('white')
+reds.set_under('white')
+
+blues_r = mpl.cm.Blues_r
+blues_r.set_bad('white')
+blues_r.set_under('white')
 
 # Need to 'reverse' red to blue so that blue=cold=small numbers,
 # and red=hot=large numbers with '_r' suffix
@@ -42,7 +47,7 @@ mpl.rcParams['patch.facecolor'] = 'none'
 mpl.rcParams['patch.edgecolor'] = set2[0]
 
 # Change the default axis colors from black to a slightly lighter black,
-# and a little thinner (0.5 instead of 0.1)
+# and a little thinner (0.5 instead of 1)
 mpl.rcParams['axes.edgecolor'] = almost_black
 mpl.rcParams['axes.labelcolor'] = almost_black
 mpl.rcParams['axes.linewidth'] = 0.5
@@ -87,7 +92,7 @@ def bar(ax, left, height, **kwargs):
 
     # add whitespace padding on left
     xmin, xmax = ax.get_xlim()
-    xmin -= 0.25
+    xmin -= 0.2
     ax.set_xlim(xmin, xmax)
 
     # If there are negative counts, remove the bottom axes
@@ -95,7 +100,7 @@ def bar(ax, left, height, **kwargs):
     if sum(h < 0 for h in height) > 0:
         axes_to_remove = ['top', 'right', 'bottom']
         ax.hlines(y=0, xmin=xmin, xmax=xmax,
-                  colors=almost_black, linewidths=0.75)
+                  linewidths=0.75)
     else:
         axes_to_remove = ['top', 'right']
 
@@ -107,7 +112,7 @@ def bar(ax, left, height, **kwargs):
         ax.set_xticks(xticks)
         ax.set_xticklabels(xtickabels)
 
-    if annotate:
+    if annotate or isinstance(annotate, collections.Iterable):
         annotate_yrange_factor = 0.025
         ymin, ymax = ax.get_ylim()
         yrange = ymax - ymin
@@ -122,16 +127,16 @@ def bar(ax, left, height, **kwargs):
         yrange = ymax - ymin
 
         offset_ = yrange * annotate_yrange_factor
-        for x, h in zip(xticks, height):
-            if type(h) is np.float_:
-                annotation = '%.3f' % h
-            else:
-                annotation = str(h)
+        if isinstance(annotate, collections.Iterable):
+            annotations = map(str, annotate)
+        else:
+            annotations = ['%.3f' % h if type(h) is np.float_ else str(h)
+                           for h in height]
+        for x, h, annotation in zip(xticks, height, annotations):
+
             # Adjust the offset to account for negative bars
             offset = offset_ if h >= 0 else -1*offset_
             verticalalignment = 'bottom' if h >= 0 else 'top'
-            print 'x', x, '  h', h, '  offset', offset,
-            print '  verticalalignment', verticalalignment
 
             # Finally, add the text to the axes
             ax.annotate(annotation, (x, h + offset),
@@ -300,8 +305,10 @@ def pcolormesh(fig, ax, x, **kwargs):
     if 'cmap' not in kwargs:
         if kwargs['vmax'] > 0 and kwargs['vmin'] < 0:
             kwargs['cmap'] = blue_red
-        else:
-            kwargs['cmap'] = blues
+        elif kwargs['vmax'] <= 0:
+            kwargs['cmap'] = blues_r
+        elif kwargs['vmax'] > 0:
+            kwargs['cmap'] = reds
 
     if 'xticklabels' in kwargs:
         xticklabels = kwargs['xticklabels']
@@ -386,7 +393,7 @@ def remove_chartjunk(ax, spines, grid=None, ticklabels=None):
 
     if ticklabels is not None:
         if type(ticklabels) is str:
-            assert ticklabels in set(('x', 'y'))
+            assert ticklabels in set(('x'   , 'y'))
             if ticklabels == 'x':
                 ax.set_xticklabels([])
             if ticklabels == 'y':

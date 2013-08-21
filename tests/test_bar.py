@@ -32,6 +32,16 @@ def test_bar_annotate():
     # fig.savefig('%s/baseline_images/test_bar/bar_annotate.png' %
     #             os.path.dirname(__file__))
 
+@image_comparison(baseline_images=['bar_annotate_user'], extensions=['png'])
+def test_bar_annotate_user():
+    fig, ax = plt.subplots(1)
+    np.random.seed(14)
+    ppl.bar(ax, np.arange(10), np.abs(np.random.randn(10)),
+            annotate=range(10,20))
+    # fig.savefig('%s/baseline_images/test_bar/bar_annotate_user.png' %
+    #             os.path.dirname(__file__))
+
+
 @image_comparison(baseline_images=['bar_xticklabels'], extensions=['png'])
 def test_bar_xticklabels():
     fig, ax = plt.subplots(1)
