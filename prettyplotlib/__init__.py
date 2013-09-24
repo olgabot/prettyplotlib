@@ -88,7 +88,7 @@ def bar(ax, left, height, **kwargs):
     # If no grid specified, don't draw one.
     grid = kwargs.pop('grid', None)
 
-    ax.bar(left, height, **kwargs)
+    rectangles = ax.bar(left, height, **kwargs)
 
     # add whitespace padding on left
     xmin, xmax = ax.get_xlim()
@@ -143,6 +143,7 @@ def bar(ax, left, height, **kwargs):
                         verticalalignment=verticalalignment,
                         horizontalalignment='center',
                         color=almost_black)
+    return rectangles
 
 
 def boxplot(ax, x, **kwargs):
@@ -163,6 +164,7 @@ def boxplot(ax, x, **kwargs):
     plt.setp(bp['fliers'], color=set1[1])
     plt.setp(bp['caps'], color='none')
     ax.spines['left']._linewidth = 0.5
+    return bp
 
 
 def hist(ax, x, **kwargs):
@@ -179,8 +181,10 @@ def hist(ax, x, **kwargs):
     grid = kwargs.pop('grid', None)
 
         # print 'hist kwargs', kwargs
-    ax.hist(x, edgecolor='white', **kwargs)
+    patches = ax.hist(x, edgecolor='white', **kwargs)
     remove_chartjunk(ax, ['top', 'right'], grid=grid)
+    return patches
+
 
 def legend(ax, facecolor=light_grey, **kwargs):
     legend = ax.legend(frameon=True, scatterpoints=1, **kwargs)
@@ -199,6 +203,8 @@ def legend(ax, facecolor=light_grey, **kwargs):
         #
         # fig, ax = plt.subplots(1)
         # ppl.scatter(ax, x, y)
+    return legend
+
 
 def plot(ax, x, y, **kwargs):
     if 'color' in kwargs:
@@ -212,8 +218,9 @@ def plot(ax, x, y, **kwargs):
     if 'linewidth' not in kwargs:
         kwargs['linewidth'] = 0.75
 
-    ax.plot(x, y, color=color, **kwargs)
+    lines = ax.plot(x, y, color=color, **kwargs)
     remove_chartjunk(ax, ['top', 'right'])
+    return lines
 
 
 def scatter(ax, x, y, **kwargs):
@@ -236,11 +243,15 @@ def scatter(ax, x, y, **kwargs):
     if 'linewidth' not in kwargs:
         kwargs['linewidth'] = 0.15
 
-    ax.scatter(x, y, **kwargs)
+    collections = ax.scatter(x, y, **kwargs)
     remove_chartjunk(ax, ['top', 'right'])
+    return collections
 
-
-
+def scatter_column(ax, x, **kwargs):
+    """
+    Creates a boxplot-like 'scatter column' which plots the values of
+    """
+    pass
 
 
 
@@ -347,6 +358,7 @@ def pcolormesh(fig, ax, x, **kwargs):
         ax.set_yticklabels(yticklabels, rotation=yticklabels_rotation)
         # Show the scale of the colorbar
     fig.colorbar(p)
+    return p
 
 def remove_chartjunk(ax, spines, grid=None, ticklabels=None):
     '''
@@ -379,7 +391,7 @@ def remove_chartjunk(ax, spines, grid=None, ticklabels=None):
     for ax_name, pos in zip(xy_ax_names, xy_pos):
         axis = ax.__dict__[ax_name]
         # axis.set_tick_params(color=almost_black)
-        if type(axis.get_scale()) == 'log':
+        if axis.get_scale() == 'log':
             # if this spine is not in the list of spines to remove
             for p in pos.difference(spines):
                 axis.set_ticks_position(p)
@@ -393,7 +405,7 @@ def remove_chartjunk(ax, spines, grid=None, ticklabels=None):
 
     if ticklabels is not None:
         if type(ticklabels) is str:
-            assert ticklabels in set(('x'   , 'y'))
+            assert ticklabels in set(('x' , 'y'))
             if ticklabels == 'x':
                 ax.set_xticklabels([])
             if ticklabels == 'y':

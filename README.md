@@ -16,15 +16,15 @@ Requirements:
 <table>
   <tr height="207" valign="top">
     <td><code>matplotlib</code> default <code>plot</code><br><img src="https://raw.github.com/olgabot/prettyplotlib/master/examples/plot_matplotlib_default.png" height="202"></td>
-    <td><code>prettyplotlib</code> default <code>plot</code><br><a href=https://github.com/olgabot/prettyplotlib/wiki/Examples-gallery#plot-lines-eg-time-series-with-a-legend"><img src="https://raw.github.com/olgabot/prettyplotlib/master/examples/plot_prettyplotlib_default.png" height="202"></a></td>
+    <td><code>prettyplotlib</code> default <code>plot</code><br><a href=https://github.com/olgabot/prettyplotlib/wiki/Examples-with-code#plot-lines-eg-time-series-with-a-legend"><img src="https://raw.github.com/olgabot/prettyplotlib/master/examples/plot_prettyplotlib_default.png" height="202"></a></td>
   </tr>  
   <tr height="207" valign="top">
     <td><code>matplotlib</code> default <code>scatter</code><br><img src="https://raw.github.com/olgabot/prettyplotlib/master/examples/scatter_matplotlib_default.png" height="202"></td>
-    <td><code>prettyplotlib</code> default <code>scatter</code><br><a href="https://github.com/olgabot/prettyplotlib/wiki/Examples-gallery#scatter-points"><img src="https://raw.github.com/olgabot/prettyplotlib/master/examples/scatter_prettyplotlib_default.png" height="202"></a></td>
+    <td><code>prettyplotlib</code> default <code>scatter</code><br><a href="https://github.com/olgabot/prettyplotlib/wiki/Examples-with-code#scatter-points"><img src="https://raw.github.com/olgabot/prettyplotlib/master/examples/scatter_prettyplotlib_default.png" height="202"></a></td>
   </tr>
   <tr height="207" valign="top">
     <td><code>matplotlib</code> default <code>bar</code><br><img src="https://raw.github.com/olgabot/prettyplotlib/master/examples/bar_matplotlib_default.png" height="202"></td>
-    <td><code>prettyplotlib</code> default <code>bar</code><br><a href=https://github.com/olgabot/prettyplotlib/wiki/Examples-gallery#bar><img src="https://raw.github.com/olgabot/prettyplotlib/master/examples/bar_prettyplotlib_default.png" height="202"></a></td>
+    <td><code>prettyplotlib</code> default <code>bar</code><br><a href=https://github.com/olgabot/prettyplotlib/wiki/Examples-with-code#bar><img src="https://raw.github.com/olgabot/prettyplotlib/master/examples/bar_prettyplotlib_default.png" height="202"></a></td>
   </tr>
   <tr height="207" valign="top">
     <td><code>matplotlib</code> default <code>hist</code><br><img src="https://raw.github.com/olgabot/prettyplotlib/master/examples/hist_matplotlib_default.png" height="202"></td>

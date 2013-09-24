@@ -1,11 +1,12 @@
-from distutils.core import setup
+from setuptools import setup
+from setuptools import find_packages
 
 setup(
     name='prettyplotlib',
     version='0.1.3',
     author='Olga B. Botvinnik',
     author_email='olga.botvinnik@gmail.com',
-    packages=['prettyplotlib'],
+    packages=find_packages(),
     license='LICENSE.txt',
     url='http://olgabot.github.io/prettyplotlib',
     description='Painlessly create beautiful default `matplotlib` plots.',
