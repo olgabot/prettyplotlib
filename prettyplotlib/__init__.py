@@ -157,12 +157,13 @@ def boxplot(ax, x, **kwargs):
         ax.xaxis.set_ticklabels(xticklabels)
 
     remove_chartjunk(ax, ['top', 'right', 'bottom'])
+    linewidth = 0.75
 
-    plt.setp(bp['boxes'], color=set1[1], linewidth=0.5)
+    plt.setp(bp['boxes'], color=set1[1], linewidth=linewidth)
     plt.setp(bp['medians'], color=set1[0])
-    plt.setp(bp['whiskers'], color=set1[1], linestyle='solid', linewidth=0.5)
+    plt.setp(bp['whiskers'], color=set1[1], linestyle='solid', linewidth=linewidth)
     plt.setp(bp['fliers'], color=set1[1])
-    plt.setp(bp['caps'], color='none')
+    plt.setp(bp['caps'], color=set1[1], linewidth=linewidth)
     ax.spines['left']._linewidth = 0.5
     return bp
 
