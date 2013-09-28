@@ -4,6 +4,7 @@ dist
 .project
 .pydevproject
 *.pyc
+*egg-info
 
 # PyCharm IDE
 .idea/
