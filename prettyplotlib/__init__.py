@@ -1,11 +1,12 @@
 #!/usr/bin/env python
 
+import collections
+
 import matplotlib as mpl
 import matplotlib.pyplot as plt
 import brewer2mpl
 import numpy as np
-import sys
-import collections
+
 
 # Get Set2 from ColorBrewer, a set of colors deemed colorblind-safe and
 # pleasant to look at by Drs. Cynthia Brewer and Mark Harrower of Pennsylvania
@@ -63,7 +64,6 @@ mpl.rcParams['xtick.color'] = almost_black
 mpl.rcParams['text.color'] = almost_black
 
 
-
 def bar(ax, left, height, **kwargs):
     """
     Creates a bar plot, with white outlines and a fill color that defaults to
@@ -71,6 +71,16 @@ def bar(ax, left, height, **kwargs):
      grid='y' or grid='x' to draw a white grid over the bars,
      to show the scale. Almost like "erasing" some of the plot,
      but it adds more information!
+
+    Can also add an annotation of the height of the barplots directly onto
+    the bars with the `annotate` parameter, which can either be True,
+    which will annotate the values, or a list of strings, which will annotate
+    with the supplied strings.
+
+    @param ax: matplotlib.axes instance
+    @param left: Vector of values of where to put the left side of the bar
+    @param height: Vector of values of the bar heights
+    @param kwargs: Any additional arguments to matplotlib.bar()
     """
     if 'color' not in kwargs:
         kwargs['color'] = set2[0]
@@ -120,9 +130,9 @@ def bar(ax, left, height, **kwargs):
         # Reset ymax and ymin so there's enough room to see the annotation of
         # the top-most
         if ymax > 0:
-            ymax += yrange*0.1
+            ymax += yrange * 0.1
         if ymin < 0:
-            ymin -= yrange*0.1
+            ymin -= yrange * 0.1
         ax.set_ylim(ymin, ymax)
         yrange = ymax - ymin
 
@@ -133,9 +143,8 @@ def bar(ax, left, height, **kwargs):
             annotations = ['%.3f' % h if type(h) is np.float_ else str(h)
                            for h in height]
         for x, h, annotation in zip(xticks, height, annotations):
-
             # Adjust the offset to account for negative bars
-            offset = offset_ if h >= 0 else -1*offset_
+            offset = offset_ if h >= 0 else -1 * offset_
             verticalalignment = 'bottom' if h >= 0 else 'top'
 
             # Finally, add the text to the axes
@@ -147,6 +156,16 @@ def bar(ax, left, height, **kwargs):
 
 
 def boxplot(ax, x, **kwargs):
+    """
+    Create a box-and-whisker plot showing the mean, 25th percentile, and 75th
+    percentile. The difference from matplotlib is only the left axis line is
+    shown, and ticklabels labeling each category of data can be added.
+
+    @param ax:
+    @param x:
+    @param kwargs:
+    @return:
+    """
     # If no ticklabels are specified, don't draw any
     xticklabels = kwargs.pop('xticklabels', None)
 
@@ -161,7 +180,8 @@ def boxplot(ax, x, **kwargs):
 
     plt.setp(bp['boxes'], color=set1[1], linewidth=linewidth)
     plt.setp(bp['medians'], color=set1[0])
-    plt.setp(bp['whiskers'], color=set1[1], linestyle='solid', linewidth=linewidth)
+    plt.setp(bp['whiskers'], color=set1[1], linestyle='solid',
+             linewidth=linewidth)
     plt.setp(bp['fliers'], color=set1[1])
     plt.setp(bp['caps'], color=set1[1], linewidth=linewidth)
     ax.spines['left']._linewidth = 0.5
@@ -175,14 +195,15 @@ def hist(ax, x, **kwargs):
      but it adds more information!
     """
     # Reassign the default colors to Set2 by Colorbrewer
-    if 'color' not in kwargs:
-        kwargs['color'] = set2[0]
+    color_cycle = ax._get_lines.color_cycle
+    color = kwargs.pop('color', color_cycle.next())
+    facecolor = kwargs.pop('facecolor', color)
 
     # If no grid specified, don't draw one.
     grid = kwargs.pop('grid', None)
 
-        # print 'hist kwargs', kwargs
-    patches = ax.hist(x, edgecolor='white', **kwargs)
+    # print 'hist kwargs', kwargs
+    patches = ax.hist(x, edgecolor='white', facecolor=facecolor, **kwargs)
     remove_chartjunk(ax, ['top', 'right'], grid=grid)
     return patches
 
@@ -198,12 +219,6 @@ def legend(ax, facecolor=light_grey, **kwargs):
     texts = legend.texts
     for t in texts:
         t.set_color(almost_black)
-
-        # import matplotlib.pyplot as plt
-        # import prettyplotlib as ppl
-        #
-        # fig, ax = plt.subplots(1)
-        # ppl.scatter(ax, x, y)
     return legend
 
 
@@ -244,28 +259,30 @@ def scatter(ax, x, y, **kwargs):
     if 'linewidth' not in kwargs:
         kwargs['linewidth'] = 0.15
 
-    collections = ax.scatter(x, y, **kwargs)
+    scatterpoints = ax.scatter(x, y, **kwargs)
     remove_chartjunk(ax, ['top', 'right'])
-    return collections
+    return scatterpoints
+
 
 def scatter_column(ax, x, **kwargs):
     """
-    Creates a boxplot-like 'scatter column' which plots the values of
+    Creates a boxplot-like 'scatter column' which is like a boxplot, though
+    it plots the values of
     """
     pass
 
 
-
-def switch_axis_limits(ax, which_axis=('x', 'y')):
+def switch_axis_limits(ax, which_axis):
     '''
-    Switch the axis limits of either x or y
+    Switch the axis limits of either x or y. Or both!
     '''
-    assert which_axis in ('x', 'y')
-    ax_limits = ax.axis()
-    if which_axis == 'x':
-        ax.set_xlim(ax_limits[1], ax_limits[0])
-    else:
-        ax.set_ylim(ax_limits[3], ax_limits[2])
+    for a in which_axis:
+        assert a in ('x', 'y')
+        ax_limits = ax.axis()
+        if a == 'x':
+            ax.set_xlim(ax_limits[1], ax_limits[0])
+        else:
+            ax.set_ylim(ax_limits[3], ax_limits[2])
 
 
 def upside_down_hist(ax, x, **kwargs):
@@ -284,9 +301,6 @@ def sideways_hist(ax, y, **kwargs):
     switch_axis_limits(ax, 'x')
     remove_chartjunk(ax, ['left', 'top'], grid='x', ticklabels='y')
 
-# TODO: Heatmap-style figures. Default colormap = Blues. Check if the data
-# has both negative and positive values. If so, then use blue (negative)-red
-# (positive) heatmap
 
 def pcolormesh(fig, ax, x, **kwargs):
     """
@@ -361,6 +375,7 @@ def pcolormesh(fig, ax, x, **kwargs):
     fig.colorbar(p)
     return p
 
+
 def remove_chartjunk(ax, spines, grid=None, ticklabels=None):
     '''
     Removes "chartjunk", such as extra lines of axes and tick marks.
@@ -381,9 +396,9 @@ def remove_chartjunk(ax, spines, grid=None, ticklabels=None):
         if spine not in spines:
             ax.spines[spine].set_linewidth(0.5)
             # ax.spines[spine].set_color(almost_black)
-        #            ax.spines[spine].set_tick_params(color=almost_black)
-        # Check that the axes are not log-scale. If they are, leave the ticks
-    # because otherwise people assume a linear scale.
+            #            ax.spines[spine].set_tick_params(color=almost_black)
+            # Check that the axes are not log-scale. If they are, leave the ticks
+        # because otherwise people assume a linear scale.
     x_pos = set(['top', 'bottom'])
     y_pos = set(['left', 'right'])
     xy_pos = [x_pos, y_pos]
@@ -396,17 +411,18 @@ def remove_chartjunk(ax, spines, grid=None, ticklabels=None):
             # if this spine is not in the list of spines to remove
             for p in pos.difference(spines):
                 axis.set_ticks_position(p)
-            #                axis.set_tick_params(which='both', p)
+                #                axis.set_tick_params(which='both', p)
         else:
             axis.set_ticks_position('none')
 
     if grid is not None:
-        assert grid in ('x', 'y')
-        ax.grid(axis=grid, color='white', linestyle='-', linewidth=0.5)
+        for g in grid:
+            assert grid in ('x', 'y')
+            ax.grid(axis=grid, color='white', linestyle='-', linewidth=0.5)
 
     if ticklabels is not None:
         if type(ticklabels) is str:
-            assert ticklabels in set(('x' , 'y'))
+            assert ticklabels in set(('x', 'y'))
             if ticklabels == 'x':
                 ax.set_xticklabels([])
             if ticklabels == 'y':
