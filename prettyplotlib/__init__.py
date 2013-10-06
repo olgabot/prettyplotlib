@@ -86,11 +86,16 @@ def bar(ax, left, height, **kwargs):
         kwargs['color'] = set2[0]
     if 'edgecolor' not in kwargs:
         kwargs['edgecolor'] = 'white'
+    if 'width' in kwargs:
+        # Find the middle of the bar
+        middle = kwargs['width']/2.0
+    else:
+        middle = 0.4
 
     # Label each individual bar, if xticklabels is provided
     xtickabels = kwargs.pop('xticklabels', None)
     # left+0.4 is the center of the bar
-    xticks = np.array(left) + 0.4
+    xticks = np.array(left) + middle
 
     # Whether or not to annotate each bar with the height value
     annotate = kwargs.pop('annotate', False)
@@ -417,7 +422,7 @@ def remove_chartjunk(ax, spines, grid=None, ticklabels=None):
 
     if grid is not None:
         for g in grid:
-            assert grid in ('x', 'y')
+            assert g in ('x', 'y')
             ax.grid(axis=grid, color='white', linestyle='-', linewidth=0.5)
 
     if ticklabels is not None:
