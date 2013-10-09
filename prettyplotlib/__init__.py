@@ -396,7 +396,7 @@ def pcolormesh(fig, ax, x, **kwargs):
     return p
 
 
-def remove_chartjunk(ax, spines, grid=None, ticklabels=None):
+def remove_chartjunk(ax, spines, grid=None, ticklabels=None, show_ticks=False):
     '''
     Removes "chartjunk", such as extra lines of axes and tick marks.
 
