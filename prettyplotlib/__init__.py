@@ -395,7 +395,7 @@ def pcolormesh(fig, ax, x, **kwargs):
         ax.set_yticklabels(yticklabels, rotation=yticklabels_rotation)
 
     # Show the scale of the colorbar
-    fig.colorbar(p, cax=ax_colorbar, use_gridpsec=True,
+    fig.colorbar(p, cax=ax_colorbar, use_gridspec=True,
     orientation=orientation_colorbar)
     return p
 
