@@ -430,11 +430,11 @@ def remove_chartjunk(ax, spines, grid=None, ticklabels=None, show_ticks=False):
     for ax_name, pos in zip(xy_ax_names, xy_pos):
         axis = ax.__dict__[ax_name]
         # axis.set_tick_params(color=almost_black)
-        print 'axis.get_scale()', axis.get_scale()
+        #print 'axis.get_scale()', axis.get_scale()
         if show_ticks or axis.get_scale() == 'log':
             # if this spine is not in the list of spines to remove
             for p in pos.difference(spines):
-                print 'p', p
+                #print 'p', p
                 axis.set_ticks_position(p)
                 axis.set_tick_params(direction='out')
                 #                axis.set_tick_params(which='both', p)
