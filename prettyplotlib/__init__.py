@@ -100,6 +100,8 @@ def bar(ax, left, height, **kwargs):
     # Whether or not to annotate each bar with the height value
     annotate = kwargs.pop('annotate', False)
 
+    show_ticks = kwargs.pop('show_ticks', False)
+
     # If no grid specified, don't draw one.
     grid = kwargs.pop('grid', None)
 
@@ -120,7 +122,7 @@ def bar(ax, left, height, **kwargs):
         axes_to_remove = ['top', 'right']
 
     # Remove excess axes
-    remove_chartjunk(ax, axes_to_remove, grid=grid)
+    remove_chartjunk(ax, axes_to_remove, grid=grid, show_ticks=show_ticks)
 
     # Add the xticklabels if they are there
     if xtickabels is not None:
@@ -180,7 +182,10 @@ def boxplot(ax, x, **kwargs):
     if xticklabels:
         ax.xaxis.set_ticklabels(xticklabels)
 
-    remove_chartjunk(ax, ['top', 'right', 'bottom'])
+    show_caps = kwargs.pop('show_caps', True)
+    show_ticks = kwargs.pop('show_ticks', False)
+
+    remove_chartjunk(ax, ['top', 'right', 'bottom'], show_ticks=show_ticks)
     linewidth = 0.75
 
     plt.setp(bp['boxes'], color=set1[1], linewidth=linewidth)
@@ -188,7 +193,10 @@ def boxplot(ax, x, **kwargs):
     plt.setp(bp['whiskers'], color=set1[1], linestyle='solid',
              linewidth=linewidth)
     plt.setp(bp['fliers'], color=set1[1])
-    plt.setp(bp['caps'], color=set1[1], linewidth=linewidth)
+    if show_caps:
+        plt.setp(bp['caps'], color=set1[1], linewidth=linewidth)
+    else:
+        plt.setp(bp['caps'], color='none')
     ax.spines['left']._linewidth = 0.5
     return bp
 
@@ -203,13 +211,14 @@ def hist(ax, x, **kwargs):
     color_cycle = ax._get_lines.color_cycle
     color = kwargs.pop('color', color_cycle.next())
     facecolor = kwargs.pop('facecolor', color)
+    show_ticks = kwargs.pop('show_ticks', False)
 
     # If no grid specified, don't draw one.
     grid = kwargs.pop('grid', None)
 
     # print 'hist kwargs', kwargs
     patches = ax.hist(x, edgecolor='white', facecolor=facecolor, **kwargs)
-    remove_chartjunk(ax, ['top', 'right'], grid=grid)
+    remove_chartjunk(ax, ['top', 'right'], grid=grid, show_ticks=show_ticks)
     return patches
 
 
@@ -239,8 +248,10 @@ def plot(ax, x, y, **kwargs):
     if 'linewidth' not in kwargs:
         kwargs['linewidth'] = 0.75
 
+    show_ticks = kwargs.pop('show_ticks', False)
+
     lines = ax.plot(x, y, color=color, **kwargs)
-    remove_chartjunk(ax, ['top', 'right'])
+    remove_chartjunk(ax, ['top', 'right'], show_ticks=show_ticks)
     return lines
 
 
@@ -264,8 +275,10 @@ def scatter(ax, x, y, **kwargs):
     if 'linewidth' not in kwargs:
         kwargs['linewidth'] = 0.15
 
+    show_ticks = kwargs.pop('show_ticks', False)
+
     scatterpoints = ax.scatter(x, y, **kwargs)
-    remove_chartjunk(ax, ['top', 'right'])
+    remove_chartjunk(ax, ['top', 'right'], show_ticks=show_ticks)
     return scatterpoints
 
 
@@ -412,9 +425,11 @@ def remove_chartjunk(ax, spines, grid=None, ticklabels=None):
     for ax_name, pos in zip(xy_ax_names, xy_pos):
         axis = ax.__dict__[ax_name]
         # axis.set_tick_params(color=almost_black)
+        print 'axis.get_scale()', axis.get_scale()
         if axis.get_scale() == 'log':
             # if this spine is not in the list of spines to remove
             for p in pos.difference(spines):
+                print 'p', p
                 axis.set_ticks_position(p)
                 #                axis.set_tick_params(which='both', p)
         else:
