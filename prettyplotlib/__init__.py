@@ -395,7 +395,7 @@ def pcolormesh(fig, ax, x, **kwargs):
         ax.set_yticklabels(yticklabels, rotation=yticklabels_rotation)
 
     # Show the scale of the colorbar
-    fig.colorbar(p, ax=ax_colorbar, orientation=orientation_colorbar)
+    fig.colorbar(p, cax=ax_colorbar, orientation=orientation_colorbar)
     return p
 
 
@@ -435,8 +435,8 @@ def remove_chartjunk(ax, spines, grid=None, ticklabels=None, show_ticks=False):
             # if this spine is not in the list of spines to remove
             for p in pos.difference(spines):
                 #print 'p', p
-                axis.set_ticks_position(p)
                 axis.set_tick_params(direction='out')
+                axis.set_ticks_position(p)
                 #                axis.set_tick_params(which='both', p)
         else:
             axis.set_ticks_position('none')
