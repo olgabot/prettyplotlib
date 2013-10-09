@@ -377,6 +377,8 @@ def pcolormesh(fig, ax, x, **kwargs):
         yticklabels_rotation = 'horizontal'
 
     ax_colorbar = kwargs.pop('ax_colorbar', None)
+    orientation_colorbar = kwargs.pop('orientation_colorbar', 'vertical')
+
     p = ax.pcolormesh(x, **kwargs)
     ax.set_ylim(0, x.shape[0])
 
@@ -391,8 +393,9 @@ def pcolormesh(fig, ax, x, **kwargs):
         yticks = np.arange(0.5, x.shape[0] + 0.5)
         ax.set_yticks(yticks)
         ax.set_yticklabels(yticklabels, rotation=yticklabels_rotation)
-        # Show the scale of the colorbar
-    fig.colorbar(p, ax=ax_colorbar)
+
+    # Show the scale of the colorbar
+    fig.colorbar(p, ax=ax_colorbar, orientation=orientation_colorbar)
     return p
 
 
