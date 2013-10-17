@@ -6,6 +6,13 @@ from prettyplotlib import plt
 import numpy as np
 import os
 import string
+import six
+
+if six.PY3:
+    UPPERCASE_CHARS = string.ascii_uppercase
+else:
+    UPPERCASE_CHARS = string.uppercase
+
 
 @image_comparison(baseline_images=['bar'], extensions=['png'])
 def test_bar():
@@ -48,7 +55,7 @@ def test_bar_xticklabels():
     np.random.seed(14)
     n = 10
     ppl.bar(ax, np.arange(n), np.abs(np.random.randn(n)),
-            xticklabels=string.uppercase[:n])
+            xticklabels=UPPERCASE_CHARS[:n])
     # fig.savefig('%s/baseline_images/test_bar/bar_xticklabels.png' %
     #             os.path.dirname(__file__))
 
