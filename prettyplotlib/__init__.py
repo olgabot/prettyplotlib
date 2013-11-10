@@ -114,7 +114,7 @@ def bar(ax, left, height, **kwargs):
 
     # If there are negative counts, remove the bottom axes
     # and add a line at y=0
-    if sum(h < 0 for h in height) > 0:
+    if any(h < 0 for h in height):
         axes_to_remove = ['top', 'right', 'bottom']
         ax.hlines(y=0, xmin=xmin, xmax=xmax,
                   linewidths=0.75)
@@ -209,7 +209,7 @@ def hist(ax, x, **kwargs):
     """
     # Reassign the default colors to Set2 by Colorbrewer
     color_cycle = ax._get_lines.color_cycle
-    color = kwargs.pop('color', color_cycle.next())
+    color = kwargs.pop('color', next(color_cycle))
     facecolor = kwargs.pop('facecolor', color)
     show_ticks = kwargs.pop('show_ticks', False)
 
@@ -244,7 +244,7 @@ def plot(ax, x, y, **kwargs):
     else:
         # if no color is specified, cycle over the ones in this axis
         color_cycle = ax._get_lines.color_cycle
-        color = color_cycle.next()
+        color = next(color_cycle)
     if 'linewidth' not in kwargs:
         kwargs['linewidth'] = 0.75
 
@@ -269,7 +269,7 @@ def scatter(ax, x, y, **kwargs):
     if 'color' not in kwargs:
         # Assume that color means the edge color. You can assign the
         color_cycle = ax._get_lines.color_cycle
-        kwargs['color'] = color_cycle.next()
+        kwargs['color'] = next(color_cycle)
     if 'alpha' not in kwargs:
         kwargs['alpha'] = 0.5
     if 'linewidth' not in kwargs:

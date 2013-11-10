@@ -9,6 +9,16 @@ import string
 from prettyplotlib import brewer2mpl
 from matplotlib.colors import LogNorm
 
+import six
+
+if six.PY3:
+    LOWERCASE_CHARS = string.ascii_lowercase
+    UPPERCASE_CHARS = string.ascii_uppercase
+else:
+    LOWERCASE_CHARS = LOWERCASE_CHARS
+    UPPERCASE_CHARS = UPPERCASE_CHARS
+
+
 @image_comparison(baseline_images=['pcolormesh'], extensions=['png'])
 def test_pcolormesh():
     fig, ax = plt.subplots(1)
@@ -27,8 +37,8 @@ def test_pcolormesh_labels():
     np.random.seed(10)
 
     ppl.pcolormesh(fig, ax, np.random.randn(10, 10),
-                   xticklabels=string.uppercase[:10],
-                   yticklabels=string.lowercase[-10:])
+                   xticklabels=UPPERCASE_CHARS[:10],
+                   yticklabels=LOWERCASE_CHARS[-10:])
     # fig.savefig('%s/baseline_images/test_pcolormesh/pcolormesh_labels.png' %
     #             os.path.dirname(__file__))
 
@@ -40,11 +50,11 @@ def test_pcolormesh_positive():
     np.random.seed(10)
 
     ppl.pcolormesh(fig, ax, np.random.uniform(size=(10, 10)),
-                   xticklabels=string.uppercase[:10],
-                   yticklabels=string.lowercase[-10:])
+                   xticklabels=UPPERCASE_CHARS[:10],
+                   yticklabels=LOWERCASE_CHARS[-10:])
     # fig.savefig('%s/baseline_images/test_pcolormesh/pcolormesh_positive.png' %
     #             os.path.dirname(__file__))
-    
+
 @image_comparison(baseline_images=['pcolormesh_negative'], extensions=['png'])
 def test_pcolormesh_negative():
     fig, ax = plt.subplots(1)
@@ -52,8 +62,8 @@ def test_pcolormesh_negative():
     np.random.seed(10)
 
     ppl.pcolormesh(fig, ax, -np.random.uniform(size=(10, 10)),
-                   xticklabels=string.uppercase[:10],
-                   yticklabels=string.lowercase[-10:])
+                   xticklabels=UPPERCASE_CHARS[:10],
+                   yticklabels=LOWERCASE_CHARS[-10:])
     # fig.savefig('%s/baseline_images/test_pcolormesh/pcolormesh_negative.png' %
     #             os.path.dirname(__file__))
 
@@ -81,8 +91,8 @@ def test_pcolormesh_positive_other_cmap():
     np.random.seed(10)
 
     ppl.pcolormesh(fig, ax, np.random.uniform(size=(10, 10)),
-                   xticklabels=string.uppercase[:10],
-                   yticklabels=string.lowercase[-10:],
+                   xticklabels=UPPERCASE_CHARS[:10],
+                   yticklabels=LOWERCASE_CHARS[-10:],
                    cmap=red_purple)
     # fig.savefig(
     #     '%s/baseline_images/test_pcolormesh/pcolormesh_positive_other_cmap.png' %
