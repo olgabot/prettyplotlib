@@ -1,9 +1,6 @@
 #!/usr/bin/env python
 
-import collections
-
 import matplotlib as mpl
-import matplotlib.pyplot as plt
 import brewer2mpl
 import numpy as np
 
@@ -47,35 +44,6 @@ blues_r.set_under('white')
 # and red=hot=large numbers with '_r' suffix
 blue_red = brewer2mpl.get_map('RdBu', 'Diverging', 11,
                               reverse=True).mpl_colormap
-
-
-# --- Set a bunch of matplotlib parameters --- #
-#mpl.rcParams['axes.color_cycle'] = set2
-#
-## Default "patches" like scatterplots
-#mpl.rcParams['patch.linewidth'] = 0.75     # edge width in points
-#
-## Default empty circle with a colored outline
-#mpl.rcParams['patch.facecolor'] = 'none'
-#mpl.rcParams['patch.edgecolor'] = almost_black
-#
-## Change the default axis colors from black to a slightly lighter black,
-## and a little thinner (0.5 instead of 1)
-#mpl.rcParams['axes.edgecolor'] = almost_black
-#mpl.rcParams['axes.labelcolor'] = almost_black
-#mpl.rcParams['axes.linewidth'] = 0.5
-#
-## Make the default grid be white so it "removes" lines rather than adds
-#mpl.rcParams['grid.color'] = 'white'
-#
-## change the tick colors also to the almost black
-#mpl.rcParams['ytick.color'] = almost_black
-#mpl.rcParams['xtick.color'] = almost_black
-#
-## change the text colors also to the almost black
-#mpl.rcParams['text.color'] = almost_black
-
-
 
 
 def scatter_column(ax, x, **kwargs):
