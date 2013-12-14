@@ -210,8 +210,10 @@ def barh(ax, top, width, **kwargs):
     # and add a line at y=0
     if any(w < 0 for w in width):
         axes_to_remove = ['top', 'right', 'bottom']
-        ax.vlines(y=0, xmin=xmin, xmax=xmax,
+        ax.vlines(x=0, ymin=ymin, ymax=ymax,
                   linewidths=0.75)
+       #ax.hlines(y=0, xmin=xmin, xmax=xmax,
+       #       linewidths=0.75)     
     else:
         axes_to_remove = ['top', 'right']
 
