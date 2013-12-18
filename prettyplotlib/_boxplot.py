@@ -23,9 +23,10 @@ def boxplot(*args, **kwargs):
     xticklabels = kwargs.pop('xticklabels', None)
     fontsize = kwargs.pop('fontsize', 10)
 
-    if 'widths' not in kwargs:
-        kwargs['widths'] = 0.15
-    bp = ax.boxplot(*args, **kwargs)
+    widths = kwargs.pop('widths', 0.15)
+
+    bp = ax.boxplot(*args, widths=widths, **kwargs)
+
     if xticklabels:
         ax.xaxis.set_ticklabels(xticklabels, fontsize=fontsize)
 

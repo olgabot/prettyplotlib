@@ -1,7 +1,6 @@
 __author__ = 'olga'
 
-from prettyplotlib import utils
-#from prettyplotlib.utils import remove_chartjunk, maybe_get_ax
+#from prettyplotlib import utils
 from prettyplotlib.colors import almost_black
 
 

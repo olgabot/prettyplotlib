@@ -51,3 +51,7 @@ Requirements:
     <td><code>prettyplotlib pcolormesh</code><br> negative-valued data with labels<br><a href="https://github.com/olgabot/prettyplotlib/wiki/Examples-with-code#pcolormesh-positive-only-data"><img src="https://raw.github.com/olgabot/prettyplotlib/master/examples/pcolormesh_prettyplotlib_negative_labels.png" height="202"></a></td>
   </tr>
 </table>
+
+### Quotes
+
+_"Dis ain't no **ugly**plotlib"_ - Anonymous
