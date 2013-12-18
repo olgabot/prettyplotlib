@@ -1,6 +1,8 @@
 __author__ = 'olga'
 
-from prettyplotlib import remove_chartjunk, almost_black
+from prettyplotlib.utils import remove_chartjunk
+from prettyplotlib.colors import almost_black
+
 
 def scatter(ax, x, y, **kwargs):
     """

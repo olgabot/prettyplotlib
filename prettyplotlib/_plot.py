@@ -1,6 +1,7 @@
 __author__ = 'olga'
 
-from prettyplotlib import remove_chartjunk
+from prettyplotlib.utils import remove_chartjunk
+
 
 def plot(ax, x, y, **kwargs):
     if 'color' in kwargs:

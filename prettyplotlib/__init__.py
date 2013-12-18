@@ -7,7 +7,7 @@ from _legend import legend
 from _plot import plot
 from _pcolormesh import pcolormesh
 from _scatter import scatter
-from _remove_chartjunk import remove_chartjunk
+#from _remove_chartjunk import remove_chartjunk
 
 
 def scatter_column(ax, x, **kwargs):

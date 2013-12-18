@@ -2,7 +2,8 @@ __author__ = 'olga'
 
 import matplotlib as mpl
 import matplotlib.pyplot as plt
-from prettyplotlib import remove_chartjunk
+from prettyplotlib.utils import remove_chartjunk
+from prettyplotlib import colors
 
 
 def boxplot(*args, **kwargs):
@@ -41,13 +42,15 @@ def boxplot(*args, **kwargs):
     remove_chartjunk(ax, ['top', 'right', 'bottom'], show_ticks=show_ticks)
     linewidth = 0.75
 
-    plt.setp(bp['boxes'], color=set1[1], linewidth=linewidth)
-    plt.setp(bp['medians'], color=set1[0])
-    plt.setp(bp['whiskers'], color=set1[1], linestyle='solid',
+    blue = colors.set1[1]
+    red = colors.set1[0]
+    plt.setp(bp['boxes'], color=blue, linewidth=linewidth)
+    plt.setp(bp['medians'], color=red)
+    plt.setp(bp['whiskers'], color=blue, linestyle='solid',
              linewidth=linewidth)
-    plt.setp(bp['fliers'], color=set1[1])
+    plt.setp(bp['fliers'], color=blue)
     if show_caps:
-        plt.setp(bp['caps'], color=set1[1], linewidth=linewidth)
+        plt.setp(bp['caps'], color=blue, linewidth=linewidth)
     else:
         plt.setp(bp['caps'], color='none')
     ax.spines['left']._linewidth = 0.5

@@ -1,7 +1,10 @@
 __author__ = 'olga'
 
-from prettyplotlib import blue_red, blues_r, reds, remove_chartjunk
 import numpy as np
+
+from prettyplotlib.colors import blue_red, blues_r, reds
+from prettyplotlib.utils import remove_chartjunk
+
 
 def pcolormesh(fig, ax, x, **kwargs):
     """

@@ -1,6 +1,7 @@
 __author__ = 'olga'
 
-from prettyplotlib import light_grey, almost_black
+from prettyplotlib.colors import light_grey, almost_black
+
 
 def legend(ax, facecolor=light_grey, **kwargs):
     legend = ax.legend(frameon=True, scatterpoints=1, **kwargs)
