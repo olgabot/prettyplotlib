@@ -1,9 +1,11 @@
 __author__ = 'olga'
 
+import matplotlib as mpl
 import matplotlib.pyplot as plt
 from prettyplotlib import remove_chartjunk, set1
 
-def boxplot(ax, x, **kwargs):
+
+def boxplot(*args, **kwargs):
     """
     Create a box-and-whisker plot showing the mean, 25th percentile, and 75th
     percentile. The difference from matplotlib is only the left axis line is
@@ -17,14 +19,21 @@ def boxplot(ax, x, **kwargs):
     http://matplotlib.org/api/axes_api.html#matplotlib.axes.Axes.boxplot
     @return:
     """
-    # If no ticklabels are specified, don't draw any
+    if isinstance(args[0], mpl.axes.Axes):
+        ax = args.pop(0)
+    elif 'ax' in kwargs:
+        ax = kwargs['ax']
+    else:
+        ax = plt.gca()
+        # If no ticklabels are specified, don't draw any
     xticklabels = kwargs.pop('xticklabels', None)
+    fontsize = kwargs.pop('fontsize', 10)
 
     if 'widths' not in kwargs:
         kwargs['widths'] = 0.15
-    bp = ax.boxplot(x, **kwargs)
+    bp = ax.boxplot(*args, **kwargs)
     if xticklabels:
-        ax.xaxis.set_ticklabels(xticklabels)
+        ax.xaxis.set_ticklabels(xticklabels, fontsize=fontsize)
 
     show_caps = kwargs.pop('show_caps', True)
     show_ticks = kwargs.pop('show_ticks', False)
@@ -42,4 +51,4 @@ def boxplot(ax, x, **kwargs):
     else:
         plt.setp(bp['caps'], color='none')
     ax.spines['left']._linewidth = 0.5
-    return bp
+    return bp, ax

@@ -22,6 +22,9 @@ from _remove_chartjunk import remove_chartjunk
 #     http://colorbrewer2.org/
 # - A quick visual reference to every ColorBrewer scale:
 #     http://bl.ocks.org/mbostock/5577023
+
+#class Common(object):
+#    def __init__(self):
 set2 = brewer2mpl.get_map('Set2', 'qualitative', 8).mpl_colors
 
 # Another ColorBrewer scale. This one has nice "traditional" colors like
@@ -44,6 +47,8 @@ blues_r.set_under('white')
 # and red=hot=large numbers with '_r' suffix
 blue_red = brewer2mpl.get_map('RdBu', 'Diverging', 11,
                               reverse=True).mpl_colormap
+
+#common = Common()
 
 
 def scatter_column(ax, x, **kwargs):
