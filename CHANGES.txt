@@ -1,1 +1,8 @@
 v0.1, April 30th 2013 -- Initial release.
+
+v0.1.4, December 17th 2013 -- Bunch of changes since last time.
+- Now the first argument of the plots doesn't have to be an 'ax' object,
+it will create the object automagically
+- Refactored to put each plotting function into its own file
+- All functions now return an 'ax' object (from which the scatterpoints or
+boxplots can be accessed)

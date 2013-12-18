@@ -1,10 +1,8 @@
 __author__ = 'olga'
 
-import matplotlib as mpl
 import matplotlib.pyplot as plt
-from prettyplotlib.utils import remove_chartjunk
+from prettyplotlib.utils import remove_chartjunk, maybe_get_ax
 from prettyplotlib import colors
-
 
 def boxplot(*args, **kwargs):
     """
@@ -20,13 +18,8 @@ def boxplot(*args, **kwargs):
     http://matplotlib.org/api/axes_api.html#matplotlib.axes.Axes.boxplot
     @return:
     """
-    if isinstance(args[0], mpl.axes.Axes):
-        ax = args.pop(0)
-    elif 'ax' in kwargs:
-        ax = kwargs['ax']
-    else:
-        ax = plt.gca()
-        # If no ticklabels are specified, don't draw any
+    ax, args, kwargs = maybe_get_ax(args, kwargs)
+    # If no ticklabels are specified, don't draw any
     xticklabels = kwargs.pop('xticklabels', None)
     fontsize = kwargs.pop('fontsize', 10)
 
@@ -54,4 +47,4 @@ def boxplot(*args, **kwargs):
     else:
         plt.setp(bp['caps'], color='none')
     ax.spines['left']._linewidth = 0.5
-    return bp, ax
+    return ax

@@ -1,5 +1,8 @@
 __author__ = 'olga'
 
+import matplotlib as mpl
+import matplotlib.pyplot as plt
+
 
 def remove_chartjunk(ax, spines, grid=None, ticklabels=None, show_ticks=False):
     '''
@@ -61,3 +64,24 @@ def remove_chartjunk(ax, spines, grid=None, ticklabels=None, show_ticks=False):
                 ax.set_xticklabels([])
             elif 'y' in ticklabels:
                 ax.set_yticklabels([])
+
+
+def maybe_get_ax(args, kwargs):
+    """
+    It used to be that the first argument of prettyplotlib had to be the 'ax'
+    object, but that's not the case anymore.
+
+    @param args:
+    @type args:
+    @param kwargs:
+    @type kwargs:
+    @return:
+    @rtype:
+    """
+    if isinstance(args[0], mpl.axes.Axes):
+        ax = args.pop(0)
+    elif 'ax' in kwargs:
+        ax = kwargs.pop('ax')
+    else:
+        ax = plt.gca()
+    return ax, args, kwargs

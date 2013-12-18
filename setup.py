@@ -1,6 +1,8 @@
+import sys
+
 from setuptools import setup
 from setuptools import find_packages
-import sys
+
 
 if sys.version_info[0] == 3:
     LONG_DESCRIPTION = open('README.txt', encoding='utf-8').read()
@@ -9,7 +11,7 @@ else:
 
 setup(
     name='prettyplotlib',
-    version='0.1.3',
+    version='0.1.4',
     author='Olga B. Botvinnik',
     author_email='olga.botvinnik@gmail.com',
     packages=find_packages(),
