@@ -15,3 +15,5 @@ def scatterhist(ax, x, y):
     @return: hist_patches, scatter_points
     @rtype: matplotlib.
     """
+    raise NotImplementedError('Check out the "seaborn" plotting library for '
+                              'this.')

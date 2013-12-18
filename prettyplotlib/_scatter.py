@@ -1,6 +1,7 @@
 __author__ = 'olga'
 
-from prettyplotlib.utils import remove_chartjunk, maybe_get_ax
+from prettyplotlib import utils
+#from prettyplotlib.utils import remove_chartjunk, maybe_get_ax
 from prettyplotlib.colors import almost_black
 
 
@@ -16,7 +17,7 @@ def scatter(*args, **kwargs):
     """
     # Force 'color' to indicate the edge color, so the middle of the
     # scatter patches are empty. Can specify
-    ax, args, kwargs = maybe_get_ax(args, kwargs)
+    ax, args, kwargs = utils.maybe_get_ax(args, kwargs)
 
     if 'color' not in kwargs:
         # Assume that color means the edge color. You can assign the
@@ -25,13 +26,12 @@ def scatter(*args, **kwargs):
     edgecolor = kwargs.pop('edgecolor', almost_black)
     alpha = kwargs.pop('alpha', 0.5)
 
-    if {'lw', 'linewidth'} & & kwargs:
-        linewidth = kwargs.pop('linewidth', 0.15)
+    lw = utils.maybe_get_linewidth(kwargs)
 
     show_ticks = kwargs.pop('show_ticks', False)
 
-    scatterpoints = ax.scatter(*args, linewidth=linewidth,
+    scatterpoints = ax.scatter(*args, lw=lw,
                                alpha=alpha, edgecolor=edgecolor,
                                **kwargs)
-    remove_chartjunk(ax, ['top', 'right'], show_ticks=show_ticks)
+    utils.remove_chartjunk(ax, ['top', 'right'], show_ticks=show_ticks)
     return ax

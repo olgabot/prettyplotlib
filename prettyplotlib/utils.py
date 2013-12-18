@@ -85,3 +85,11 @@ def maybe_get_ax(args, kwargs):
     else:
         ax = plt.gca()
     return ax, args, kwargs
+
+
+def maybe_get_linewidth(kwargs):
+    try:
+        lw = ({"lw", "linewidth"} & set(kwargs)).pop()
+    except KeyError:
+        lw = 0.15
+    return lw
