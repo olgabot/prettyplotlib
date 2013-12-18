@@ -2,7 +2,7 @@ __author__ = 'olga'
 
 import matplotlib as mpl
 import matplotlib.pyplot as plt
-from prettyplotlib import remove_chartjunk, set1
+from prettyplotlib import remove_chartjunk
 
 
 def boxplot(*args, **kwargs):
