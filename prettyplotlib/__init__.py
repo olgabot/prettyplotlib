@@ -10,9 +10,6 @@ from _scatter import scatter
 from _remove_chartjunk import remove_chartjunk
 
 
-#common = Common()
-
-
 def scatter_column(ax, x, **kwargs):
     """
     Creates a boxplot-like 'scatter column' which is like a boxplot, though

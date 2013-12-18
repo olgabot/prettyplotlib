@@ -1,6 +1,10 @@
-import numpy as np
 import collections
-from prettyplotlib import set2, almost_black, remove_chartjunk
+
+import numpy as np
+
+from prettyplotlib.utils import remove_chartjunk
+from prettyplotlib import colors
+
 
 def bar(ax, left, height, **kwargs):
     """
@@ -23,7 +27,7 @@ def bar(ax, left, height, **kwargs):
     .org/api/axes_api.html#matplotlib.axes.Axes.bar is accepted.
     """
     if 'color' not in kwargs:
-        kwargs['color'] = set2[0]
+        kwargs['color'] = colors.set2[0]
     if 'edgecolor' not in kwargs:
         kwargs['edgecolor'] = 'white'
     if 'width' in kwargs:
@@ -103,5 +107,5 @@ def bar(ax, left, height, **kwargs):
             ax.annotate(annotation, (x, h + offset),
                         verticalalignment=verticalalignment,
                         horizontalalignment='center',
-                        color=almost_black)
+                        color=colors.almost_black)
     return rectangles
