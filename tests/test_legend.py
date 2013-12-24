@@ -5,8 +5,7 @@ import prettyplotlib as ppl
 import numpy as np
 import os
 
-# This is "import matplotlib.pyplot as plt" from the prettyplotlib library
-from prettyplotlib import plt
+import matplotlib.pyplot as plt
 
 @image_comparison(baseline_images=['legend'], extensions=['png'])
 def test_legend():

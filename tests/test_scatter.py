@@ -5,21 +5,17 @@ import prettyplotlib as ppl
 import numpy as np
 import os
 
-# This is "import matplotlib.pyplot as plt" from the prettyplotlib library
-from prettyplotlib import plt
 
 @image_comparison(baseline_images=['scatter'], extensions=['png'])
 def test_scatter():
     # Set the random seed for consistency
     np.random.seed(12)
 
-    fig, ax = plt.subplots(1)
-
     # Show the whole color range
     for i in range(8):
         x = np.random.normal(loc=i, size=1000)
         y = np.random.normal(loc=i, size=1000)
-        ppl.scatter(ax, x, y, label=str(i))
+        ppl.scatter(x, y, label=str(i))
     # fig.savefig('%s/baseline_images/test_scatter/scatter.png' %
     #             os.path.dirname(__file__))
 

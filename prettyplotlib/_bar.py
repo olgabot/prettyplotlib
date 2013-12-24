@@ -2,11 +2,11 @@ import collections
 
 import numpy as np
 
-from prettyplotlib.utils import remove_chartjunk
-from prettyplotlib import colors
+from prettyplotlib.utils import remove_chartjunk, maybe_get_ax
+from prettyplotlib.colors import set2, almost_black
 
 
-def bar(ax, left, height, **kwargs):
+def bar(*args, **kwargs):
     """
     Creates a bar plot, with white outlines and a fill color that defaults to
      the first teal-ish green in ColorBrewer's Set2. Optionally accepts
@@ -26,8 +26,9 @@ def bar(ax, left, height, **kwargs):
     argument, any additional arguments to matplotlib.bar(): http://matplotlib
     .org/api/axes_api.html#matplotlib.axes.Axes.bar is accepted.
     """
+    ax, args, kwargs = maybe_get_ax(*args, **kwargs)
     if 'color' not in kwargs:
-        kwargs['color'] = colors.set2[0]
+        kwargs['color'] = set2[0]
     if 'edgecolor' not in kwargs:
         kwargs['edgecolor'] = 'white'
     if 'width' in kwargs:
@@ -35,6 +36,9 @@ def bar(ax, left, height, **kwargs):
         middle = kwargs['width']/2.0
     else:
         middle = 0.4
+
+    left = args[0]
+    height = args[1]
 
     # Label each individual bar, if xticklabels is provided
     xtickabels = kwargs.pop('xticklabels', None)
@@ -107,5 +111,5 @@ def bar(ax, left, height, **kwargs):
             ax.annotate(annotation, (x, h + offset),
                         verticalalignment=verticalalignment,
                         horizontalalignment='center',
-                        color=colors.almost_black)
+                        color=almost_black)
     return rectangles

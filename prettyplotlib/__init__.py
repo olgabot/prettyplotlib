@@ -2,9 +2,9 @@
 
 
 import brewer2mpl
-import matplotlib as mpl
 
 from _bar import bar
+from _barh import barh
 from _boxplot import boxplot
 from _hist import hist
 from _legend import legend
@@ -13,6 +13,7 @@ from _pcolormesh import pcolormesh
 from _scatter import scatter
 from _fill_between import fill_between
 from _fill_betweenx import fill_betweenx
+import matplotlib as mpl
 
 #from _remove_chartjunk import remove_chartjunk
 
@@ -41,21 +42,4 @@ def switch_axis_limits(ax, which_axis):
             ax.set_xlim(ax_limits[1], ax_limits[0])
         else:
             ax.set_ylim(ax_limits[3], ax_limits[2])
-
-
-def upside_down_hist(ax, x, **kwargs):
-    hist(ax, x, **kwargs)
-
-    # Turn the histogram upside-down by switching the y-axis limits
-    switch_axis_limits(ax, 'y')
-    remove_chartjunk(ax, ['bottom', 'right'], grid='y', ticklabels='x')
-
-
-def sideways_hist(ax, y, **kwargs):
-    hist(ax, y, orientation='horizontal', **kwargs)
-
-    # Orient the histogram with `0` counts on the right and the max
-    # counts on the left by switching the `x` axis limits
-    switch_axis_limits(ax, 'x')
-    remove_chartjunk(ax, ['left', 'top'], grid='x', ticklabels='y')
 

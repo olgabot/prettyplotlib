@@ -5,16 +5,11 @@ import prettyplotlib as ppl
 import numpy as np
 import os
 
-# This is "import matplotlib.pyplot as plt" from the prettyplotlib library
-from prettyplotlib import plt
-
 
 @image_comparison(baseline_images=['plot'], extensions=['png'])
 def test_plot():
     # Set the random seed for consistency
     np.random.seed(12)
-
-    fig, ax = plt.subplots(1)
 
     # Show the whole color range
     for i in range(8):
@@ -23,7 +18,7 @@ def test_plot():
 
         # For now, you need to specify both x and y :(
         # Still figuring out how to specify just one
-        ppl.plot(ax, x, y, label=str(i))
+        ppl.plot(x, y, label=str(i))
     # fig.savefig('%s/baseline_images/test_plot/plot.png' %
     #             os.path.dirname(__file__))
 

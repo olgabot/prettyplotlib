@@ -1,7 +1,7 @@
 __author__ = 'olga'
 
 from matplotlib.testing.decorators import image_comparison
-from matplotlib import pyplot as plt
+import matplotlib.pyplot as plt
 import numpy as np
 import prettyplotlib as ppl
 import os
