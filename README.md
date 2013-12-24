@@ -19,6 +19,29 @@ Requirements:
     <td><code>prettyplotlib</code> default <code>plot</code><br><a href=https://github.com/olgabot/prettyplotlib/wiki/Examples-with-code#plot-lines-eg-time-series-with-a-legend"><img src="https://raw.github.com/olgabot/prettyplotlib/master/ipython_notebooks/plot_prettyplotlib_default.png" height="202"></a></td>
   </tr>  
   <tr height="207" valign="top">
+    <td><code>matplotlib</code> default <code>fill_between</code><br><img
+    src="https://raw.github
+    .com/olgabot/prettyplotlib/master/ipython_notebooks
+    /fill_between_matplotlib_default.png" height="202"></td>
+    <td><code>prettyplotlib</code> default <code>fill_between</code><br><a
+    href=https://github.com/olgabot/prettyplotlib/wiki/Examples-with-code
+    #plot-lines-eg-time-series-with-a-legend"><img src="https://raw.github
+    .com/olgabot/prettyplotlib/master/ipython_notebooks
+    /fill_between_prettyplotlib_default.png" height="202"></a></td>
+  </tr>
+  <tr height="207" valign="top">
+    <td><code>matplotlib</code> default <code>fill_betweenx</code><br><img
+    src="https://raw.github
+    .com/olgabot/prettyplotlib/master/ipython_notebooks
+    /fill_betweenx_matplotlib_default
+    .png" height="202"></td>
+    <td><code>prettyplotlib</code> default <code>fill_betweenx</code><br><a
+    href=https://github.com/olgabot/prettyplotlib/wiki/Examples-with-code
+    #plot-lines-eg-time-series-with-a-legend"><img src="https://raw.github
+    .com/olgabot/prettyplotlib/master/ipython_notebooks
+    /fill_betweenx_prettyplotlib_default.png" height="202"></a></td>
+  </tr>
+  <tr height="207" valign="top">
     <td><code>matplotlib</code> default <code>scatter</code><br><img src="https://raw.github.com/olgabot/prettyplotlib/master/ipython_notebooks/scatter_matplotlib_default.png" height="202"></td>
     <td><code>prettyplotlib</code> default <code>scatter</code><br><a href="https://github.com/olgabot/prettyplotlib/wiki/Examples-with-code#scatter-points"><img src="https://raw.github.com/olgabot/prettyplotlib/master/ipython_notebooks/scatter_prettyplotlib_default.png" height="202"></a></td>
   </tr>
