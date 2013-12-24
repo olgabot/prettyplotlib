@@ -14,16 +14,26 @@ def remove_chartjunk(ax, spines, grid=None, ticklabels=None, show_ticks=False):
     If ticklabels="y" or "x", or ['x', 'y'] will remove ticklabels from that
     axis
     '''
-    all_spines = ['top', 'bottom', 'right', 'left']
+    all_spines = ['top', 'bottom', 'right', 'left', 'polar']
     for spine in spines:
-        ax.spines[spine].set_visible(False)
+        # The try/except is for polar coordinates, which only have a 'polar'
+        # spine and none of the others
+        try:
+            ax.spines[spine].set_visible(False)
+        except KeyError:
+            pass
 
     # For the remaining spines, make their line thinner and a slightly
     # off-black dark grey
     for spine in all_spines:
         if spine not in spines:
-            ax.spines[spine].set_linewidth(0.5)
-            # ax.spines[spine].set_color(almost_black)
+            # The try/except is for polar coordinates, which only have a 'polar'
+            # spine and none of the others
+            try:
+                ax.spines[spine].set_linewidth(0.5)
+            except KeyError:
+                pass
+                # ax.spines[spine].set_color(almost_black)
             #            ax.spines[spine].set_tick_params(color=almost_black)
             # Check that the axes are not log-scale. If they are, leave the ticks
             # because otherwise people assume a linear scale.
@@ -86,6 +96,35 @@ def maybe_get_ax(*args, **kwargs):
     else:
         ax = plt.gca()
     return ax, args, dict(kwargs)
+
+
+def maybe_get_fig_ax(*args, **kwargs):
+    """
+    It used to be that the first argument of prettyplotlib had to be the 'ax'
+    object, but that's not the case anymore. This is specially made for
+    pcolormesh.
+
+    @param args:
+    @type args:
+    @param kwargs:
+    @type kwargs:
+    @return:
+    @rtype:
+    """
+    if isinstance(args[0], mpl.figure.Figure) and \
+            isinstance(args[1], mpl.axes.Axes):
+        fig = args[0]
+        ax = args[1]
+        args = args[2:]
+    elif 'ax' in kwargs:
+        ax = kwargs.pop('ax')
+        if 'fig' in kwargs:
+            fig = kwargs.pop('fig')
+        else:
+            fig = plt.gcf()
+    else:
+        fig, ax = plt.subplots(1)
+    return fig, ax, args, dict(kwargs)
 
 
 def maybe_get_linewidth(**kwargs):

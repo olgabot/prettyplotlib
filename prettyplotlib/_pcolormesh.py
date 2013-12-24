@@ -3,10 +3,10 @@ __author__ = 'olga'
 import numpy as np
 
 from prettyplotlib.colors import blue_red, blues_r, reds
-from prettyplotlib.utils import remove_chartjunk
+from prettyplotlib.utils import remove_chartjunk, maybe_get_fig_ax
 
 
-def pcolormesh(fig, ax, x, **kwargs):
+def pcolormesh(*args, **kwargs):
     """
     Use for large datasets
 
@@ -23,17 +23,35 @@ def pcolormesh(fig, ax, x, **kwargs):
      'vertical'. The default is 'horizontal' and in most cases,
      that's what you'll want to stick with. But the option is there if you
      want.
+    - center_value, which will be the centered value for a divergent
+    colormap, for example if you have data above and below zero, but you want
+    the white part of the colormap to be equal to 10 rather than 0,
+    then specify 'center_value=10'.
     """
     # Deal with arguments in kwargs that should be there, or need to be taken
     #  out
+    fig, ax, args, kwargs = maybe_get_fig_ax(*args, **kwargs)
+
+    x = args[0]
+
     if 'vmax' not in kwargs:
         kwargs['vmax'] = x.max()
     if 'vmin' not in kwargs:
         kwargs['vmin'] = x.min()
 
+    center_value = kwargs.pop('center_value', 0)
+
+    # If
+    divergent_data = False
+    if kwargs['vmax'] > 0 and kwargs['vmin'] < 0:
+        divergent_data = True
+        kwargs['vmax'] += center_value
+        kwargs['vmin'] += center_value
+
     # If we have both negative and positive values, use a divergent colormap
     if 'cmap' not in kwargs:
-        if kwargs['vmax'] > 0 and kwargs['vmin'] < 0:
+        # Check if this is divergent
+        if divergent_data:
             kwargs['cmap'] = blue_red
         elif kwargs['vmax'] <= 0:
                 kwargs['cmap'] = blues_r
@@ -65,7 +83,7 @@ def pcolormesh(fig, ax, x, **kwargs):
     ax_colorbar = kwargs.pop('ax_colorbar', None)
     orientation_colorbar = kwargs.pop('orientation_colorbar', 'vertical')
 
-    p = ax.pcolormesh(x, **kwargs)
+    p = ax.pcolormesh(*args, **kwargs)
     ax.set_ylim(0, x.shape[0])
 
     # Get rid of ALL axes
@@ -83,4 +101,4 @@ def pcolormesh(fig, ax, x, **kwargs):
     # Show the scale of the colorbar
     fig.colorbar(p, cax=ax_colorbar, use_gridspec=True,
                  orientation=orientation_colorbar)
-    return p
+    return fig

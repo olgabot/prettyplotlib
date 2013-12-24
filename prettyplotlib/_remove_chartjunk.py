@@ -1,3 +1,0 @@
-__author__ = 'olga'
-
-
