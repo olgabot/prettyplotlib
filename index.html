@@ -34,13 +34,10 @@
           <h1>
 <a name="prettyplotlib" class="anchor" href="#prettyplotlib"><span class="octicon octicon-link"></span></a>prettyplotlib</h1>
 
-<p><code>prettyplotlib</code> is a Python matplotlib-enhancer library which painlessly creates beautiful default <code>matplotlib</code>
+<p>Python matplotlib-enhancer library which painlessly creates beautiful default <code>matplotlib</code>
  plots. Inspired by <a href="http://www.edwardtufte.com/tufte/">Edward Tufte</a>'s work on information design and <a href="http://www.personal.psu.edu/cab38/">Cynthia Brewer</a>'s work on <a href="http://colorbrewer2.org/">color perception</a>.</p>
 
-<p>How to install:</p>
-
-<pre><code> pip install prettyplotlib
-</code></pre>
+<p>I truly believe that scientific progress is impeded when improper data visualizations are used. I spent a lot of time tweaking my figures to make them more understandable, and realized the scientific world could be a better place if the default parameters for plotting libraries followed recent advances in information design research. And thus <code>prettyplotlib</code> was born.</p>
 
 <p>Requirements:</p>
 
@@ -52,82 +49,110 @@
 <a href="https://github.com/jiffyclub/brewer2mpl"><code>brewer2mpl</code></a>. Can be installed via <code>pip install brewer2mpl</code> or <code>easy_install brewer2mpl</code>
 </li>
 </ul><h2>
-<a name="matplotlib-defaults-vs-prettyplotlib-defaults" class="anchor" href="#matplotlib-defaults-vs-prettyplotlib-defaults"><span class="octicon octicon-link"></span></a><code>matplotlib</code> defaults vs <code>prettyplotlib</code> defaults</h2>
+<a name="comparison-to-matplotlib" class="anchor" href="#comparison-to-matplotlib"><span class="octicon octicon-link"></span></a>Comparison to <code>matplotlib</code>
+</h2>
 
 <table>
 <tr height="207" valign="top">
 <td>
-<code>matplotlib</code> default <code>plot</code><br><img src="https://raw.github.com/olgabot/prettyplotlib/master/examples/plot_matplotlib_default.png" height="202">
+<code>matplotlib</code> default <code>plot</code><br><img src="https://raw.github.com/olgabot/prettyplotlib/master/ipython_notebooks/plot_matplotlib_default.png" height="202">
 </td>
     <td>
-<code>prettyplotlib</code> default <code>plot</code><br><a href="https://github.com/olgabot/prettyplotlib/wiki/Examples-with-code#plot-lines-eg-time-series-with-a-legend%22"><img src="https://raw.github.com/olgabot/prettyplotlib/master/examples/plot_prettyplotlib_default.png" height="202"></a>
+<code>prettyplotlib</code> default <code>plot</code><br><a href="https://github.com/olgabot/prettyplotlib/wiki/Examples-with-code#plot-lines-eg-time-series-with-a-legend%22"><img src="https://raw.github.com/olgabot/prettyplotlib/master/ipython_notebooks/plot_prettyplotlib_default.png" height="202"></a>
 </td>
   </tr>
 <tr height="207" valign="top">
 <td>
-<code>matplotlib</code> default <code>scatter</code><br><img src="https://raw.github.com/olgabot/prettyplotlib/master/examples/scatter_matplotlib_default.png" height="202">
+<code>matplotlib</code> default <code>fill_between</code><br><img src="https://raw.github.com/olgabot/prettyplotlib/master/ipython_notebooks/fill_between_matplotlib_default.png" height="202">
 </td>
     <td>
-<code>prettyplotlib</code> default <code>scatter</code><br><a href="https://github.com/olgabot/prettyplotlib/wiki/Examples-with-code#scatter-points"><img src="https://raw.github.com/olgabot/prettyplotlib/master/examples/scatter_prettyplotlib_default.png" height="202"></a>
+<code>prettyplotlib</code> default <code>fill_between</code><br><a href="https://github.com/olgabot/prettyplotlib/wiki/Examples-with-code#fill_between-area-between-two-lines%22"><img src="https://raw.github.com/olgabot/prettyplotlib/master/ipython_notebooks/fill_between_prettyplotlib_default.png" height="202"></a>
 </td>
   </tr>
 <tr height="207" valign="top">
 <td>
-<code>matplotlib</code> default <code>bar</code><br><img src="https://raw.github.com/olgabot/prettyplotlib/master/examples/bar_matplotlib_default.png" height="202">
+<code>matplotlib</code> default <code>fill_betweenx</code><br><img src="https://raw.github.com/olgabot/prettyplotlib/master/ipython_notebooks/fill_betweenx_matplotlib_default.png" height="202">
 </td>
     <td>
-<code>prettyplotlib</code> default <code>bar</code><br><a href="https://github.com/olgabot/prettyplotlib/wiki/Examples-with-code#bar"><img src="https://raw.github.com/olgabot/prettyplotlib/master/examples/bar_prettyplotlib_default.png" height="202"></a>
+<code>prettyplotlib</code> default <code>fill_betweenx</code><br><a href="https://github.com/olgabot/prettyplotlib/wiki/Examples-with-code#fill_betweenx-area-between-two-lines-fill-between-x-valueshttps://github.com/olgabot/prettyplotlib/wiki/Examples-with-code#fill_betweenx-area-between-two-lines-fill-between-x-values%22"><img src="https://raw.github.com/olgabot/prettyplotlib/master/ipython_notebooks/fill_betweenx_prettyplotlib_default.png" height="202"></a>
 </td>
   </tr>
 <tr height="207" valign="top">
 <td>
-<code>matplotlib</code> default <code>hist</code><br><img src="https://raw.github.com/olgabot/prettyplotlib/master/examples/hist_matplotlib_default.png" height="202">
+<code>matplotlib</code> default <code>scatter</code><br><img src="https://raw.github.com/olgabot/prettyplotlib/master/ipython_notebooks/scatter_matplotlib_default.png" height="202">
 </td>
     <td>
-<code>prettyplotlib</code> default <code>hist</code><br><a href="https://github.com/olgabot/prettyplotlib/wiki/Examples-with-code#hist"><img src="https://raw.github.com/olgabot/prettyplotlib/master/examples/hist_prettyplotlib_default.png" height="202"></a>
+<code>prettyplotlib</code> default <code>scatter</code><br><a href="https://github.com/olgabot/prettyplotlib/wiki/Examples-with-code#scatter-points"><img src="https://raw.github.com/olgabot/prettyplotlib/master/ipython_notebooks/scatter_prettyplotlib_default.png" height="202"></a>
+</td>
+  </tr>
+<tr height="207" valign="top">
+<td>
+<code>matplotlib</code> default <code>bar</code><br><img src="https://raw.github.com/olgabot/prettyplotlib/master/ipython_notebooks/bar_matplotlib_default.png" height="202">
+</td>
+    <td>
+<code>prettyplotlib</code> default <code>bar</code><br><a href="https://github.com/olgabot/prettyplotlib/wiki/Examples-with-code#bar"><img src="https://raw.github.com/olgabot/prettyplotlib/master/ipython_notebooks/bar_prettyplotlib_default.png" height="202"></a>
+</td>
+  </tr>
+<tr height="207" valign="top">
+<td>
+<code>matplotlib</code> default non-annotated <code>bar</code><br><img src="https://raw.github.com/olgabot/prettyplotlib/master/ipython_notebooks/matplotlib_bar_nucleotide_counts.png" height="202">
+</td>
+    <td>
+<code>prettyplotlib</code> default annotated <code>bar</code><br><a href="https://github.com/olgabot/prettyplotlib/wiki/Examples-with-code#bar-correctly-annotates-negative-values"><img src="https://raw.github.com/olgabot/prettyplotlib/master/ipython_notebooks/prettyplotlib_bar_nucleotide_counts.png" height="202"></a>
+</td>
+  </tr>
+<tr height="207" valign="top">
+<td>
+<code>matplotlib</code> default <code>hist</code><br><img src="https://raw.github.com/olgabot/prettyplotlib/master/ipython_notebooks/hist_matplotlib_default.png" height="202">
+</td>
+    <td>
+<code>prettyplotlib</code> default <code>hist</code><br><a href="https://github.com/olgabot/prettyplotlib/wiki/Examples-with-code#hist"><img src="https://raw.github.com/olgabot/prettyplotlib/master/ipython_notebooks/hist_prettyplotlib_default.png" height="202"></a>
 </td>
 </tr>
 <tr height="207" valign="top">
 <td>
-<code>matplotlib</code> default <code>hist</code><br>with grid<br><img src="https://raw.github.com/olgabot/prettyplotlib/master/examples/hist_matplotlib_grid.png" height="202">
+<code>matplotlib</code> default <code>hist</code><br>with grid<br><img src="https://raw.github.com/olgabot/prettyplotlib/master/ipython_notebooks/hist_matplotlib_grid.png" height="202">
 </td>
     <td>
-<code>prettyplotlib</code> default <code>hist</code><br>with grid<br><a href="https://github.com/olgabot/prettyplotlib/wiki/Examples-with-code#back-to-matplotlib-style-scatterplots"><img src="https://raw.github.com/olgabot/prettyplotlib/master/examples/hist_prettyplotlib_grid.png" height="202"></a>
+<code>prettyplotlib</code> default <code>hist</code><br>with grid<br><a href="https://github.com/olgabot/prettyplotlib/wiki/Examples-with-code#back-to-matplotlib-style-scatterplots"><img src="https://raw.github.com/olgabot/prettyplotlib/master/ipython_notebooks/hist_prettyplotlib_grid.png" height="202"></a>
 </td>
 </tr>
 <tr height="207" valign="top">
 <td>
-<code>matplotlib</code> default <code>boxplot</code><br><img src="https://raw.github.com/olgabot/prettyplotlib/master/examples/boxplot_matplotlib_default.png" height="202">
+<code>matplotlib</code> default <code>boxplot</code><br><img src="https://raw.github.com/olgabot/prettyplotlib/master/ipython_notebooks/boxplot_matplotlib_default.png" height="202">
 </td>
     <td>
-<code>prettyplotlib</code> default <code>boxplot</code><br><a href="https://github.com/olgabot/prettyplotlib/wiki/Examples-with-code#boxplot"><img src="https://raw.github.com/olgabot/prettyplotlib/master/examples/boxplot_prettyplotlib_default.png" height="202"></a>
+<code>prettyplotlib</code> default <code>boxplot</code><br><a href="https://github.com/olgabot/prettyplotlib/wiki/Examples-with-code#boxplot"><img src="https://raw.github.com/olgabot/prettyplotlib/master/ipython_notebooks/boxplot_prettyplotlib_default.png" height="202"></a>
 </td>
   </tr>
 <tr height="207" valign="top">
 <td>
-<code>matplotlib</code> default <code>pcolormesh</code><br>positive and negative data<br><img src="https://raw.github.com/olgabot/prettyplotlib/master/examples/pcolormesh_matplotlib_default.png" height="202">
+<code>matplotlib</code> default <code>pcolormesh</code><br>positive and negative data<br><img src="https://raw.github.com/olgabot/prettyplotlib/master/ipython_notebooks/pcolormesh_matplotlib_default.png" height="202">
 </td>
     <td>
-<code>prettyplotlib</code> default <code>pcolormesh</code><br>positive and negative data<br><a href="https://github.com/olgabot/prettyplotlib/wiki/Examples-with-code#pcolormesh-heatmaps"><img src="https://raw.github.com/olgabot/prettyplotlib/master/examples/pcolormesh_prettyplotlib_default.png" height="202"></a>
+<code>prettyplotlib</code> default <code>pcolormesh</code><br>positive and negative data<br><a href="https://github.com/olgabot/prettyplotlib/wiki/Examples-with-code#pcolormesh-heatmaps"><img src="https://raw.github.com/olgabot/prettyplotlib/master/ipython_notebooks/pcolormesh_prettyplotlib_default.png" height="202"></a>
 </td>
   </tr>
 <tr height="207" valign="top">
 <td>
-<code>matplotlib</code> default <code>pcolormesh</code><br>positive data only<br><img src="https://raw.github.com/olgabot/prettyplotlib/master/examples/pcolormesh_matplotlib_positive_default.png" height="202">
+<code>matplotlib</code> default <code>pcolormesh</code><br>positive data only<br><img src="https://raw.github.com/olgabot/prettyplotlib/master/ipython_notebooks/pcolormesh_matplotlib_positive_default.png" height="202">
 </td>
     <td>
-<code>prettyplotlib</code> default <code>pcolormesh</code><br>positive data only<br><a href="https://github.com/olgabot/prettyplotlib/wiki/Examples-with-code#pcolormesh-positive-only-data"><img src="https://raw.github.com/olgabot/prettyplotlib/master/examples/pcolormesh_prettyplotlib_positive.png" height="202"></a>
+<code>prettyplotlib</code> default <code>pcolormesh</code><br>positive data only<br><a href="https://github.com/olgabot/prettyplotlib/wiki/Examples-with-code#pcolormesh-positive-only-data"><img src="https://raw.github.com/olgabot/prettyplotlib/master/ipython_notebooks/pcolormesh_prettyplotlib_positive.png" height="202"></a>
 </td>
   </tr>
 <tr height="207" valign="top">
 <td>
-<code>matplotlib pcolormesh</code><br> negative-valued data with labels<br><img src="https://raw.github.com/olgabot/prettyplotlib/master/examples/pcolormesh_matplotlib_negative_labels.png" height="202">
+<code>matplotlib pcolormesh</code><br> negative-valued data with labels<br><img src="https://raw.github.com/olgabot/prettyplotlib/master/ipython_notebooks/pcolormesh_matplotlib_negative_labels.png" height="202">
 </td>
     <td>
-<code>prettyplotlib pcolormesh</code><br> negative-valued data with labels<br><a href="https://github.com/olgabot/prettyplotlib/wiki/Examples-with-code#pcolormesh-positive-only-data"><img src="https://raw.github.com/olgabot/prettyplotlib/master/examples/pcolormesh_prettyplotlib_negative_labels.png" height="202"></a>
+<code>prettyplotlib pcolormesh</code><br> negative-valued data with labels<br><a href="https://github.com/olgabot/prettyplotlib/wiki/Examples-with-code#pcolormesh-positive-only-data"><img src="https://raw.github.com/olgabot/prettyplotlib/master/ipython_notebooks/pcolormesh_prettyplotlib_negative_labels.png" height="202"></a>
 </td>
   </tr>
-</table>
+</table><h3>
+<a name="quotes" class="anchor" href="#quotes"><span class="octicon octicon-link"></span></a>Quotes</h3>
+
+<p><em>"Dis ain't no <strong>ugly</strong>plotlib"</em> - Anonymous</p>
         </section>
 
         <footer>
