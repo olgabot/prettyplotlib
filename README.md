@@ -20,26 +20,15 @@ Requirements:
   </tr>  
   <tr height="207" valign="top">
     <td><code>matplotlib</code> default <code>fill_between</code><br><img
-    src="https://raw.github
-    .com/olgabot/prettyplotlib/master/ipython_notebooks
-    /fill_between_matplotlib_default.png" height="202"></td>
+    src="https://raw.github.com/olgabot/prettyplotlib/master/ipython_notebooks/fill_between_matplotlib_default.png" height="202"></td>
     <td><code>prettyplotlib</code> default <code>fill_between</code><br><a
-    href=https://github.com/olgabot/prettyplotlib/wiki/Examples-with-code
-    #plot-lines-eg-time-series-with-a-legend"><img src="https://raw.github
-    .com/olgabot/prettyplotlib/master/ipython_notebooks
-    /fill_between_prettyplotlib_default.png" height="202"></a></td>
+    href=https://github.com/olgabot/prettyplotlib/wiki/Examples-with-code#fill_between-area-between-two-lines"><img src="https://raw.github.com/olgabot/prettyplotlib/master/ipython_notebooks/fill_between_prettyplotlib_default.png" height="202"></a></td>
   </tr>
   <tr height="207" valign="top">
     <td><code>matplotlib</code> default <code>fill_betweenx</code><br><img
-    src="https://raw.github
-    .com/olgabot/prettyplotlib/master/ipython_notebooks
-    /fill_betweenx_matplotlib_default
-    .png" height="202"></td>
+    src="https://raw.github.com/olgabot/prettyplotlib/master/ipython_notebooks/fill_betweenx_matplotlib_default.png" height="202"></td>
     <td><code>prettyplotlib</code> default <code>fill_betweenx</code><br><a
-    href=https://github.com/olgabot/prettyplotlib/wiki/Examples-with-code
-    #plot-lines-eg-time-series-with-a-legend"><img src="https://raw.github
-    .com/olgabot/prettyplotlib/master/ipython_notebooks
-    /fill_betweenx_prettyplotlib_default.png" height="202"></a></td>
+    href=https://github.com/olgabot/prettyplotlib/wiki/Examples-with-code#fill_betweenx-area-between-two-lines-fill-between-x-valueshttps://github.com/olgabot/prettyplotlib/wiki/Examples-with-code#fill_betweenx-area-between-two-lines-fill-between-x-values"><img src="https://raw.github.com/olgabot/prettyplotlib/master/ipython_notebooks/fill_betweenx_prettyplotlib_default.png" height="202"></a></td>
   </tr>
   <tr height="207" valign="top">
     <td><code>matplotlib</code> default <code>scatter</code><br><img src="https://raw.github.com/olgabot/prettyplotlib/master/ipython_notebooks/scatter_matplotlib_default.png" height="202"></td>

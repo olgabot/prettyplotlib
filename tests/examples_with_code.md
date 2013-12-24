@@ -103,9 +103,7 @@ ppl.legend()
 
 fig.savefig('fill_between_prettyplotlib_default.png')
 ```
-![Legend parameters](https://raw.github
-.com/olgabot/prettyplotlib/master/ipython_notebooks
-/fill_between_prettyplotlib_default.png)
+![fill_between](https://raw.github.com/olgabot/prettyplotlib/master/ipython_notebooks/fill_between_prettyplotlib_default.png)
 
 # `fill_betweenx` (area between two lines, fill between x values)
 
@@ -137,9 +135,7 @@ ax = ppl.legend()
 
 fig.savefig('fill_between_prettyplotlib_default.png')
 ```
-![Legend parameters](https://raw.github
-.com/olgabot/prettyplotlib/master/ipython_notebooks
-/fill_betweenx_prettyplotlib_default.png)
+![fill_betweenx](https://raw.github.com/olgabot/prettyplotlib/master/ipython_notebooks/fill_betweenx_prettyplotlib_default.png)
 
 # `scatter` (points)
 
