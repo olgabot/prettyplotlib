@@ -1,5 +1,9 @@
 #!/usr/bin/env python
 
+
+import brewer2mpl
+import matplotlib as mpl
+
 from _bar import bar
 from _boxplot import boxplot
 from _hist import hist
@@ -7,7 +11,13 @@ from _legend import legend
 from _plot import plot
 from _pcolormesh import pcolormesh
 from _scatter import scatter
+
 #from _remove_chartjunk import remove_chartjunk
+
+
+rcParams = {'axes.color_cycle': brewer2mpl.get_map('Set2', 'Qualitative',
+                                                   8).mpl_colors}
+mpl.rcParams.update(rcParams)
 
 
 def scatter_column(ax, x, **kwargs):

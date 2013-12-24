@@ -18,14 +18,15 @@ def boxplot(*args, **kwargs):
     http://matplotlib.org/api/axes_api.html#matplotlib.axes.Axes.boxplot
     @return:
     """
-    ax, args, kwargs = maybe_get_ax(args, kwargs)
+    ax, args, kwargs = maybe_get_ax(*args, **kwargs)
     # If no ticklabels are specified, don't draw any
     xticklabels = kwargs.pop('xticklabels', None)
     fontsize = kwargs.pop('fontsize', 10)
 
-    widths = kwargs.pop('widths', 0.15)
+    if 'widths' not in kwargs:
+        kwargs['widths'] = 0.15
 
-    bp = ax.boxplot(*args, widths=widths, **kwargs)
+    bp = ax.boxplot(*args, **kwargs)
 
     if xticklabels:
         ax.xaxis.set_ticklabels(xticklabels, fontsize=fontsize)
