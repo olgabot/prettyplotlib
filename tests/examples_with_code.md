@@ -659,3 +659,6 @@ fig.savefig('pcolormesh_prettyplotlib_labels_other_cmap_diverging_center_value.p
 ![Heatmap: custom diverging colormap](https://raw.github
 .com/olgabot/prettyplotlib/master/ipython_notebooks
 /pcolormesh_prettyplotlib_labels_other_cmap_diverging_center_value.png)
+
+And now the 'zero' value is 2! So it's white at 2. Looks like most of the
+data is below there..
