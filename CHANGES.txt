@@ -9,3 +9,4 @@ import *" for matplotlib-native functionality
 boxplots can be accessed). Except for 'pcolormesh' which returns the 'fig'
 - Don't change any rcParams upon import, everything is done programmtically
 - pcolormesh also takes a center_value
+- Added fill_between and fill_betweenx

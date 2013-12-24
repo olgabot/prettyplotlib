@@ -88,11 +88,15 @@ def maybe_get_ax(*args, **kwargs):
     @return:
     @rtype:
     """
-    if isinstance(args[0], mpl.axes.Axes):
+
+    if 'ax' in kwargs:
+        ax = kwargs.pop('ax')
+    elif len(args) == 0:
+        fig = plt.gcf()
+        ax = plt.gca()
+    elif isinstance(args[0], mpl.axes.Axes):
         ax = args[0]
         args = args[1:]
-    elif 'ax' in kwargs:
-        ax = kwargs.pop('ax')
     else:
         ax = plt.gca()
     return ax, args, dict(kwargs)
@@ -111,17 +115,21 @@ def maybe_get_fig_ax(*args, **kwargs):
     @return:
     @rtype:
     """
-    if isinstance(args[0], mpl.figure.Figure) and \
-            isinstance(args[1], mpl.axes.Axes):
-        fig = args[0]
-        ax = args[1]
-        args = args[2:]
-    elif 'ax' in kwargs:
+    if 'ax' in kwargs:
         ax = kwargs.pop('ax')
         if 'fig' in kwargs:
             fig = kwargs.pop('fig')
         else:
             fig = plt.gcf()
+    elif len(args) == 0:
+        print 'len(args) == 0'
+        fig = plt.gcf()
+        ax = plt.gca()
+    elif isinstance(args[0], mpl.figure.Figure) and \
+            isinstance(args[1], mpl.axes.Axes):
+        fig = args[0]
+        ax = args[1]
+        args = args[2:]
     else:
         fig, ax = plt.subplots(1)
     return fig, ax, args, dict(kwargs)
@@ -129,7 +137,8 @@ def maybe_get_fig_ax(*args, **kwargs):
 
 def maybe_get_linewidth(**kwargs):
     try:
-        lw = ({"lw", "linewidth"} & set(kwargs)).pop()
+        key = ({"lw", "linewidth", 'linewidths'} & set(kwargs)).pop()
+        lw = kwargs[key]
     except KeyError:
         lw = 0.15
     return lw

@@ -11,6 +11,8 @@ from _legend import legend
 from _plot import plot
 from _pcolormesh import pcolormesh
 from _scatter import scatter
+from _fill_between import fill_between
+from _fill_betweenx import fill_betweenx
 
 #from _remove_chartjunk import remove_chartjunk
 

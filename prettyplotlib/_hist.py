@@ -28,4 +28,4 @@ def hist(*args, **kwargs):
     # print 'hist kwargs', kwargs
     patches = ax.hist(*args, **kwargs)
     remove_chartjunk(ax, ['top', 'right'], grid=grid, show_ticks=show_ticks)
-    return patches
+    return ax
