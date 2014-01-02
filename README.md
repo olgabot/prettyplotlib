@@ -39,7 +39,7 @@ Requirements:
     <td><code>prettyplotlib</code> default <code>bar</code><br><a href=https://github.com/olgabot/prettyplotlib/wiki/Examples-with-code#bar><img src="https://raw.github.com/olgabot/prettyplotlib/master/ipython_notebooks/bar_prettyplotlib_default.png" height="202"></a></td>
   </tr>
   <tr height="207" valign="top">
-    <td><code>matplotlib</code> default annotated <code>bar</code><br><img
+    <td><code>matplotlib</code> default non-annotated <code>bar</code><br><img
     src="https://raw.github.com/olgabot/prettyplotlib/master/ipython_notebooks/matplotlib_bar_nucleotide_counts.png" height="202"></td>
     <td><code>prettyplotlib</code> default annotated <code>bar</code><br><a
     href=https://github.com/olgabot/prettyplotlib/wiki/Examples-with-code#bar-correctly-annotates-negative-values><img src="https://raw.github.com/olgabot/prettyplotlib/master/ipython_notebooks/prettyplotlib_bar_nucleotide_counts.png" height="202"></a></td>
