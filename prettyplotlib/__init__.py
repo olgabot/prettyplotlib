@@ -18,9 +18,9 @@ import matplotlib as mpl
 #from _remove_chartjunk import remove_chartjunk
 
 
-rcParams = {'axes.color_cycle': brewer2mpl.get_map('Set2', 'Qualitative',
-                                                   8).mpl_colors}
-mpl.rcParams.update(rcParams)
+# rcParams = {'axes.color_cycle': brewer2mpl.get_map('Set2', 'Qualitative',
+#                                                    8).mpl_colors}
+# mpl.rcParams.update(rcParams)
 
 
 def scatter_column(ax, x, **kwargs):
