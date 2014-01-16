@@ -85,6 +85,8 @@ def bar(*args, **kwargs):
     # add whitespace padding on left
     xmin, xmax = ax.get_xlim()
     xmin -= 0.2
+    if stacked:
+        xmax = num_data
     ax.set_xlim(xmin, xmax)
 
     # If the user is only plotting one bar, make it an iterable
@@ -150,9 +152,10 @@ def bar(*args, **kwargs):
     # http://www.tableausoftware.com/about/blog/2014/1/new-whitepaper-survey-data-less-ugly-more-understandable-27812
     if stack_text:
         bottom = np.zeros(num_data)
+        max_h = max(height)
         for i in np.arange(num_stacks):
-            for x, h, d, b in zip(xticks, height, data[i], bottom):
-                if (d*100.0/h) > 4.0:
+            for x, d, b in zip(xticks, data[i], bottom):
+                if (d*100.0/max_h) > 4.0:
                     ax.text(x,b+d/2.0,d, ha='center', va='center', color=almost_black)
             bottom += data[i]
     return rectangles
