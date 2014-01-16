@@ -81,10 +81,12 @@ def barh(*args, **kwargs):
     # add whitespace padding on left
     ymin, ymax = ax.get_ylim()
     ymin -= 0.2
+    if stacked:
+        ymax = num_data
     ax.set_ylim(ymin, ymax)
 
-#    # If there are negative counts, remove the bottom axes
-#    # and add a line at y=0
+    # If there are negative counts, remove the bottom axes
+    # and add a line at y=0
     if any(w < 0 for w in width.tolist()):
         axes_to_remove = ['top', 'right', 'bottom']
         ax.vlines(x=0, ymin=ymin, ymax=ymax,
@@ -140,9 +142,10 @@ def barh(*args, **kwargs):
     # http://www.tableausoftware.com/about/blog/2014/1/new-whitepaper-survey-data-less-ugly-more-understandable-27812
     if stack_text:
         left = np.zeros(num_data)
+        max_w = max(width)
         for i in np.arange(num_stacks):
-            for y, w, d, l in zip(yticks, width, data[i], left):
-                if (d*100.0/w) > 3.0:
+            for y, d, l in zip(yticks, data[i], left):
+                if (d*100.0/max_w) > 2.0:
                     ax.text(l+d/2.0,y,d, ha='center', va='center', color=almost_black)
             left += data[i]
 
