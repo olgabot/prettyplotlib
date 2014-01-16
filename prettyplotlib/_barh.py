@@ -18,6 +18,9 @@ def barh(*args, **kwargs):
     which will annotate the values, or a list of strings, which will annotate
     with the supplied strings.
 
+    Can support stacked bars with the value of each stack shown on the stack
+    (Added by Salil Banerjee)
+
     @param ax: matplotlib.axes instance
     @param top: Vector of values of where to put the top side of the bar
     @param width: Vector of values of the bar widths
@@ -35,8 +38,12 @@ def barh(*args, **kwargs):
     else:
         middle = 0.4
 
+    stacked = kwargs.pop('stacked',False)
+    stack_text = kwargs.pop('stack_text',False)
+
     top = args[0]
-    width = args[1]
+
+    width = np.array(args[1])
 
     # Label each individual bar, if xticklabels is provided
     ytickabels = kwargs.pop('yticklabels', None)
@@ -49,16 +56,32 @@ def barh(*args, **kwargs):
     # If no grid specified, don't draw one.
     grid = kwargs.pop('grid', None)
 
-    rectangles = ax.barh(*args, **kwargs)
+    if stacked:
+        num_stacks, num_data = width.shape
+        left = np.zeros(num_data)
+        print left
+        for i in np.arange(num_stacks):
+            lst = list(args)
+            lst[1] = width[i]
+            args = tuple(lst)
+            kwargs['color'] = set2[i]
+            kwargs['left'] = left
+            rectangles = ax.barh(*args, **kwargs)
+            left += width[i]
+    else:
+        rectangles = ax.barh(*args, **kwargs)
+
+#    if isinstance(legend, collections.Iterable):
+    ax.legend(['A','B','C'],loc='upper center',bbox_to_anchor=(0.5,1.11), ncol=5)
 
     # add whitespace padding on left
     ymin, ymax = ax.get_ylim()
     ymin -= 0.2
     ax.set_ylim(ymin, ymax)
 
-    # If there are negative counts, remove the bottom axes
-    # and add a line at y=0
-    if any(w < 0 for w in width):
+#    # If there are negative counts, remove the bottom axes
+#    # and add a line at y=0
+    if np.any(w < 0 for w in width):
         axes_to_remove = ['top', 'right', 'bottom']
         ax.vlines(x=0, ymin=ymin, ymax=ymax,
                   linewidths=0.75)
@@ -67,8 +90,12 @@ def barh(*args, **kwargs):
     else:
         axes_to_remove = ['top', 'right']
 
-    # Remove excess axes
+    #Remove excess axes
     remove_chartjunk(ax, axes_to_remove, grid=grid)
+
+    if stacked:
+        data = width
+        width = width.sum(axis=0)
 
     # Add the yticklabels if they are there
     if ytickabels is not None:
@@ -98,10 +125,20 @@ def barh(*args, **kwargs):
         for y, w, annotation in zip(yticks, width, annotations):
             # Adjust the offset to account for negative bars
             offset = offset_ if w >= 0 else -1 * offset_
-
             # Finally, add the text to the axes
             ax.annotate(annotation, (w + offset, y),
                         verticalalignment='center',
                         horizontalalignment='center',
                         color=almost_black)
+
+    # Text for each block of stack
+    # This was partially inspired by the following article by Tableau software
+    # http://www.tableausoftware.com/about/blog/2014/1/new-whitepaper-survey-data-less-ugly-more-understandable-27812
+    if stack_text:
+        left = np.zeros(num_data)
+        for i in np.arange(num_stacks):
+            for y, w, d, l in zip(yticks, width, data[i], left):
+                if (d*100.0/w) > 3.0:
+                    ax.text(l+d/2.0,y,d, ha='center', va='center', color=almost_black)
+            left += data[i]
     return ax
