@@ -19,6 +19,9 @@ def bar(*args, **kwargs):
     which will annotate the values, or a list of strings, which will annotate
     with the supplied strings.
 
+    Can support stacked bars with the value of each stack shown on the stack
+    (Added by Salil Banerjee)
+
     @param ax: matplotlib.axes instance
     @param left: Vector of values of where to put the left side of the bar
     @param height: Vector of values of the bar heights
@@ -37,8 +40,15 @@ def bar(*args, **kwargs):
     else:
         middle = 0.4
 
+    # Check if data contains stacks
+    stacked = kwargs.pop('stacked',False)
+    # Check if stack text should be included
+    stack_text = kwargs.pop('stack_text',False)
+    # Get legend if available
+    legend = kwargs.pop('legend',False)
+
     left = args[0]
-    height = args[1]
+    height = np.array(args[1])
 
     # Label each individual bar, if xticklabels is provided
     xtickabels = kwargs.pop('xticklabels', None)
@@ -53,7 +63,24 @@ def bar(*args, **kwargs):
     # If no grid specified, don't draw one.
     grid = kwargs.pop('grid', None)
 
-    rectangles = ax.bar(left, height, **kwargs)
+    # Check if stacked and plot data accordingly
+    if stacked:
+        num_stacks, num_data = height.shape
+        bottom = np.zeros(num_data)
+        for i in np.arange(num_stacks):
+            lst = list(args)
+            lst[1] = height[i]
+            args = tuple(lst)
+            kwargs['color'] = set2[i]
+            kwargs['bottom'] = bottom
+            rectangles = ax.bar(*args, **kwargs)
+            bottom += height[i]
+    else:
+        rectangles = ax.bar(*args, **kwargs)
+
+    # add legend
+    if isinstance(legend, collections.Iterable):
+        ax.legend(legend,loc='upper center',bbox_to_anchor=(0.5,1.11), ncol=5)
 
     # add whitespace padding on left
     xmin, xmax = ax.get_xlim()
@@ -67,15 +94,23 @@ def bar(*args, **kwargs):
 
     # If there are negative counts, remove the bottom axes
     # and add a line at y=0
-    if any(h < 0 for h in height):
+    if any(h < 0 for h in height.tolist()):
+#        print h
+#    for h in height:
+#        if h<0.0:
+#            print h
         axes_to_remove = ['top', 'right', 'bottom']
         ax.hlines(y=0, xmin=xmin, xmax=xmax,
-                  linewidths=0.75)
+                      linewidths=0.75)
     else:
         axes_to_remove = ['top', 'right']
 
     # Remove excess axes
     remove_chartjunk(ax, axes_to_remove, grid=grid, show_ticks=show_ticks)
+
+    if stacked:
+        data = height
+        height = height.sum(axis=0)
 
     # Add the xticklabels if they are there
     if xtickabels is not None:
@@ -101,7 +136,8 @@ def bar(*args, **kwargs):
             annotations = map(str, annotate)
         else:
             annotations = ['%.3f' % h if type(h) is np.float_ else str(h)
-                           for h in height]
+                               for h in height]
+
         for x, h, annotation in zip(xticks, height, annotations):
             # Adjust the offset to account for negative bars
             offset = offset_ if h >= 0 else -1 * offset_
@@ -112,4 +148,15 @@ def bar(*args, **kwargs):
                         verticalalignment=verticalalignment,
                         horizontalalignment='center',
                         color=almost_black)
+
+    # Text for each block of stack
+    # This was partially inspired by the following article by Tableau software
+    # http://www.tableausoftware.com/about/blog/2014/1/new-whitepaper-survey-data-less-ugly-more-understandable-27812
+    if stack_text:
+        bottom = np.zeros(num_data)
+        for i in np.arange(num_stacks):
+            for x, h, d, b in zip(xticks, height, data[i], bottom):
+                if (d*100.0/h) > 4.0:
+                    ax.text(x,b+d/2.0,d, ha='center', va='center', color=almost_black)
+            bottom += data[i]
     return rectangles
