@@ -38,11 +38,14 @@ def barh(*args, **kwargs):
     else:
         middle = 0.4
 
+    # Check if data contains stacks
     stacked = kwargs.pop('stacked',False)
+    # Check if stack text should be included
     stack_text = kwargs.pop('stack_text',False)
+    # Get legend if available
+    legend = kwargs.pop('legend',False)
 
     top = args[0]
-
     width = np.array(args[1])
 
     # Label each individual bar, if xticklabels is provided
@@ -56,10 +59,10 @@ def barh(*args, **kwargs):
     # If no grid specified, don't draw one.
     grid = kwargs.pop('grid', None)
 
+    # Check if stacked and plot data accordingly
     if stacked:
         num_stacks, num_data = width.shape
         left = np.zeros(num_data)
-        print left
         for i in np.arange(num_stacks):
             lst = list(args)
             lst[1] = width[i]
@@ -71,8 +74,9 @@ def barh(*args, **kwargs):
     else:
         rectangles = ax.barh(*args, **kwargs)
 
-#    if isinstance(legend, collections.Iterable):
-    ax.legend(['A','B','C'],loc='upper center',bbox_to_anchor=(0.5,1.11), ncol=5)
+    # add legend
+    if isinstance(legend, collections.Iterable):
+        ax.legend(legend,loc='upper center',bbox_to_anchor=(0.5,1.11), ncol=5)
 
     # add whitespace padding on left
     ymin, ymax = ax.get_ylim()
@@ -81,7 +85,7 @@ def barh(*args, **kwargs):
 
 #    # If there are negative counts, remove the bottom axes
 #    # and add a line at y=0
-    if np.any(w < 0 for w in width):
+    if any(w < 0 for w in width.tolist()):
         axes_to_remove = ['top', 'right', 'bottom']
         ax.vlines(x=0, ymin=ymin, ymax=ymax,
                   linewidths=0.75)
@@ -141,4 +145,5 @@ def barh(*args, **kwargs):
                 if (d*100.0/w) > 3.0:
                     ax.text(l+d/2.0,y,d, ha='center', va='center', color=almost_black)
             left += data[i]
-    return ax
+
+    return rectangles
