@@ -95,10 +95,6 @@ def bar(*args, **kwargs):
     # If there are negative counts, remove the bottom axes
     # and add a line at y=0
     if any(h < 0 for h in height.tolist()):
-#        print h
-#    for h in height:
-#        if h<0.0:
-#            print h
         axes_to_remove = ['top', 'right', 'bottom']
         ax.hlines(y=0, xmin=xmin, xmax=xmax,
                       linewidths=0.75)
