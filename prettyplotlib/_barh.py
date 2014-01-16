@@ -95,14 +95,13 @@ def barh(*args, **kwargs):
         else:
             annotations = ['%.3f' % w if type(w) is np.float_ else str(w)
                            for w in width]
-        for x, w, annotation in zip(yticks, width, annotations):
+        for y, w, annotation in zip(yticks, width, annotations):
             # Adjust the offset to account for negative bars
             offset = offset_ if w >= 0 else -1 * offset_
-            verticalalignment = 'bottom' if w >= 0 else 'top'
 
             # Finally, add the text to the axes
-            ax.annotate(annotation, (w + offset, x - offset),
-                        verticalalignment=verticalalignment,
+            ax.annotate(annotation, (w + offset, y),
+                        verticalalignment='center',
                         horizontalalignment='center',
                         color=almost_black)
     return ax
