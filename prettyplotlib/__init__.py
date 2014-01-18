@@ -1,18 +1,18 @@
 #!/usr/bin/env python
-
+from __future__ import absolute_import
 
 import brewer2mpl
 
-from _bar import bar
-from _barh import barh
-from _boxplot import boxplot
-from _hist import hist
-from _legend import legend
-from _plot import plot
-from _pcolormesh import pcolormesh
-from _scatter import scatter
-from _fill_between import fill_between
-from _fill_betweenx import fill_betweenx
+from ._bar import bar
+from ._barh import barh
+from ._boxplot import boxplot
+from ._hist import hist
+from ._legend import legend
+from ._plot import plot
+from ._pcolormesh import pcolormesh
+from ._scatter import scatter
+from ._fill_between import fill_between
+from ._fill_betweenx import fill_betweenx
 import matplotlib as mpl
 
 #from _remove_chartjunk import remove_chartjunk

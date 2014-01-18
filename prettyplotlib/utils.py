@@ -122,7 +122,7 @@ def maybe_get_fig_ax(*args, **kwargs):
         else:
             fig = plt.gcf()
     elif len(args) == 0:
-        print 'len(args) == 0'
+        print('len(args) == 0')
         fig = plt.gcf()
         ax = plt.gca()
     elif isinstance(args[0], mpl.figure.Figure) and \
