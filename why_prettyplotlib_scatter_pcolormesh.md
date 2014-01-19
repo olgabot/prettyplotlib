@@ -36,7 +36,7 @@ set2 = brewer2mpl.get_map('Set2', 'qualitative', 8).mpl_colors
 ...
 color = set2[i]
 ax.scatter(x, y, label=str(i), facecolor=color)
-``
+```
 
 The full code is,
 
@@ -271,8 +271,8 @@ fig.savefig('black_vs_almost_black.png')
 ![Matplotlib scatter improved 06: removed tick marks](https://raw.github.com/olgabot/prettyplotlib/master/ipython_notebooks/black_vs_almost_black.png)
 
 So not a *huge* difference, and the dark grey still looks pretty black, but it's
-[a little more pleasant on the eyes](http://ianstormtaylor.com/design-tip-never-
-use-black/) to use a dark grey instead of black. There's very few things in
+[a little more pleasant on the eyes](http://ianstormtaylor.com/design-tip-never-use-black/)
+to use a dark grey instead of black. There's very few things in
 nature that are truly black. Just look at shadows! They're just dark grey, or
 blue, or red or purple. But I digress. Back to plotting libraries...
 
@@ -283,7 +283,7 @@ symbols from black to dark grey, we'll do:
 # For remaining spines, thin out their line and change the black to a slightly off-black dark grey
 almost_black = '#262626'
 ...
-ax.scatter(x, y, label=str(i), alpha=0.5, edgecolor='black', facecolor=color, linewidth=0.15)`
+ax.scatter(x, y, label=str(i), alpha=0.5, edgecolor='black', facecolor=color, linewidth=0.15)
 ...
 spines_to_keep = ['bottom', 'left']
 for spine in spines_to_keep:
@@ -693,9 +693,9 @@ x, y...)` instead of `ax.scatter(x, y, ...)`
 
 The default `matplotlib` `pcolormesh` heatmaps use a rainbow colormap, which has
 been known to mislead data visualization. Specifically, [*"the rainbow color map
-is universally inferior to all other color maps"*](http://www.jwave.vt.edu/~rkri
-z/Projects/create_color_table/color_07.pdf). Unfortunately, `matplotlib` took
-its default colors from MATLAB, and there the default is also rainbow.
+is universally inferior to all other color maps"*](http://www.sv.vt.edu/~rkriz/Projects/create_color_table/color_07.pdf).
+Unfortunately, `matplotlib` took its default colors from MATLAB,
+and there the default is also rainbow.
 
 
 ```python
@@ -715,7 +715,7 @@ fig.savefig('pcolormesh_matplotlib_default.png')
 ![Matplotlib default scatterplot](https://raw.github.com/olgabot/prettyplotlib/master/ipython_notebooks/pcolormesh_matplotlib_default.png)
 
 Using the same zero-centered randomly distributed gaussian distribution, we can
-plot it using `prettplotlib` with a few modifications in syntax:
+plot it using `prettyplotlib` with a few modifications in syntax:
 
 ```python
 ppl.pcolormesh(fig, ax, np.random.randn(10,10))
@@ -940,7 +940,7 @@ fig.savefig('pcolormesh_prettyplotlib_labels_other_cmap_sequential.png')
 Plus, this will take the usual parameters of `pcolormesh` like if you want to
 rescale your data to log-scale:
 
-```
+```python
 from matplotlib.colors import LogNorm
 ...
 ppl.pcolormesh(..., norm=LogNorm(vmin=x.min().min(), vmax=x.max().max()))
@@ -948,7 +948,7 @@ ppl.pcolormesh(..., norm=LogNorm(vmin=x.min().min(), vmax=x.max().max()))
 
 The full `prettyplotlib` code is,
 
-```
+```python
 import prettyplotlib as ppl
 from prettyplotlib import plt
 from prettyplotlib import brewer2mpl
