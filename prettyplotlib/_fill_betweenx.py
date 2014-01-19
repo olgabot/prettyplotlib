@@ -1,9 +1,10 @@
 __author__ = 'olga'
 
 from prettyplotlib.utils import remove_chartjunk, maybe_get_ax, maybe_get_linewidth
-from prettyplotlib.colors import almost_black
+from prettyplotlib.colors import almost_black, pretty
 
 
+@pretty
 def fill_betweenx(*args, **kwargs):
     ax, args, kwargs = maybe_get_ax(*args, **kwargs)
 

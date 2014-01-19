@@ -1,9 +1,10 @@
 __author__ = 'olga'
 
 from prettyplotlib import utils
-from prettyplotlib.colors import almost_black
+from prettyplotlib.colors import almost_black, pretty
 
 
+@pretty
 def scatter(*args, **kwargs):
     """
     This will plot a scatterplot of x and y, iterating over the ColorBrewer

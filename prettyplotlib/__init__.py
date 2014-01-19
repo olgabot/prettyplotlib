@@ -1,6 +1,7 @@
 #!/usr/bin/env python
 from __future__ import absolute_import
 
+import matplotlib as mpl
 import brewer2mpl
 
 from ._bar import bar
@@ -13,15 +14,7 @@ from ._pcolormesh import pcolormesh
 from ._scatter import scatter
 from ._fill_between import fill_between
 from ._fill_betweenx import fill_betweenx
-import matplotlib as mpl
-
-#from _remove_chartjunk import remove_chartjunk
-
-
-rcParams = {'axes.color_cycle': brewer2mpl.get_map('Set2', 'Qualitative',
-                                                   8).mpl_colors}
-mpl.rcParams.update(rcParams)
-
+from .general import *
 
 def scatter_column(ax, x, **kwargs):
     """
