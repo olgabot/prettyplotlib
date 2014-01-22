@@ -17,8 +17,8 @@ def pcolormesh(*args, **kwargs):
      of the heatmap block
      - xticklabels_rotation, which can be either 'horizontal' or 'vertical'
      depending on how you want the xticklabels rotated. The default is
-     'horiztonal' but if you have xticklabels that are longer, you may want
-     to do 'vertical' so they don't overlap
+     'horizontal', but if you have xticklabels that are longer, you may want
+     to do 'vertical' so they don't overlap.
      - yticklabels_rotation, which can also be either 'horizontal' or
      'vertical'. The default is 'horizontal' and in most cases,
      that's what you'll want to stick with. But the option is there if you
