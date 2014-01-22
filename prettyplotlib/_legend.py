@@ -9,7 +9,7 @@ def legend(*args, **kwargs):
 
     @param args:
     @type args:
-    @param kwargs: Any keyword arugments to matplotlib's plt.legend()
+    @param kwargs: Any keyword arguments to matplotlib's plt.legend()
     Optional 'facecolor' keyword to change the facecolor of the legend
     @type kwargs:
     @return:
@@ -29,7 +29,7 @@ def legend(*args, **kwargs):
         rect.set_facecolor(facecolor)
         rect.set_linewidth(0.0)
 
-        # change the label colors in the legend to almost black
+        # Change the label colors in the legend to almost black
         # Change the legend label colors to almost black, too
         texts = legend.texts
         for t in texts:
