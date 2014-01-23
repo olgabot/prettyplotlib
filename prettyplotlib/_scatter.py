@@ -23,10 +23,8 @@ def scatter(*args, **kwargs):
         # Assume that color means the edge color. You can assign the
         color_cycle = ax._get_lines.color_cycle
         kwargs['color'] = next(color_cycle)
-    if 'edgecolor' not in kwargs:
-        kwargs['edgecolor'] = almost_black
-    if 'alpha' not in kwargs:
-        kwargs['alpha'] = 0.5
+    kwargs.setdefault('edgecolor', almost_black)
+    kwargs.setdefault('alpha', 0.5)
 
     lw = utils.maybe_get_linewidth(**kwargs)
     kwargs['lw'] = lw

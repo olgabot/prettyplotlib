@@ -28,15 +28,9 @@ def barh(*args, **kwargs):
     @param kwargs: Any additional arguments to matplotlib.bar()
     """
     ax, args, kwargs = maybe_get_ax(*args, **kwargs)
-    if 'color' not in kwargs:
-        kwargs['color'] = set2[0]
-    if 'edgecolor' not in kwargs:
-        kwargs['edgecolor'] = 'white'
-    if 'width' in kwargs:
-        # Find the middle of the bar
-        middle = kwargs['width']/2.0
-    else:
-        middle = 0.4
+    kwargs.setdefault('color', set2[0])
+    kwargs.setdefault('edgecolor', 'white')
+    middle = 0.4 if 'width' not in kwargs else kwargs['width']/2.0
 
     # Check if data contains stacks
     stacked = kwargs.pop('stacked',False)
