@@ -34,10 +34,8 @@ def pcolormesh(*args, **kwargs):
 
     x = args[0]
 
-    if 'vmax' not in kwargs:
-        kwargs['vmax'] = x.max()
-    if 'vmin' not in kwargs:
-        kwargs['vmin'] = x.min()
+    kwargs.setdefault('vmax', x.max())
+    kwargs.setdefault('vmin', x.min())
 
     center_value = kwargs.pop('center_value', 0)
 
