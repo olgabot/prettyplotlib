@@ -5,7 +5,6 @@ import numpy as np
 from prettyplotlib.colors import blue_red, blues_r, reds
 from prettyplotlib.utils import remove_chartjunk, maybe_get_fig_ax
 
-
 def pcolormesh(*args, **kwargs):
     """
     Use for large datasets
