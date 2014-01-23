@@ -26,10 +26,21 @@ def boxplot(*args, **kwargs):
     if 'widths' not in kwargs:
         kwargs['widths'] = 0.15
 
+    # Number of items to be plotted
+    if isinstance(args[0], list):
+        n_items = len(args[0])
+    else:
+        n_items = args[0].shape[1]
+
     bp = ax.boxplot(*args, **kwargs)
 
     if xticklabels:
-        ax.xaxis.set_ticklabels(xticklabels, fontsize=fontsize)
+        if n_items > 5:
+            rotation = 45
+        else:
+            rotation = 0
+        ax.xaxis.set_ticklabels(xticklabels,
+                                fontsize=fontsize, rotation=rotation)
 
     show_caps = kwargs.pop('show_caps', True)
     show_ticks = kwargs.pop('show_ticks', False)
