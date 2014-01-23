@@ -18,10 +18,8 @@ def legend(*args, **kwargs):
     ax, args, kwargs = maybe_get_ax(*args, **kwargs)
     facecolor = kwargs.pop('facecolor', light_grey)
 
-    if 'frameon' not in kwargs:
-        kwargs['frameon'] = True
-    if 'scatterpoints' not in kwargs:
-        kwargs['scatterpoints'] = True
+    kwargs.setdefault('frameon', True)
+    kwargs.setdefault('scatterpoints', True)
 
     legend = ax.legend(**kwargs)
     try:
