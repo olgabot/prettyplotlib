@@ -2,7 +2,8 @@ __author__ = 'olga'
 
 from prettyplotlib.utils import remove_chartjunk, maybe_get_ax, maybe_get_linewidth
 from prettyplotlib.colors import almost_black, pretty
-
+from itertools import cycle
+import matplotlib as mpl
 
 @pretty
 def fill_betweenx(*args, **kwargs):
@@ -13,7 +14,7 @@ def fill_betweenx(*args, **kwargs):
 
     if 'color' not in kwargs:
         # if no color is specified, cycle over the ones in this axis
-        color_cycle = ax._get_lines.color_cycle
+        color_cycle = cycle(mpl.rcParams['axes.color_cycle'])
         kwargs['color'] = next(color_cycle)
     kwargs.setdefault('edgecolor', almost_black)
 
