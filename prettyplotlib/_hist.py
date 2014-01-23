@@ -14,12 +14,9 @@ def hist(*args, **kwargs):
     color_cycle = ax._get_lines.color_cycle
     color = next(color_cycle)
     # Reassign the default colors to Set2 by Colorbrewer
-    if 'color' not in kwargs:
-        kwargs['color'] = color
-    if 'facecolor' not in kwargs:
-        kwargs['facecolor'] = color
-    if 'edgecolor' not in kwargs:
-        kwargs['edgecolor'] = 'white'
+    kwargs.setdefault('color', color)
+    kwargs.setdefault('facecolor', color)
+    kwargs.sefdefault('edgecolor', 'white')
     show_ticks = kwargs.pop('show_ticks', False)
 
     # If no grid specified, don't draw one.
