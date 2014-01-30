@@ -5,9 +5,9 @@ from setuptools import find_packages
 
 
 if sys.version_info[0] == 3:
-    LONG_DESCRIPTION = open('README.txt', encoding='utf-8').read()
+    LONG_DESCRIPTION = open('README.md', encoding='utf-8').read()
 else:
-    LONG_DESCRIPTION = open('README.txt').read()
+    LONG_DESCRIPTION = open('README.md').read()
 
 setup(
     name='prettyplotlib',

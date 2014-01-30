@@ -86,11 +86,11 @@ def pcolormesh(*args, **kwargs):
     # Get rid of ALL axes
     remove_chartjunk(ax, ['top', 'right', 'left', 'bottom'])
 
-    if xticklabels:
+    if any(xticklabels):
         xticks = np.arange(0.5, x.shape[1] + 0.5)
         ax.set_xticks(xticks)
         ax.set_xticklabels(xticklabels, rotation=xticklabels_rotation)
-    if yticklabels:
+    if any(yticklabels):
         yticks = np.arange(0.5, x.shape[0] + 0.5)
         ax.set_yticks(yticks)
         ax.set_yticklabels(yticklabels, rotation=yticklabels_rotation)
