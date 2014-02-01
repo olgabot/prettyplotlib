@@ -7,6 +7,7 @@ import brewer2mpl
 from ._bar import bar
 from ._barh import barh
 from ._boxplot import boxplot
+from ._eventplot import eventplot
 from ._hist import hist
 from ._legend import legend
 from ._plot import plot
