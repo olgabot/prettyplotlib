@@ -1,10 +1,13 @@
 __author__ = 'olga'
 
-from prettyplotlib.utils import remove_chartjunk, maybe_get_ax
-from prettyplotlib.colors import pretty
+from itertools import cycle
+
 from matplotlib.cbook import iterable
 import matplotlib as mpl
-from itertools import cycle
+
+from prettyplotlib.utils import remove_chartjunk, maybe_get_ax
+from prettyplotlib.colors import pretty
+
 
 @pretty
 def hist(*args, **kwargs):
@@ -18,8 +21,13 @@ def hist(*args, **kwargs):
     color_cycle = cycle(mpl.rcParams['axes.color_cycle'])
     # Reassign the default colors to Set2 by Colorbrewer
     if iterable(args[0]):
-        ncolors = len(args[0]) if isinstance(args[0], list) \
-            else args[0].shape[1]
+        if isinstance(args[0], list):
+            ncolors = len(args[0])
+        else:
+            if len(args[0].shape) == 2:
+                ncolors = args[0].shape[1]
+            else:
+                ncolors = 1
         kwargs.setdefault('color', [next(color_cycle) for _ in range(ncolors)])
     else:
         kwargs.setdefault('color', next(color_cycle))
