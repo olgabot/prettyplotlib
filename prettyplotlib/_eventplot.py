@@ -9,6 +9,7 @@ from prettyplotlib.colors import set2
 def eventplot(*args, **kwargs):
     ax, args, kwargs = maybe_get_ax(*args, **kwargs)
     show_ticks = kwargs.pop('show_ticks', False)
+    alpha = kwargs.pop('alpha', 1.0)
 
     if len(args) > 0:
         positions = args[0]
@@ -20,7 +21,7 @@ def eventplot(*args, **kwargs):
     else:
         size = 1
 
-    kwargs.setdefault('colors', [c + (1.0,) for c in set2[:size]])
+    kwargs.setdefault('colors', [c + (alpha,) for c in set2[:size]])
 
     event_collections = ax.eventplot(*args, **kwargs)
     remove_chartjunk(ax, ['top', 'right'], show_ticks=show_ticks)
