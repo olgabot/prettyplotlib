@@ -1,25 +1,22 @@
 __author__ = 'olga'
 
 from matplotlib.testing.decorators import image_comparison
-import prettyplotlib as ppl
 import numpy as np
-import os
 
-import matplotlib.pyplot as plt
+import prettyplotlib as ppl
+
 
 @image_comparison(baseline_images=['legend'], extensions=['png'])
 def test_legend():
     # Set the random seed for consistency
     np.random.seed(12)
 
-    fig, ax = plt.subplots(1)
-
     # Show the whole color range
     for i in range(8):
         x = np.random.normal(loc=i, size=1000)
         y = np.random.normal(loc=i, size=1000)
-        ppl.scatter(ax, x, y, label=str(i))
-    ppl.legend(ax)
+        ppl.scatter(x, y, label=str(i))
+    ppl.legend()
     # fig.savefig('%s/baseline_images/test_legend/legend.png' %
     #             os.path.dirname(__file__))
 

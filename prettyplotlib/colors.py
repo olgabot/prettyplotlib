@@ -1,8 +1,10 @@
+from functools import wraps
+
 import brewer2mpl
 import numpy as np
 import matplotlib as mpl
 from matplotlib import cm
-from functools import wraps
+
 
 
 # Get Set2 from ColorBrewer, a set of colors deemed colorblind-safe and
@@ -25,7 +27,8 @@ set1 = brewer2mpl.get_map('Set1', 'qualitative', 9).mpl_colors
 # This decorator makes it possible to change the color cycle inside
 # prettyplotlib  without affecting pyplot
 def pretty(func):
-    rcParams = {'axes.color_cycle':set2, 'lines.linewidth':.75} 
+    rcParams = {'axes.color_cycle': set2, 'lines.linewidth': .75}
+
     @wraps(func)
     def wrapper(*args, **kwargs):
         with mpl.rc_context(rc=rcParams):
