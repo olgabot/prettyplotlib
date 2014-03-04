@@ -136,7 +136,7 @@ def maybe_get_fig_ax(*args, **kwargs):
 
 def maybe_get_linewidth(**kwargs):
     try:
-        key = (set("lw", "linewidth", 'linewidths') & set(kwargs)).pop()
+        key = (set(["lw", "linewidth", 'linewidths']) & set(kwargs)).pop()
         lw = kwargs[key]
     except KeyError:
         lw = 0.15
