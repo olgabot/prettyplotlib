@@ -8,7 +8,7 @@ python:
 install:
   - conda create -n testenv --yes pip python=$TRAVIS_PYTHON_VERSION
   - source activate testenv
-  - conda --yes install numpy matplotlib
+  - conda install --yes numpy matplotlib
   - pip install .
 
 

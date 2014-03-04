@@ -5,9 +5,9 @@ from setuptools import find_packages
 
 
 if sys.version_info[0] == 3:
-    LONG_DESCRIPTION = open('README.md', encoding='utf-8').read()
+    LONG_DESCRIPTION = open('README.rst', encoding='utf-8').read()
 else:
-    LONG_DESCRIPTION = open('README.md').read()
+    LONG_DESCRIPTION = open('README.rst').read()
 
 setup(
     name='prettyplotlib',
@@ -30,5 +30,5 @@ setup(
     description='Painlessly create beautiful default `matplotlib` plots.',
     long_description=LONG_DESCRIPTION,
     install_requires=['matplotlib >= 1.2.1',
-              'brewer2mpl >= 1.3.1']
+                      'brewer2mpl >= 1.3.1']
 )
