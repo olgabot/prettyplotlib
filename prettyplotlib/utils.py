@@ -34,9 +34,9 @@ def remove_chartjunk(ax, spines, grid=None, ticklabels=None, show_ticks=False):
             except KeyError:
                 pass
                 # ax.spines[spine].set_color(almost_black)
-            #            ax.spines[spine].set_tick_params(color=almost_black)
-            # Check that the axes are not log-scale. If they are, leave the ticks
-            # because otherwise people assume a linear scale.
+                #            ax.spines[spine].set_tick_params(color=almost_black)
+                # Check that the axes are not log-scale. If they are, leave the ticks
+                # because otherwise people assume a linear scale.
     x_pos = set(['top', 'bottom'])
     y_pos = set(['left', 'right'])
     xy_pos = [x_pos, y_pos]
@@ -122,7 +122,6 @@ def maybe_get_fig_ax(*args, **kwargs):
         else:
             fig = plt.gcf()
     elif len(args) == 0:
-        print('len(args) == 0')
         fig = plt.gcf()
         ax = plt.gca()
     elif isinstance(args[0], mpl.figure.Figure) and \
