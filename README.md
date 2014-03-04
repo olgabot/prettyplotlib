@@ -1,7 +1,4 @@
-[![Build Status](https://travis-ci.org/olgabot/prettyplotlib
-.png?branch=master)]
-(https://travis-ci.org/olgabot/prettyplotlib)
-
+[![Build Status](https://travis-ci.org/olgabot/prettyplotlib.png?branch=master)](https://travis-ci.org/olgabot/prettyplotlib)
 
 prettyplotlib
 =============
