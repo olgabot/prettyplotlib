@@ -3,8 +3,7 @@ import collections
 import numpy as np
 
 from prettyplotlib.utils import remove_chartjunk, maybe_get_ax
-from prettyplotlib.colors import set2, almost_black
-
+from prettyplotlib.colors import set2, almost_black, getcolors
 
 def bar(*args, **kwargs):
     """
@@ -57,6 +56,12 @@ def bar(*args, **kwargs):
     # If no grid specified, don't draw one.
     grid = kwargs.pop('grid', None)
 
+    cmap = kwargs.pop('cmap', False)
+    if cmap:
+        kwargs['edgecolor'] = almost_black
+        if not stacked:
+            kwargs['color'] = getcolors(cmap, height, 0)
+
     # Check if stacked and plot data accordingly
     if stacked:
         num_stacks, num_data = height.shape
@@ -65,13 +70,16 @@ def bar(*args, **kwargs):
             lst = list(args)
             lst[1] = height[i]
             args = tuple(lst)
-            kwargs['color'] = set2[i]
+            if cmap:
+                kwargs['color'] = getcolors(cmap, height[i], i)
+            else:
+                kwargs['color'] = set2[i]
             kwargs['bottom'] = bottom
             rectangles = ax.bar(*args, **kwargs)
             bottom += height[i]
     else:
         rectangles = ax.bar(*args, **kwargs)
-
+   
     # add legend
     if isinstance(legend, collections.Iterable):
         ax.legend(legend,loc='upper center',bbox_to_anchor=(0.5,1.11), ncol=5)
