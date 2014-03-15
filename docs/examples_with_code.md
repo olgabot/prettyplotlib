@@ -389,28 +389,6 @@ ppl.bar(N, func(array([0.9,14.8]),N),  cmap=True)
 
 savefig('bar_prettyplotlib_colormap.png')
 ```
-![Bar plot with white grid, with arbitrary annotation](https://raw.github.com/TheIdealis/prettyplotlib/blob/master/ipython_notebooks/bar_prettyplotlib_colormap.png)
-
-## `bar` with each bar labeled on x-axis
-
-If you supply `xticklabels` as an argument to `plt.bar`, this will label each bar with this xlabel.
-
-```python
-import prettyplotlib as ppl
-import matplotlib.pyplot as plt
-import numpy as np
-import string
-
-fig, ax = plt.subplots(1)
-np.random.seed(14)
-n = 10
-ppl.bar(ax, np.arange(n), np.abs(np.random.randn(n)), annotate=True, xticklabels=string.uppercase[:n], grid='y')
-fig.savefig('bar_prettyplotlib_grid_annotated_labeled.png')
-```
-
-![Bar plot with white grid, x-axis labeled and each bar annotated](https://raw.github.com/olgabot/prettyplotlib/master/ipython_notebooks/bar_prettyplotlib_grid_annotated_labeled.png)
-
-
 
 # `hist`
 
