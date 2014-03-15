@@ -389,7 +389,7 @@ ppl.bar(N, func(array([0.9,14.8]),N),  cmap=True)
 
 savefig('bar_prettyplotlib_colormap.png')
 ```
-![Bar plot with white grid, with arbitrary annotation](https://raw.github.com/olgabot/prettyplotlib/master/ipython_notebooks/bar_prettyplotlib_colormap.png)
+![Bar plot with white grid, with arbitrary annotation](https://raw.github.com/TheIdealis/prettyplotlib/blob/master/ipython_notebooks/bar_prettyplotlib_colormap.png)
 
 ## `bar` with each bar labeled on x-axis
 
