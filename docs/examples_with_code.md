@@ -386,9 +386,9 @@ import brewer2mpl
 func    = lambda p, x: p[0]*pow(p[1],x)*pow(e,-p[1])/factorial(x)
 N       = range(40)
 
-Set2 = brewer2mpl.get_map('Set2', 'qualitative', 8).mpl_colormap
+Set2 = brewer2mpl.get_map('Paired', 'qualitative', 8).mpl_colormap
 
-figure(1)
+figure(figsize=(12,10))
 subplot(2,2,1)
 ppl.bar(N, func(array([0.9,14.8]),N),  cmap=True)
 subplot(2,2,2)
