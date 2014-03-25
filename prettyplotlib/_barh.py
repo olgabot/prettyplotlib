@@ -1,7 +1,7 @@
 __author__ = 'olga'
 
 from prettyplotlib.utils import maybe_get_ax, remove_chartjunk
-from prettyplotlib.colors import set2, almost_black
+from prettyplotlib.colors import set2, almost_black, getcolors
 import numpy as np
 import collections
 
@@ -53,6 +53,12 @@ def barh(*args, **kwargs):
     # If no grid specified, don't draw one.
     grid = kwargs.pop('grid', None)
 
+    cmap = kwargs.pop('cmap', False)
+    if cmap:
+        kwargs['edgecolor'] = almost_black
+        if not stacked:
+            kwargs['color'] = getcolors(cmap, width, 0)
+
     # Check if stacked and plot data accordingly
     if stacked:
         num_stacks, num_data = width.shape
@@ -61,7 +67,10 @@ def barh(*args, **kwargs):
             lst = list(args)
             lst[1] = width[i]
             args = tuple(lst)
-            kwargs['color'] = set2[i]
+            if cmap:
+                kwargs['color'] = getcolors(cmap, width[i], i)
+            else:
+                kwargs['color'] = set2[i]
             kwargs['left'] = left
             rectangles = ax.barh(*args, **kwargs)
             left += width[i]

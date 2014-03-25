@@ -370,6 +370,37 @@ fig.savefig('bar_prettyplotlib_grid_annotated_labeled.png')
 
 ![Bar plot with white grid, x-axis labeled and each bar annotated](https://raw.github.com/olgabot/prettyplotlib/master/ipython_notebooks/bar_prettyplotlib_grid_annotated_labeled.png)
 
+## `bar` and `barh` with colormap
+
+If you want to color the bars according to thier height, you should either use `cmap=True` or you specify the colormap on your own `cmap=your_cmap`:
+
+```python
+import prettyplotlib as ppl
+from pylab import savefig, show, figure, subplot
+from numpy import array, e
+from scipy import optimize
+from scipy.misc import factorial 
+# prettyplotlib imports
+import brewer2mpl
+
+func    = lambda p, x: p[0]*pow(p[1],x)*pow(e,-p[1])/factorial(x)
+N       = range(40)
+
+Set2 = brewer2mpl.get_map('Paired', 'qualitative', 8).mpl_colormap
+
+figure(figsize=(12,10))
+subplot(2,2,1)
+ppl.bar(N, func(array([0.9,14.8]),N),  cmap=True)
+subplot(2,2,2)
+ppl.barh(N, func(array([0.9,14.8]),N),  cmap=True)
+subplot(2,2,3)
+ppl.bar(N, func(array([0.9,14.8]),N),  cmap=Set2)
+subplot(2,2,4)
+ppl.barh(N, func(array([0.9,14.8]),N),  cmap=Set2)
+
+#show()
+savefig('bar_prettyplotlib_colormap.png')
+```
 
 # `hist`
 

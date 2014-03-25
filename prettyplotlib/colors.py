@@ -24,6 +24,10 @@ set2 = brewer2mpl.get_map('Set2', 'qualitative', 8).mpl_colors
 # reds and blues
 set1 = brewer2mpl.get_map('Set1', 'qualitative', 9).mpl_colors
 
+# A colormapcycle for stacked barplots
+stackmaps = [brewer2mpl.get_map('YlGn', 'sequential', 8).mpl_colormap,
+             brewer2mpl.get_map('YlOrRd', 'sequential', 8).mpl_colormap]
+
 # This decorator makes it possible to change the color cycle inside
 # prettyplotlib  without affecting pyplot
 def pretty(func):
@@ -34,6 +38,13 @@ def pretty(func):
         with mpl.rc_context(rc=rcParams):
             return func(*args, **kwargs)
     return wrapper
+
+# This function returns a colorlist for barplots
+def getcolors(cmap, yvals, n):
+    if isinstance(cmap, bool):
+        cmap = stackmaps[n%len(stackmaps)]
+    return [cmap( abs(int((float(yval)/np.max(yvals))*cmap.N) )) for yval in yvals]
+
 
 # Set some commonly used colors
 almost_black = '#262626'
