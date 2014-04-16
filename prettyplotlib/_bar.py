@@ -63,6 +63,7 @@ def bar(*args, **kwargs):
             kwargs['color'] = getcolors(cmap, height, 0)
 
     # Check if stacked and plot data accordingly
+    color = kwargs.pop('color', None)
     if stacked:
         num_stacks, num_data = height.shape
         bottom = np.zeros(num_data)
@@ -70,10 +71,14 @@ def bar(*args, **kwargs):
             lst = list(args)
             lst[1] = height[i]
             args = tuple(lst)
-            if cmap:
-                kwargs['color'] = getcolors(cmap, height[i], i)
+            # make sure number of user specified colors equals to the stacks 
+            if not color or len(color) != num_stacks:
+                if cmap:
+                    kwargs['color'] = getcolors(cmap, height[i], i)
+                else:
+                    kwargs['color'] = set2[i]
             else:
-                kwargs['color'] = set2[i]
+                kwargs['color'] = color[i]
             kwargs['bottom'] = bottom
             rectangles = ax.bar(*args, **kwargs)
             bottom += height[i]
