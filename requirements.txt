@@ -1,4 +1,5 @@
 numpy
 scipy
-matplotlib
+matplotlib>=1.3.1
 brewer2mpl
+six
