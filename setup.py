@@ -8,6 +8,12 @@ if sys.version_info[0] == 3:
     LONG_DESCRIPTION = open('README.rst', encoding='utf-8').read()
 else:
     LONG_DESCRIPTION = open('README.rst').read()
+    
+if sys.version_info[0] == 3:
+    REQUIREMENTS = open('requirments.rst', encoding='utf-8').readlines()
+else:
+    REQUIREMENTS = open('requirements.rst').readlines()
+REQUIREMENTS = map(lambda x: x.rstrip(), REQUIREMENTS)
 
 setup(
     name='prettyplotlib',
@@ -29,6 +35,5 @@ setup(
     ],
     description='Painlessly create beautiful default `matplotlib` plots.',
     long_description=LONG_DESCRIPTION,
-    install_requires=['matplotlib >= 1.2.1',
-                      'brewer2mpl >= 1.3.1']
+    install_requires=REQUIREMENTS
 )
