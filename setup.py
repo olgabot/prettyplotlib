@@ -10,7 +10,7 @@ else:
     LONG_DESCRIPTION = open('README.rst').read()
     
 if sys.version_info[0] == 3:
-    REQUIREMENTS = open('requirments.txt', encoding='utf-8').readlines()
+    REQUIREMENTS = open('requirements.txt', encoding='utf-8').readlines()
 else:
     REQUIREMENTS = open('requirements.txt').readlines()
 REQUIREMENTS = map(lambda x: x.rstrip(), REQUIREMENTS)
