@@ -4,7 +4,8 @@ import matplotlib as mpl
 import matplotlib.pyplot as plt
 
 
-def remove_chartjunk(ax, spines, grid=None, ticklabels=None, show_ticks=False):
+def remove_chartjunk(ax, spines, grid=None, ticklabels=None, show_ticks=False,
+                     xkcd=False):
     '''
     Removes "chartjunk", such as extra lines of axes and tick marks.
 
@@ -25,18 +26,19 @@ def remove_chartjunk(ax, spines, grid=None, ticklabels=None, show_ticks=False):
 
     # For the remaining spines, make their line thinner and a slightly
     # off-black dark grey
-    for spine in all_spines:
-        if spine not in spines:
-            # The try/except is for polar coordinates, which only have a 'polar'
-            # spine and none of the others
-            try:
-                ax.spines[spine].set_linewidth(0.5)
-            except KeyError:
-                pass
-                # ax.spines[spine].set_color(almost_black)
-                #            ax.spines[spine].set_tick_params(color=almost_black)
-                # Check that the axes are not log-scale. If they are, leave the ticks
-                # because otherwise people assume a linear scale.
+    if not xkcd:
+        for spine in all_spines:
+            if spine not in spines:
+                # The try/except is for polar coordinates, which only have a
+                # 'polar' spine and none of the others
+                try:
+                    ax.spines[spine].set_linewidth(0.5)
+                except KeyError:
+                    pass
+                    # ax.spines[spine].set_color(almost_black)
+                    # ax.spines[spine].set_tick_params(color=almost_black)
+                    # Check that the axes are not log-scale. If they are, leave
+                    # the ticks because otherwise people assume a linear scale.
     x_pos = set(['top', 'bottom'])
     y_pos = set(['left', 'right'])
     xy_pos = [x_pos, y_pos]
