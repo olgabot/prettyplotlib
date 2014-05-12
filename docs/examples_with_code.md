@@ -448,7 +448,7 @@ If you have several things you'd like to compare distributions with, the `boxplo
 ```python
 import prettyplotlib as ppl
 import numpy as np
-import matplotlib as mpl
+import matplotlib.pyplot as plt
 
 np.random.seed(10)
 
