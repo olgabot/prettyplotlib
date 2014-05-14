@@ -63,7 +63,7 @@ def bar(*args, **kwargs):
             kwargs['color'] = getcolors(cmap, height, 0)
 
     # Check if stacked and plot data accordingly
-    color = kwargs.pop('color', None)
+    color = kwargs.get('color', None)
     if stacked:
         num_stacks, num_data = height.shape
         bottom = np.zeros(num_data)
