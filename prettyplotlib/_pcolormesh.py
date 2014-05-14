@@ -98,4 +98,4 @@ def pcolormesh(*args, **kwargs):
     # Show the scale of the colorbar
     fig.colorbar(p, cax=ax_colorbar, use_gridspec=True,
                  orientation=orientation_colorbar)
-    return fig
+    return p

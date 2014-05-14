@@ -33,4 +33,4 @@ def scatter(*args, **kwargs):
 
     scatterpoints = ax.scatter(*args, **kwargs)
     utils.remove_chartjunk(ax, ['top', 'right'], show_ticks=show_ticks)
-    return ax
+    return scatterpoints 
