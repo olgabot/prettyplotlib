@@ -22,4 +22,4 @@ def fill_betweenx(*args, **kwargs):
 
     lines = ax.fill_betweenx(*args, **kwargs)
     remove_chartjunk(ax, ['top', 'right'], show_ticks=show_ticks)
-    return ax
+    return lines 

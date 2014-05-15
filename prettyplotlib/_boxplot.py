@@ -48,4 +48,4 @@ def boxplot(*args, **kwargs):
     else:
         plt.setp(bp['caps'], color='none')
     ax.spines['left']._linewidth = 0.5
-    return ax
+    return bp 
