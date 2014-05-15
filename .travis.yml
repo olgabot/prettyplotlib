@@ -7,7 +7,7 @@ python:
 install:
   - conda create -n testenv --yes pip python=$TRAVIS_PYTHON_VERSION
   - source activate testenv
-  - conda install --yes numpy matplotlib nose six
+  - conda install --yes matplotlib nose six
   - pip install .
 
 
