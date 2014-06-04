@@ -28,16 +28,28 @@ set1 = brewer2mpl.get_map('Set1', 'qualitative', 9).mpl_colors
 stackmaps = [brewer2mpl.get_map('YlGn', 'sequential', 8).mpl_colormap,
              brewer2mpl.get_map('YlOrRd', 'sequential', 8).mpl_colormap]
 
-# This decorator makes it possible to change the color cycle inside
-# prettyplotlib  without affecting pyplot
-def pretty(func):
+# This context-decorator makes it possible to change the color cycle inside
+# prettyplotlib without affecting pyplot
+class _pretty:
     rcParams = {'axes.color_cycle': set2, 'lines.linewidth': .75}
+    mpl_contexts = []
 
-    @wraps(func)
-    def wrapper(*args, **kwargs):
-        with mpl.rc_context(rc=rcParams):
-            return func(*args, **kwargs)
-    return wrapper
+    def __call__(self, func):
+        @wraps(func)
+        def wrapper(*args, **kwargs):
+            with self:
+                return func(*args, **kwargs)
+        return wrapper
+
+    def __enter__(self):
+        context = mpl.rc_context(rc=self.rcParams)
+        self.mpl_contexts.append(context)
+        return context.__enter__()
+
+    def __exit__(self, *args):
+        return self.mpl_contexts.pop().__exit__(*args)
+
+pretty = _pretty()
 
 # This function returns a colorlist for barplots
 def getcolors(cmap, yvals, n):
