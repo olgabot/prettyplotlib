@@ -5,9 +5,9 @@ python:
   - "3.3"
 # command to install dependencies
 install:
-  - conda create -n testenv --yes pip python=$TRAVIS_PYTHON_VERSION
+  - conda create -n testenv --yes python=$TRAVIS_PYTHON_VERSION
   - source activate testenv
-  - conda install --yes numpy matplotlib nose six
+  - conda install --yes pip numpy scipy matplotlib nose six
   - pip install .
 
 
