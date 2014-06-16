@@ -8,12 +8,13 @@ if sys.version_info[0] == 3:
     LONG_DESCRIPTION = open('README.rst', encoding='utf-8').read()
 else:
     LONG_DESCRIPTION = open('README.rst').read()
-    
+
 if sys.version_info[0] == 3:
     REQUIREMENTS = open('requirements.txt', encoding='utf-8').readlines()
 else:
     REQUIREMENTS = open('requirements.txt').readlines()
-REQUIREMENTS = map(lambda x: x.rstrip(), REQUIREMENTS)
+
+REQUIREMENTS = [req.rstrip() for req in REQUIREMENTS]
 
 setup(
     name='prettyplotlib',
