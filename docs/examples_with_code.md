@@ -16,7 +16,8 @@ from prettyplotlib import brewer2mpl
 # Set the random seed for consistency
 np.random.seed(12)
 
-fig, ax = plt.subplots(1)
+with ppl.pretty:
+    fig, ax = plt.subplots(1)
 
 # Show the whole color range
 for i in range(8):
@@ -56,7 +57,8 @@ from prettyplotlib import brewer2mpl
 # Set the random seed for consistency
 np.random.seed(12)
 
-fig, ax = plt.subplots(1)
+with ppl.pretty:
+    fig, ax = plt.subplots(1)
 
 # Show the whole color range
 for i in range(8):
@@ -89,7 +91,8 @@ from prettyplotlib import brewer2mpl
 # Set the random seed for consistency
 np.random.seed(12)
 
-fig, ax = plt.subplots(1)
+with ppl.pretty:
+    fig, ax = plt.subplots(1)
 
 # Show the whole color range
 for i in range(8):
@@ -121,7 +124,8 @@ from prettyplotlib import brewer2mpl
 # Set the random seed for consistency
 np.random.seed(12)
 
-fig, ax = plt.subplots(1)
+with ppl.pretty:
+    fig, ax = plt.subplots(1)
 
 # Show the whole color range
 for i in range(8):
@@ -154,7 +158,8 @@ import matplotlib as mpl
 # Set the random seed for consistency
 np.random.seed(12)
 
-fig, ax = plt.subplots(1)
+with ppl.pretty:
+    fig, ax = plt.subplots(1)
 
 # Show the whole color range
 for i in range(8):
@@ -183,7 +188,8 @@ from prettyplotlib import brewer2mpl
 # Set the random seed for consistency
 np.random.seed(12)
 
-fig, ax = plt.subplots(1)
+with ppl.pretty:
+    fig, ax = plt.subplots(1)
 
 #mpl.rcParams['axis.color_cycle'] = ['blue']
 
@@ -236,7 +242,8 @@ import prettyplotlib as ppl
 import numpy as np
 import matplotlib.pyplot as plt
 
-fig, ax = plt.subplots(1)
+with ppl.pretty:
+    fig, ax = plt.subplots(1)
 
 np.random.seed(14)
 
@@ -255,7 +262,8 @@ import prettyplotlib as ppl
 import numpy as np
 import matplotlib.pyplot as plt
 
-fig, ax = plt.subplots(1)
+with ppl.pretty:
+    fig, ax = plt.subplots(1)
 
 np.random.seed(14)
 
@@ -276,7 +284,9 @@ import matplotlib.pyplot as plt
 import numpy as np
 import string
 
-fig, ax = plt.subplots(1)
+with ppl.pretty:
+    fig, ax = plt.subplots(1)
+    
 np.random.seed(14)
 n = 10
 ppl.bar(ax, np.arange(n), np.abs(np.random.randn(n)), annotate=True, grid='y')
@@ -342,7 +352,9 @@ import matplotlib.pyplot as plt
 import numpy as np
 import string
 
-fig, ax = plt.subplots(1)
+with ppl.pretty:
+    fig, ax = plt.subplots(1)
+    
 np.random.seed(14)
 n = 10
 ppl.bar(ax, np.arange(n), np.abs(np.random.randn(n)),
@@ -361,7 +373,9 @@ import matplotlib.pyplot as plt
 import numpy as np
 import string
 
-fig, ax = plt.subplots(1)
+with ppl.pretty:
+    fig, ax = plt.subplots(1)
+
 np.random.seed(14)
 n = 10
 ppl.bar(ax, np.arange(n), np.abs(np.random.randn(n)), annotate=True, xticklabels=string.uppercase[:n], grid='y')
@@ -415,7 +429,8 @@ import numpy as np
 
 np.random.seed(12)
 
-fig, ax = plt.subplots(1)
+with ppl.pretty:
+    fig, ax = plt.subplots(1)
 
 ppl.hist(ax, np.random.randn(1000))
 fig.savefig('hist_prettyplotlib_default.png')
@@ -433,7 +448,8 @@ import numpy as np
 
 np.random.seed(12)
 
-fig, ax = plt.subplots(1)
+with ppl.pretty:
+    fig, ax = plt.subplots(1)
 
 # 'y' for the 'y' axis. Could also add a grid over the 'x' axis.
 ppl.hist(ax, np.random.randn(1000), grid='y')
@@ -455,7 +471,9 @@ np.random.seed(10)
 data = np.random.randn(8, 4)
 labels = ['A', 'B', 'C', 'D']
 
-fig, ax = plt.subplots()
+with ppl.pretty:
+    fig, ax = plt.subplots()
+    
 ppl.boxplot(ax, data, xticklabels=labels)
 fig.savefig('boxplot_prettyplotlib_default.png')
 ```
@@ -480,7 +498,8 @@ import prettyplotlib as ppl
 import matplotlib.pyplot as plt
 import numpy as np
 
-fig, ax = plt.subplots(1)
+with ppl.pretty:
+    fig, ax = plt.subplots(1)
 
 np.random.seed(10)
 
@@ -503,7 +522,8 @@ import prettyplotlib as ppl
 import matplotlib.pyplot as plt
 import numpy as np
 
-fig, ax = plt.subplots(1)
+with ppl.pretty:
+    fig, ax = plt.subplots(1)
 
 np.random.seed(10)
 
@@ -522,7 +542,8 @@ import prettyplotlib as ppl
 import matplotlib.pyplot as plt
 import numpy as np
 
-fig, ax = plt.subplots(1)
+with ppl.pretty:
+    fig, ax = plt.subplots(1)
 
 np.random.seed(10)
 
@@ -541,7 +562,8 @@ import matplotlib.pyplot as plt
 import numpy as np
 import string
 
-fig, ax = plt.subplots(1)
+with ppl.pretty:
+    fig, ax = plt.subplots(1)
 
 np.random.seed(10)
 
@@ -580,7 +602,8 @@ import string
 
 green_purple = brewer2mpl.get_map('PRGn', 'diverging', 11).mpl_colormap
 
-fig, ax = plt.subplots(1)
+with ppl.pretty:
+    fig, ax = plt.subplots(1)
 
 np.random.seed(10)
 
@@ -616,7 +639,8 @@ import string
 
 red_purple = brewer2mpl.get_map('RdPu', 'Sequential', 9).mpl_colormap
 
-fig, ax = plt.subplots(1)
+with ppl.pretty:
+    fig, ax = plt.subplots(1)
 
 np.random.seed(10)
 
@@ -643,7 +667,8 @@ from matplotlib.colors import LogNorm
 
 red_purple = brewer2mpl.get_map('RdPu', 'Sequential', 9).mpl_colormap
 
-fig, ax = plt.subplots(1)
+with ppl.pretty:
+    fig, ax = plt.subplots(1)
 
 np.random.seed(10)
 
@@ -673,7 +698,8 @@ import string
 
 green_purple = brewer2mpl.get_map('PRGn', 'diverging', 11).mpl_colormap
 
-fig, ax = plt.subplots(1)
+with ppl.pretty:
+    fig, ax = plt.subplots(1)
 
 np.random.seed(10)
 
