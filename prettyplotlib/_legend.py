@@ -21,7 +21,7 @@ def legend(*args, **kwargs):
     kwargs.setdefault('frameon', True)
     kwargs.setdefault('scatterpoints', True)
 
-    legend = ax.legend(**kwargs)
+    legend = ax.legend(*args, **kwargs)
     try:
         rect = legend.get_frame()
         rect.set_facecolor(facecolor)
