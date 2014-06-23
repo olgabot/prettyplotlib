@@ -53,6 +53,15 @@ def test_bar_xticklabels():
     # fig.savefig('%s/baseline_images/test_bar/bar_xticklabels.png' %
     #             os.path.dirname(__file__))
 
+@image_comparison(baseline_images=['bar_log'], extensions=['png'])
+def test_bar_log():
+    np.random.seed(14)
+    x = np.arange(10)
+    y = np.exp(np.random.random(10)*5)
+    ppl.bar(x,y)
+    # fig.savefig('%s/baseline_images/test_bar/bar.png' %
+    #             os.path.dirname(__file__))
+
 if __name__ == '__main__':
     import nose
     nose.runmodule(argv=['-s', '--with-doctest'])

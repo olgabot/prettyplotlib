@@ -31,10 +31,18 @@ def pcolormesh(*args, **kwargs):
     #  out
     fig, ax, args, kwargs = maybe_get_fig_ax(*args, **kwargs)
 
-    x = args[0]
+    # If x and y axis are passed in arguments, gets correct data
+    # Ticks will work with x and y data, although it would be pointless to use
+    # both x/y and custom ticks
+    if len(args) == 3:
+        x = args[0]
+        y = args[1]
+        data = args[2]
+    elif len(args) == 1:
+        data = args[0]
 
-    kwargs.setdefault('vmax', x.max())
-    kwargs.setdefault('vmin', x.min())
+    kwargs.setdefault('vmax', data.max())
+    kwargs.setdefault('vmin', data.min())
 
     center_value = kwargs.pop('center_value', 0)
 
@@ -81,18 +89,34 @@ def pcolormesh(*args, **kwargs):
     orientation_colorbar = kwargs.pop('orientation_colorbar', 'vertical')
 
     p = ax.pcolormesh(*args, **kwargs)
-    ax.set_ylim(0, x.shape[0])
-    ax.set_xlim(0, x.shape[1])
+    # ax.set_ylim(0, x.shape[0])
+    # ax.set_xlim(0, x.shape[1])
 
     # Get rid of ALL axes
     remove_chartjunk(ax, ['top', 'right', 'left', 'bottom'])
 
     if xticklabels is not None and any(xticklabels):
-        xticks = np.arange(0.5, x.shape[1] + 0.5)
+        if len(args) == 1:
+            xticks = np.arange(0.5, data.shape[1] + 0.5)
+        else:
+            xticks = []
+            for i in np.arange(len(x) - 1):
+                half = float(x[i + 1] - x[i]) / 2. + x[i]
+                print half
+                xticks.append(half)
+        xticks = np.array(xticks)
         ax.set_xticks(xticks)
         ax.set_xticklabels(xticklabels, rotation=xticklabels_rotation)
+
     if yticklabels is not None and any(yticklabels):
-        yticks = np.arange(0.5, x.shape[0] + 0.5)
+        if len(args) == 1:
+            yticks = np.arange(0.5, data.shape[1] + 0.5)
+        else:
+            yticks = []
+            for i in np.arange(len(y) - 1):
+                half = float(y[i + 1] - y[i]) / 2. + y[i]
+                yticks.append(half)
+        yticks = np.array(yticks)
         ax.set_yticks(yticks)
         ax.set_yticklabels(yticklabels, rotation=yticklabels_rotation)
 

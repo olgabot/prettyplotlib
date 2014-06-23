@@ -94,6 +94,15 @@ def test_pcolormesh_lognorm():
     # fig.savefig('%s/baseline_images/test_pcolormesh/test_pcolormesh_lognorm.png' %
     #             os.path.dirname(__file__))
 
+@image_comparison(baseline_images=['pcolormesh_axes'], extensions=['png'])
+def test_pcolormesh_axes():
+    np.random.seed(10)
+    x=np.arange(0,100,10)
+    y=np.arange(0,20,2)
+
+    ppl.pcolormesh(x, y, np.random.randn(10, 10))
+    # fig.savefig('%s/baseline_images/test_pcolormesh/pcolormesh.png' %
+    #             os.path.dirname(__file__))
 
 if __name__ == '__main__':
     import nose

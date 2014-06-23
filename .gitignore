@@ -12,3 +12,6 @@ dist
 # test results
 result_images
 tests/result_images
+
+# virtual environment
+ve
