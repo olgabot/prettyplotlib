@@ -82,6 +82,7 @@ def pcolormesh(*args, **kwargs):
 
     p = ax.pcolormesh(*args, **kwargs)
     ax.set_ylim(0, x.shape[0])
+    ax.set_xlim(0, x.shape[1])
 
     # Get rid of ALL axes
     remove_chartjunk(ax, ['top', 'right', 'left', 'bottom'])
