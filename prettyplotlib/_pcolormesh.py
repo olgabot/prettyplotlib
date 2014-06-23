@@ -5,6 +5,7 @@ import numpy as np
 from prettyplotlib.colors import blue_red, blues_r, reds
 from prettyplotlib.utils import remove_chartjunk, maybe_get_fig_ax
 
+
 def pcolormesh(*args, **kwargs):
     """
     Use for large datasets
@@ -59,7 +60,7 @@ def pcolormesh(*args, **kwargs):
         if divergent_data:
             kwargs['cmap'] = blue_red
         elif kwargs['vmax'] <= 0:
-                kwargs['cmap'] = blues_r
+            kwargs['cmap'] = blues_r
         elif kwargs['vmax'] > 0:
             kwargs['cmap'] = reds
 
@@ -102,7 +103,6 @@ def pcolormesh(*args, **kwargs):
             xticks = []
             for i in np.arange(len(x) - 1):
                 half = float(x[i + 1] - x[i]) / 2. + x[i]
-                print half
                 xticks.append(half)
         xticks = np.array(xticks)
         ax.set_xticks(xticks)
