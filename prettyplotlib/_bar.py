@@ -136,10 +136,10 @@ def bar(*args, **kwargs):
         ax.set_ylim(ymin, ymax)
         yrange = ymax - ymin
 
-        if kwargs.get('log') == True :
+        if kwargs.get('log') == True:
             offset_ = np.log(yrange) * annotate_yrange_factor
-        else :
-            offset_= yrange * annotate_yrange_factor
+        else:
+            offset_ = yrange * annotate_yrange_factor
 
         if isinstance(annotate, collections.Iterable):
             annotations = map(str, annotate)

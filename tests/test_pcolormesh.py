@@ -1,14 +1,15 @@
 __author__ = 'olga'
 
-from matplotlib.testing.decorators import image_comparison
-import prettyplotlib as ppl
-import numpy as np
-import os
 import string
-from prettyplotlib import brewer2mpl
-from matplotlib.colors import LogNorm
 
+from matplotlib.testing.decorators import image_comparison
+import numpy as np
+from matplotlib.colors import LogNorm
 import six
+
+import prettyplotlib as ppl
+from prettyplotlib import brewer2mpl
+
 
 if six.PY3:
     LOWERCASE_CHARS = string.ascii_lowercase
@@ -48,6 +49,7 @@ def test_pcolormesh_positive():
     # fig.savefig('%s/baseline_images/test_pcolormesh/pcolormesh_positive.png' %
     #             os.path.dirname(__file__))
 
+
 @image_comparison(baseline_images=['pcolormesh_negative'], extensions=['png'])
 def test_pcolormesh_negative():
     np.random.seed(10)
@@ -83,6 +85,7 @@ def test_pcolormesh_positive_other_cmap():
     #     '%s/baseline_images/test_pcolormesh/pcolormesh_positive_other_cmap.png' %
     #     os.path.dirname(__file__))
 
+
 @image_comparison(baseline_images=['pcolormesh_lognorm'],
                   extensions=['png'])
 def test_pcolormesh_lognorm():
@@ -94,16 +97,19 @@ def test_pcolormesh_lognorm():
     # fig.savefig('%s/baseline_images/test_pcolormesh/test_pcolormesh_lognorm.png' %
     #             os.path.dirname(__file__))
 
+
 @image_comparison(baseline_images=['pcolormesh_axes'], extensions=['png'])
 def test_pcolormesh_axes():
     np.random.seed(10)
-    x=np.arange(0,100,10)
-    y=np.arange(0,20,2)
+    x = np.arange(0, 100, 10)
+    y = np.arange(0, 20, 2)
 
     ppl.pcolormesh(x, y, np.random.randn(10, 10))
     # fig.savefig('%s/baseline_images/test_pcolormesh/pcolormesh.png' %
     #             os.path.dirname(__file__))
 
+
 if __name__ == '__main__':
     import nose
+
     nose.runmodule(argv=['-s', '--with-doctest'])
