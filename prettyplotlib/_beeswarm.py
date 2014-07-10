@@ -99,7 +99,7 @@ def _beeswarm(ax, x, notch=0, sym='b+', vert=1, whis=1.5,
             else:
                 x = [x[:,i] for i in xrange(nc)]
         else:
-            raise ValueError, "input x can have no more than 2 dimensions"
+            raise ValueError("input x can have no more than 2 dimensions")
     if not hasattr(x[0], '__len__'):
         x = [x]
     col = len(x)
