@@ -6,13 +6,13 @@ from prettyplotlib import colors as _colors
 import numpy as np 
 import matplotlib.mlab as mlab
 
-def _boxplot2(ax, x, notch=0, sym='b+', vert=1, whis=1.5,
+def _beeswarm(ax, x, notch=0, sym='b+', vert=1, whis=1.5,
             positions=None, widths=None, patch_artist=False,
             bootstrap=None):
     """
     Call signature::
 
-      boxplot(x, notch=0, sym='+', vert=1, whis=1.5,
+      beeswarm(x, notch=0, sym='+', vert=1, whis=1.5,
               positions=None, widths=None, patch_artist=False)
 
     Make a box and whisker plot for each column of *x* or each
@@ -275,18 +275,33 @@ def _boxplot2(ax, x, notch=0, sym='b+', vert=1, whis=1.5,
 
 
 
-def boxplot2(*args, **kwargs):
+def beeswarm(*args, **kwargs):
     """
-    Create a box-and-whisker plot showing the mean, 25th percentile, and 75th
-    percentile. The difference from matplotlib is only the left axis line is
+    Create a R-like beeswarm plot showing the mean and datapoints. 
+    The difference from matplotlib is only the left axis line is
     shown, and ticklabels labeling each category of data can be added.
 
     @param ax:
     @param x:
     @param kwargs: Besides xticklabels, which is a prettyplotlib-specific
-    argument which will label each individual boxplot, any argument for
+    argument which will label each individual beeswarm, many arguments for
     matplotlib.pyplot.boxplot will be accepted:
     http://matplotlib.org/api/axes_api.html#matplotlib.axes.Axes.boxplot
+    Additional arguments include:
+    
+       *median_color* : (default gray)
+        The color of median lines   
+    
+       *median_width* : (default 2)
+        Median line width
+
+       *colors* : (default None)
+        Colors to use when painting a dataseries, for example
+        
+          list1 = [1,2,3]
+          list2 = [5,6,7]
+          ppl.beeswarm([list1, list2], colors=["red", "blue"], xticklabels=["data1", "data2"])
+
     @return:
     """
     ax, args, kwargs = maybe_get_ax(*args, **kwargs)
@@ -294,13 +309,20 @@ def boxplot2(*args, **kwargs):
     xticklabels = kwargs.pop('xticklabels', None)
     colors = kwargs.pop('colors', None)
     fontsize = kwargs.pop('fontsize', 10)
+    
+    gray = _colors.set1[8]
+    red = _colors.set1[0]
     blue = kwargs.pop('color', _colors.set1[1])
 
     kwargs.setdefault('widths', 0.25)
     kwargs.setdefault('sym', "o")
     
-    bp = _boxplot2(ax, *args, **kwargs)
-
+    bp = _beeswarm(ax, *args, **kwargs)
+    
+    kwargs.setdefault("median_color", gray)
+    kwargs.setdefault("median_linewidth", 2)
+    
+    
     if xticklabels:
         ax.xaxis.set_ticklabels(xticklabels, fontsize=fontsize)
 
@@ -310,10 +332,8 @@ def boxplot2(*args, **kwargs):
     remove_chartjunk(ax, ['top', 'right', 'bottom'], show_ticks=show_ticks)
     linewidth = 0.75
 
-    gray = _colors.set1[8]
-    red = _colors.set1[0]
     plt.setp(bp['boxes'], color=blue, linewidth=linewidth)
-    plt.setp(bp['medians'], color=kwargs.pop("median_color", gray), linewidth=kwargs.pop("median_linewidth", 2))
+    plt.setp(bp['medians'], color=kwargs.pop("median_color"), linewidth=kwargs.pop("median_linewidth"))
     #plt.setp(bp['whiskers'], color=blue, linestyle='solid',
     #         linewidth=linewidth)
     for color, flier in zip(colors, bp['fliers']):
