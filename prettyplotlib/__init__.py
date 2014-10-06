@@ -16,6 +16,7 @@ from ._pcolormesh import pcolormesh
 from ._scatter import scatter
 from ._fill_between import fill_between
 from ._fill_betweenx import fill_betweenx
+from ._stackplot import stackplot
 from .general import *
 
 def scatter_column(ax, x, **kwargs):
