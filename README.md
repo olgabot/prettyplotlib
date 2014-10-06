@@ -1,3 +1,18 @@
+# Announcement
+
+Thank you to everyone who has used `prettyplotlib` and made it what it is today! Unfortunately, I no longer have the bandwidth to maintain prettyplotlib. I recommend using [`seaborn`](https://github.com/mwaskom/seaborn). Using `seaborn`, to get the `prettyplotlib` style, do:
+
+    import seaborn as sns
+    sns.set(style='ticks', palette='Set2')
+
+And to remove "chartjunk", do:
+
+    sns.despine()
+
+If you have discrete pull requests, I will accept them, but I personally will no longer fix bugs.
+
+If you are a biological scientist looking for ways to analyze your big-ish (20+ samples) data, check out my main project, [`flotilla`](https://github.com/YeoLab/flotilla).
+
 [![Build Status](https://travis-ci.org/olgabot/prettyplotlib.png?branch=master)](https://travis-ci.org/olgabot/prettyplotlib)
 
 prettyplotlib
